@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -312,13 +313,6 @@ textarea {
 }
 
 /**
- * Fix appearance for Firefox
- */
-[type=number] {
-  -moz-appearance: textfield;
-}
-
-/**
  * Clickable labels
  */
 label[for] {
@@ -376,21 +370,6 @@ th {
 html {
   font-size: 10px;
 }
-@media (min-width: 768px) {
-  html {
-    font-size: 0.78125vw;
-  }
-}
-@media (min-width: 1240px) {
-  html {
-    font-size: 0.6451612903vw;
-  }
-}
-@media (min-width: 1440px) {
-  html {
-    font-size: 0.6944444444vw;
-  }
-}
 
 .base-background-color {
   background-color: #fff;
@@ -416,34 +395,484 @@ html {
   color: #fff;
 }
 
-nav {
-  background-color: #333;
-  color: #fff;
+.main-title {
   display: flex;
+  gap: 1.5rem;
+  justify-content: center;
   align-items: center;
 }
-nav #menu-icon {
-  display: none;
-  cursor: pointer;
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-nav ul li {
-  display: inline-block;
-}
-nav ul a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2em;
-  padding: 15px;
+.main-title span {
   display: block;
+  width: 6px;
+  height: 3rem;
+  background: transparent linear-gradient(163deg, #40BEE2 0%, #356ED5 100%) 0% 0% no-repeat padding-box;
+  border-radius: 3px;
 }
-nav ul a:hover {
-  background-color: #444;
+.main-title h2 {
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 3.6rem;
+}
+.main-title p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.8rem;
+  color: #333333;
+  color: transparent;
+  background: repeating-linear-gradient(90deg, #70CFE4 0, #5C76F6 100%);
+  -webkit-background-clip: text;
+}
+
+.header {
+  position: fixed;
+  top: 3%;
+  height: auto;
+  width: 100%;
+  z-index: 999;
+}
+.header__nav {
+  color: #131311;
+  height: 100%;
+  padding: 0 5rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav--title {
+  width: 15rem;
+  height: 2.6rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.header__nav--title img {
+  width: 100%;
+  height: 100%;
+}
+.header .nav-list {
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.header .nav-list .nav-list-item {
+  width: 12rem;
+  height: 4rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav-list .nav-list-item--link {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.6rem;
+}
+.header .nav-list .nav-list-item-acodion {
+  position: relative;
+  width: 12rem;
+  height: 4rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header .nav-list .nav-list-item-acodion .nav-list-link {
+  position: static;
+  z-index: 2;
+  height: 4rem;
+  width: 12rem;
+  padding-left: 2rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.6rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .nav-list .nav-list-item-acodion .nav-list-link::after {
+  content: "";
+  width: 1rem;
+  height: 100%;
+  background-image: url(/wp-content/themes/testsite/images/home-img/under-arow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.header .nav-list .nav-list-item-acodion ul {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.header .nav-list .nav-list-item-acodion ul li .nav-list-link-chiled {
+  opacity: 0;
+  height: 4rem;
+  width: 12rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.3rem;
+}
+.header .nav-list .nav-list-item-acodion ul li .nav-list-link-chiled-large {
+  opacity: 0;
+  height: 4rem;
+  width: 20rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.3rem;
+}
+.header .nav-list .nav-list-item-acodion:hover ul {
+  top: 100%;
+  width: auto;
+  height: auto;
+  background-color: #131311;
+  transition: 0.3s;
+}
+.header .nav-list .nav-list-item-acodion:hover ul li {
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav-list .nav-list-item-acodion:hover ul li .nav-list-link-chiled {
+  opacity: 1;
+  color: white;
+  padding-left: 2rem;
+}
+.header .nav-list .nav-list-item-acodion:hover ul li .nav-list-link-chiled::after {
+  content: "";
+  width: 1rem;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.header .nav-list .nav-list-item-acodion:hover ul li .nav-list-link-chiled-large {
+  opacity: 1;
+  color: white;
+  padding-left: 2rem;
+}
+.header .nav-list .nav-list-item-acodion:hover ul li .nav-list-link-chiled-large::after {
+  content: "";
+  width: 1rem;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.header .nav-list .nav-list-item-color-white {
+  position: relative;
+  width: 13rem;
+  height: 4rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: #6DCAE4 1px solid;
+  border-radius: 25px;
+}
+.header .nav-list .nav-list-item-color-white--link {
+  color: transparent;
+  background: repeating-linear-gradient(90deg, #4169e1 0, #90CAF9 100%);
+  -webkit-background-clip: text;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.6rem;
+}
+.header .nav-list .nav-list-item-color-blue {
+  position: relative;
+  margin-left: 1.3rem;
+  width: 13rem;
+  height: 4rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
+}
+.header .nav-list .nav-list-item-color-blue--link {
+  color: white;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.6rem;
+}
+
+.kv {
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  gap: 0rem;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.kv__title {
+  width: 100%;
+  height: 100%;
+  padding-left: 12rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.kv__title--main {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 5.4rem;
+  color: #333333;
+}
+.kv__title--main span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 7.4rem;
+  color: #333333;
+  color: transparent;
+  background: repeating-linear-gradient(90deg, #70CFE4 0, #5C76F6 100%);
+  -webkit-background-clip: text;
+}
+.kv__title--text {
+  margin-top: 6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 6.4rem;
+  font-size: 2.4rem;
+  color: #333333;
+}
+.kv__title--button {
+  margin-top: 5rem;
+  width: 24.6rem;
+  height: 5.6rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 2.4rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 3px; /*borderの太さ*/
+  border-radius: 30px;
+  color: transparent;
+  background: repeating-linear-gradient(90deg, #6DCAE4 0, #5F94EF 100%);
+  -webkit-background-clip: text;
+  transition: 0.3s;
+}
+.kv__title--button .kv-button-back {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3rem;
+  width: 24.6rem;
+  height: 5.6rem;
+  background-color: white;
+  transition: 0.3s;
+}
+.kv__title--button::after {
+  content: ">";
+  position: absolute;
+  right: 5%;
+  top: 48%;
+  background: repeating-linear-gradient(90deg, #6DCAE4 0, #5F94EF 100%);
+  -webkit-background-clip: text;
+  transform: translate(0%, -50%);
+}
+.kv__title--button::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #00ffd5 0%, #0f3dd7 100%);
+  width: 25rem;
+  height: 6rem;
+  border-radius: 3rem;
+  padding: 20px;
+}
+.kv__title--button:hover {
+  color: white;
+  transition: 0.3s;
+}
+.kv__title--button:hover .kv-button-back {
+  transition: 0.3s;
+  opacity: 0;
+}
+.kv__news {
+  width: 100%;
+  height: auto;
+  padding-right: 7rem;
+  padding-bottom: 3rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.kv__news--text {
+  width: 80%;
+  height: 6rem;
+  background-color: white;
+  border-radius: 0 3rem 3rem 0;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.kv__news--text--day {
+  color: #3F3F3F;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.5rem;
+  color: #333333;
+}
+.kv__news--text--detail {
+  margin-left: 4rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.5rem;
+  color: #333333;
+}
+.kv__news--text--more {
+  margin-left: auto;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1.7rem;
+  justify-content: center;
+  align-items: center;
+}
+.kv__news--text--more::after {
+  content: ">";
+  padding-bottom: 0.3rem;
+}
+.kv__news--scroll {
+  width: 7rem;
+  height: auto;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.kv__news--scroll--text {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 1.5rem;
+}
+.kv__news--scroll--mouth {
+  width: 4rem;
+  height: 7rem;
+  border: 1px solid #C6C6C6;
+  border-radius: 3rem;
+  padding-top: 1rem;
+  display: flex;
+  gap: 0rem;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.4s;
+}
+.kv__news--scroll--mouth--ball {
+  width: 7px;
+  height: 10px;
+  background-color: #AFAFAF;
+  border-radius: 4px;
+}
+.kv__news--scroll--mouth:hover {
+  transition: 0.4s;
+  padding-top: 1.3rem;
+  transform: translate(0rem, 1rem);
+}
+.kv::after {
+  content: "";
+  height: 100svh;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  z-index: -100;
+  background-image: url(/wp-content/themes/testsite/images/home-img/KV.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.business {
+  width: 100%;
+  height: auto;
+  padding: 0 5rem;
+}
+.business__title {
+  width: 100%;
+  display: flex;
+  gap: 0rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.business__sub {
+  width: 100%;
+  display: flex;
+  gap: 0rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.business__sub--title {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: normal;
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */

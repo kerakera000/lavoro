@@ -1,0 +1,160 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.kv{
+    height: 100svh;
+    width: 100%;
+    @include flex.flex($justify-content:flex-start);
+    flex-direction: column;
+    &__title{
+        width: 100%;
+        height: 100%;
+        padding-left: 12rem;
+        @include flex.flex($align-items:flex-start);
+        flex-direction: column;
+        &--main{
+            @include font.font-Noto-bold($fontsize:5.4rem);
+            span{
+                @include font.font-Noto-bold($fontsize:7.4rem);
+                color: transparent;
+	            background: repeating-linear-gradient( 90deg, #70CFE4 0, #5C76F6 100% );
+                -webkit-background-clip: text;
+            }
+        }
+        &--text{
+            margin-top: 6rem;
+            @include font.font-Noto-bold($fontsize:2.4rem,$lineHeight:6.4rem);
+        }
+        &--button{
+            margin-top: 5rem;
+            width: 24.6rem;
+            height: 5.6rem;
+            @include font.font-jost-bold($fontsize:2.4rem);
+            @include flex.flex();
+            position: relative;
+            padding: 3px;/*borderの太さ*/
+            border-radius: 30px;
+            color: transparent;
+            background: repeating-linear-gradient( 90deg, #6DCAE4 0, #5F94EF 100% );
+            -webkit-background-clip: text;
+            transition: 0.3s;
+            .kv-button-back{
+                position: absolute;
+                z-index: -1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 3rem;
+                width: 24.6rem;
+                height: 5.6rem;
+                background-color: white;
+                transition: 0.3s;
+            }
+            &::after{
+                content: '>';
+                position: absolute;
+                right: 5%;
+                top: 48%;
+                background: repeating-linear-gradient( 90deg, #6DCAE4 0, #5F94EF 100% );
+                -webkit-background-clip: text;
+                transform: translate(-0%,-50%);
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                z-index: -2;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                background:  linear-gradient(to right, #00ffd5 0%, #0f3dd7 100%);
+                width: 25rem;
+                height: 6rem;
+                border-radius: 3rem;
+                padding: 20px;
+            }
+            &:hover{
+                color:white;
+                transition: 0.3s;
+                & .kv-button-back{
+                    transition: 0.3s;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &__news{
+        width: 100%;
+        height: auto;
+        padding-right: 7rem;
+        padding-bottom: 3rem;
+        @include flex.flex($justify-content:space-between);
+        &--text{
+            width: 80%;
+            height: 6rem;
+            background-color: white;
+            border-radius: 0 3rem 3rem 0;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            @include flex.flex($justify-content:flex-start);
+            &--day{
+                color: #3F3F3F;
+                @include font.font-Noto-midium($fontsize:1.5rem);
+            }
+            &--detail{
+                margin-left: 4rem;
+                @include font.font-Noto-midium($fontsize:1.5rem);
+            }
+            &--more{
+                margin-left: auto;
+                @include font.font-jost-bold($fontsize:1.5rem);
+                @include flex.flex($gap:1.7rem);
+                &::after{
+                    content: '>';
+                    padding-bottom: 0.3rem;
+                }
+            }
+        }
+        &--scroll{
+            width: 7rem;
+            height: auto;
+            @include flex.flex($gap:2rem);
+            flex-direction: column;
+            &--text{
+                @include font.font-jost-bold($fontsize:1.5rem);
+            }
+            &--mouth{
+                width: 4rem;
+                height: 7rem;
+                border: 1px solid #C6C6C6;
+                border-radius: 3rem;
+                padding-top: 1rem;
+                @include flex.flex($justify-content:flex-start);
+                flex-direction: column;
+                transition: 0.4s;
+                &--ball{
+                    width: 7px;
+                    height: 10px;
+                    background-color: #AFAFAF;
+                    border-radius: 4px;
+                }
+                &:hover{
+                    transition: 0.4s;
+                    padding-top: 1.3rem;
+                    transform: translate(0rem,1rem);
+                }
+            }
+        }
+    }
+    &::after{
+        content: '';
+        height: 100svh;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        position: fixed;
+        z-index: -100;
+        background-image: url(/wp-content/themes/testsite/images/home-img/KV.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,19 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.business{
+    width: 100%;
+    height: auto;
+    padding: 0 5rem;
+    &__title{
+        width: 100%;
+        @include flex.flex($justify-content:flex-start);
+    }
+    &__sub{
+        width: 100%;
+        @include flex.flex($justify-content:flex-start);
+        &--title{
+            @include font.font-jost-bold
+        }
+    }
+}

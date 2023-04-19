@@ -1,59 +1,78 @@
 //フォント管理
-
-@mixin font-( //使用するfont名に変えよう
-    $fontsize:0rem,
-    $letterSpacing:0px,
-    $lineHeight:0rem,
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Sawarabi Gothic', sans-serif;
+@mixin font-Noto-midium(
+    $fontsize:2rem,
+    $letterSpacing:normal,
+    $lineHeight:normal,
+    $color:#333333,
     ){
-    font-family: a ; //使用するfont-familyに変更
-    font-weight: 100; //使用するfont-weght指定
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    letter-spacing: $letterSpacing;
+    line-height: $lineHeight;
+    font-size: $fontsize;
+    color: $color;
+}
+
+@mixin font-Noto-semibold(
+    $fontsize:2rem,
+    $letterSpacing:normal,
+    $lineHeight:normal,
+    $color:#333333,
+    ){
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    letter-spacing: $letterSpacing;
+    line-height: $lineHeight;
+    font-size: $fontsize;
+    color:  $color;
+}
+@mixin font-Noto-bold(
+    $fontsize:2rem,
+    $letterSpacing:normal,
+    $lineHeight:normal,
+    $color:#333333,
+    ){
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    letter-spacing: $letterSpacing;
+    line-height: $lineHeight;
+    font-size: $fontsize;
+    color: $color;
+}
+
+@mixin font-jost-medium(
+    $fontsize:2rem,
+    $letterSpacing:normal,
+    $lineHeight:normal,
+    ){
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
     letter-spacing: $letterSpacing;
     line-height: $lineHeight;
     font-size: $fontsize;
 }
 
-@mixin font-(
-    $fontsize:0rem,
-    $letterSpacing:0px,
-    $lineHeight:0rem,
+@mixin font-jost-semibold(
+    $fontsize:2rem,
+    $letterSpacing:normal,
+    $lineHeight:normal,
     ){
-    font-family: a ;
-    font-weight: 100;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
     letter-spacing: $letterSpacing;
     line-height: $lineHeight;
     font-size: $fontsize;
 }
 
-@mixin font-(
-    $fontsize:0rem,
-    $letterSpacing:0px,
-    $lineHeight:0rem,
+@mixin font-jost-bold(
+    $fontsize:2rem,
+    $letterSpacing:normal,
+    $lineHeight:normal,
     ){
-    font-family: a ;
-    font-weight: 100;
-    letter-spacing: $letterSpacing;
-    line-height: $lineHeight;
-    font-size: $fontsize;
-}
-@mixin font-(
-    $fontsize:0rem,
-    $letterSpacing:0px,
-    $lineHeight:0rem,
-    ){
-    font-family: a ;
-    font-weight: 100;
-    letter-spacing: $letterSpacing;
-    line-height: $lineHeight;
-    font-size: $fontsize;
-}
-
-@mixin font-(
-    $fontsize:0rem,
-    $letterSpacing:0px,
-    $lineHeight:0rem,
-    ){
-    font-family: a ;
-    font-weight: 100;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
     letter-spacing: $letterSpacing;
     line-height: $lineHeight;
     font-size: $fontsize;

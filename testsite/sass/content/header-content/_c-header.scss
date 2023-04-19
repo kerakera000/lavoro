@@ -1,34 +1,152 @@
-nav {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    
-    #menu-icon {
-    display: none;
-    cursor: pointer;
-    }
-    
-    ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-        li {
-            display: inline-block;
+@use "../../foundation/base/f-font-family" as font;
+@use "../../foundation/mixin/f-flex" as flex;
+
+.header {
+    position: fixed;
+    top: 3%;
+    height: auto;
+    width: 100%;
+    z-index: 999;
+    &__nav {
+        color: #131311;
+        height: 100%;
+        padding: 0 5rem;
+        @include flex.flex($justify-content:space-between);
+        &--title{
+            width: 15rem;
+            height: 2.6rem;
+            @include flex.flex($gap:1rem);
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
-    
-        a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-            padding: 15px;
-            display: block;
-      
-            &:hover {
-            background-color: #444;
+    }
+    .nav-list{
+        @include flex.flex($align-items:flex-start);
+        .nav-list-item{
+            width: 12rem;
+            height: 4rem;
+            @include flex.flex();
+            &--link{
+                @include font.font-jost-medium($fontsize:1.6rem);
+            }
+        }
+        .nav-list-item-acodion{
+            position: relative;
+            width: 12rem;
+            height: 4rem;
+            @include flex.flex();
+            flex-direction: column;
+            .nav-list-link{
+                position: static;
+                z-index: 2;
+                height: 4rem;
+                width: 12rem;
+                padding-left: 2rem;
+                @include font.font-jost-medium($fontsize:1.6rem);
+                @include flex.flex($gap:0.5rem,$justify-content:flex-start);
+                &::after{
+                    content: "";
+                    width: 1rem;
+                    height: 100%;
+                    background-image: url(/wp-content/themes/testsite/images/home-img/under-arow.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                }
+            }
+            ul{
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                transition: 0.3s;
+                li{
+                    .nav-list-link-chiled{
+                        opacity: 0;
+                        height: 4rem;
+                        width: 12rem;
+                        @include flex.flex($gap:0.5rem,$justify-content:flex-start);
+                        @include font.font-jost-medium($fontsize:1.3rem);
+                    }
+                    .nav-list-link-chiled-large{
+                        opacity: 0;
+                        height: 4rem;
+                        width: 20rem;
+                        @include flex.flex($gap:0.5rem,$justify-content:flex-start);
+                        @include font.font-jost-medium($fontsize:1.3rem);
+                    }
+                }
+            }
+            &:hover{
+                ul{
+                    top: 100%;
+                    width: auto;
+                    height: auto;
+                    background-color: #131311;
+                    transition: 0.3s;
+                    li{
+                        width: auto;
+                        height: auto;
+                        @include flex.flex();
+                        .nav-list-link-chiled{
+                            opacity: 1;
+                            color: white;
+                            padding-left: 2rem;
+                            &::after{
+                                content: "";
+                                width: 1rem;
+                                height: 100%;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: 50%;
+                            }
+                        }
+                        .nav-list-link-chiled-large{
+                            opacity: 1;
+                            color: white;
+                            padding-left: 2rem;
+                            &::after{
+                                content: "";
+                                width: 1rem;
+                                height: 100%;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nav-list-item-color-white{
+            position: relative;
+            width: 13rem;
+            height: 4rem;
+            @include flex.flex();
+            background: white;
+            border: #6DCAE4 1px solid;
+            border-radius: 25px;
+            &--link{
+                color: transparent;
+	            background: repeating-linear-gradient( 90deg, #4169e1 0, #90CAF9 100% );
+                -webkit-background-clip: text;
+                @include font.font-jost-medium($fontsize:1.6rem);
+            }
+        }
+        .nav-list-item-color-blue{
+            position: relative;
+            margin-left: 1.3rem;
+            width: 13rem;
+            height: 4rem;
+            @include flex.flex();
+            border-radius: 25px;
+            background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
+            &--link{
+                color: white;
+                @include font.font-jost-medium($fontsize:1.6rem);
             }
         }
     }

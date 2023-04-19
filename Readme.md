@@ -27,6 +27,10 @@
             content : 各ページsection、header、footer、base内容を管理  
             page：contentをまとめた内容を管理  
 
+        5.sass命名規則のルール  
+            homeは普通で大丈夫  
+            下層ページはページ名-content-セクション名で構築  
+
 #### 3.scssの読み込みルール  
 
         1.@useを使う(理由：importが廃止になるらしい)  
