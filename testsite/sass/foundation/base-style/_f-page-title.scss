@@ -1,0 +1,21 @@
+@use "../../foundation/base/f-font-family" as font;
+@use "../../foundation/mixin/f-flex" as flex;
+
+.page-title{
+    width: 100%;
+    height: auto;
+    @include flex.flex($justify-content:flex-start);
+    &__text{
+        width: auto;
+        height: auto;
+        @include flex.flex($align-items:flex-start);
+        flex-direction: column;
+        h2{
+            @include font.font-Noto-semibold($fontsize:7.2rem);
+        }
+        p{
+            @include font.font-Noto-midium($fontsize:2rem);
+            color: #959595;
+        }
+    }
+}

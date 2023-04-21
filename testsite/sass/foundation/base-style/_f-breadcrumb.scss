@@ -1,0 +1,19 @@
+@use "../../foundation/base/f-font-family" as font;
+@use "../../foundation/mixin/f-flex" as flex;
+
+.Breadcrumb-list{
+    width: 100%;
+    height: 3rem;
+    @include flex.flex($justify-content:flex-end);
+    .Breadcrumb{
+        width: auto;
+        height: 100%;
+        @include flex.flex();
+        &__top{
+            @include font.font-jost-medium($fontsize:1.5rem);
+        }
+        &__text{
+            @include font.font-jost-medium($fontsize:1.5rem);
+        }
+    }
+}

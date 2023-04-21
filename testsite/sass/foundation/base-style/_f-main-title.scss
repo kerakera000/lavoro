@@ -19,3 +19,22 @@
         -webkit-background-clip: text;
     }
 }
+
+.main-title-white{
+    @include flex.flex($gap:1.5rem,$justify-content:flex-start);
+    span{
+        display: block;
+        width: 6px;
+        height: 3.5rem;
+        background: transparent linear-gradient(163deg, #40BEE2 0%, #356ED5 100%) 0% 0% no-repeat padding-box;
+        border-radius: 3px;
+    }
+    h2{
+        @include font.font-jost-semibold($fontsize:5rem);
+        color: white;
+    }
+    p{
+        @include font.font-Noto-midium($fontsize:2.2rem);
+        color: white;
+    }
+}

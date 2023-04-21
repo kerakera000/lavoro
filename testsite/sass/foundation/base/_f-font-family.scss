@@ -77,3 +77,15 @@
     line-height: $lineHeight;
     font-size: $fontsize;
 }
+
+@mixin font-oswald-medium(
+    $fontsize:2rem,
+    $letterSpacing:normal,
+    $lineHeight:normal,
+    ){
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    letter-spacing: $letterSpacing;
+    line-height: $lineHeight;
+    font-size: $fontsize;
+}

@@ -18,17 +18,12 @@
 	</head>
 	<body class="">
 		<header class="header">
+			<div id="HeaderTitle" class="header__title">
+				<img class="header__title--pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/title-logo.png" alt="LAVORO">
+				<img class="header__title--sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/Footer-logo.png" alt="LAVORO">
+			</div>
 			<nav class="header__nav">
-				<div class="header__nav--title">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/title-logo.png" alt="LAVORO">
-				</div>
-
-				<ul class="nav-list">
-					<li class="nav-list-item">
-						<a class="nav-list-item--link" href="#">
-							TOP
-						</a>
-					</li>
+				<ul id="NavList" class="nav-list">
 
 					<li id="header-about" class="nav-list-item-acodion">
 						<a class="nav-list-link" href="#">
@@ -87,10 +82,15 @@
 						</a>
 					</li>
 					<li class="nav-list-item-color-blue">
-						<a class="nav-list-item-color-blue--link" href="#">
+						<a class="nav-list-item-color-blue--link" href="<?php echo esc_url(home_url('/contactpage')); ?>">
 							CONTACT
 						</a>
 					</li>
 				</ul>
 			</nav>
+			<button id="NavButton" class="nav-button">
+				<span class="nav-button--line1"></span>
+				<span class="nav-button--line2"></span>
+				<span class="nav-button--line3"></span>
+			</button>
 		</header>

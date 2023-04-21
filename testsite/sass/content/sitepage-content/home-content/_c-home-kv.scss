@@ -87,7 +87,7 @@
         height: auto;
         padding-right: 7rem;
         padding-bottom: 3rem;
-        @include flex.flex($justify-content:space-between);
+        @include flex.flex($justify-content:space-between,$align-items:flex-end);
         &--text{
             width: 80%;
             height: 6rem;

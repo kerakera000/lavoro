@@ -1,17 +1,13 @@
 //htmlが全部ロードされてから開始
 document.addEventListener("DOMContentLoaded", function(){
 
-    const headerabout = document.getElementById("header-about");
-    const headerbuisiness = document.getElementById("header-buisiness");
-    const headerworks = document.getElementById("header-works");
+    const NavButton = document.getElementById("NavButton");
+    const NavList = document.getElementById("NavList");
+    const HeaderTitle = document.getElementById("HeaderTitle")
 
-    headerabout.addEventListener("click", function() {
-        headerabout.classList.toggle("open");
-    });
-    headerbuisiness.addEventListener("click", function() {
-        headerbuisiness.classList.toggle("open");
-    });
-    headerworks.addEventListener("click", function() {
-        headerworks.classList.toggle("open");
-    });
+    NavButton.addEventListener("click", function() {
+        NavButton.classList.toggle("open");
+        NavList.classList.toggle("open");
+        HeaderTitle.classList.toggle("open");
+    })
 });

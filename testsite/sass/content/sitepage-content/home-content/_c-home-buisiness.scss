@@ -4,16 +4,227 @@
 .business{
     width: 100%;
     height: auto;
-    padding: 0 5rem;
+    padding: 8rem 5rem 0;
+    background: #F8F8F8;
+    box-shadow: 0px 8px 10px #00000029;
     &__title{
         width: 100%;
         @include flex.flex($justify-content:flex-start);
     }
     &__sub{
         width: 100%;
-        @include flex.flex($justify-content:flex-start);
+        margin-top: 6rem;
+        @include flex.flex($align-items:flex-start,$justify-content:space-between);
         &--title{
-            @include font.font-jost-bold
+            @include font.font-jost-bold($fontsize:3rem);
+            @include flex.flex($align-items:flex-start,$gap:1rem);
+            p{
+                padding-top: 0.3rem;
+            }
+        }
+        &--title--box{
+            @include flex.flex($align-items:flex-start,$justify-content:flex-start);
+            flex-direction: column;
+            h3{
+                @include font.font-Noto-bold($fontsize:3.2rem);
+            }
+            p{
+                color: #959595;
+                @include font.font-jost-medium($fontsize:2rem)
+            }
+        }
+        &--text{
+            width: 50%;
+            p{
+                @include font.font-Noto-midium($fontsize:2rem);
+            }
+        }
+    }
+    &__content{
+        width: 100%;
+        margin-top: 6rem;
+        @include flex.flex($justify-content:space-between);
+        .business-card{
+            width: 30%;
+            height: 18.3vw;
+            border-radius: 3rem;
+            padding-left: 3rem;
+            padding-bottom: 2.5rem;
+            padding-right: 3rem;
+            position: relative;
+            @include flex.flex($align-items:flex-end);
+            overflow: hidden;
+            transition: 0.4s;
+            &__box{
+                width: 70%;
+                height: 100%;
+                @include flex.flex($align-items:flex-start,$justify-content:flex-end);
+                flex-direction: column;
+                position: relative;
+                z-index: 2;
+                &--img{
+                    width: 5rem;
+                    height: 5rem;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                &--main-text{
+                    margin-top: 9px;
+                    white-space: nowrap;
+                    @include font.font-Noto-bold($fontsize:2.4rem);
+                    color: white;
+                }
+                &--sub-text{
+                    @include font.font-Noto-midium($fontsize:1.4rem);
+                    color: white;
+                }
+            }
+            &__button{
+                width: 30%;
+                height: 100%;
+                position: relative;
+                z-index: 2;
+                @include flex.flex($align-items:flex-end,$justify-content:flex-end);
+                button{
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: 30px;
+                    border: 2px solid white;
+                    position: relative;
+                    &::after{
+                        content: ">";
+                        position: absolute;
+                        top: 48%;
+                        left: 50%;
+                        @include font.font-jost-bold($fontsize:1.8rem);
+                        transform: translate(-50%,-50%);
+                        color: white;
+                    }
+                }
+            }
+            &::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 1;
+                transition: 0.4s;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            &:hover{
+                .business-card__button{
+                    button{
+                        border: 2px solid #5C76F6;
+                        &::after{
+                            content: ">";
+                            color: transparent;
+                            background: repeating-linear-gradient( 90deg, #70CFE4 0, #5C76F6 100% );
+                            -webkit-background-clip: text;
+                        }
+                    }
+                }
+                // .business-card__box--main-text{
+                //     margin-top: 9px;
+                //     @include font.font-Noto-bold($fontsize:2.4rem);
+                //     color: transparent;
+                //     background: repeating-linear-gradient( 90deg, #20cbf1 0, #3a57e6 100% );
+                //     -webkit-background-clip: text;
+                // }
+                // .business-card__box--sub-text{
+                //     @include font.font-Noto-midium($fontsize:1.4rem);
+                //     color: white;
+                //     color: transparent;
+                //     background: repeating-linear-gradient( 90deg, #2fd7fd 0, #3a57e6 100% );
+                //     -webkit-background-clip: text;
+                // }
+                &::after{
+                    scale: 1.1;
+                }
+            }
+        }
+        .business-card.C1{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business1.png);
+            }
+        }
+        .business-card.C2{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business2.png);
+            }
+        }
+        .business-card.C3{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business3.png);
+            }
+        }
+    }
+    &__sistem{
+        width: 100%;
+        height: auto;
+        margin-top: 6rem;
+        @include flex.flex($gap:10rem);
+        .sistem-card{
+            width: 50%;
+            height: 19vw;
+            padding-left: 3rem;
+            padding-bottom: 2.5rem;
+            padding-right: 3rem;
+            position: relative;
+            @include flex.flex($justify-content:space-between,$align-items:flex-end);
+            .sistem-card-title{
+                position: relative;
+                z-index: 3;
+                width: 70%;
+                &--img{
+                    width: 8em;
+                    height: 8rem;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                h3{
+                    margin-top: 4px;
+                    white-space: nowrap;
+                    @include font.font-Noto-bold($fontsize:3rem);
+                    color: white;
+                }
+                p{
+                    @include font.font-Noto-midium($fontsize:1.9rem);
+                    color: white;
+                }
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 1;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .sistem-card.C1{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business4.png);
+            }
+        }
+        .sistem-card.C2{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business5.png);
+            }
         }
     }
 }

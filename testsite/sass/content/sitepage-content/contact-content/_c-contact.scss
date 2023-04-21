@@ -1,0 +1,17 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.p-contact{
+    width: 100%;
+    height: auto;
+    padding: 20rem 10rem 0;
+    &__text{
+        width: 100%;
+        height: 3rem;
+        margin-top: 4rem;
+        @include flex.flex($justify-content:flex-start);
+        p{
+            @include font.font-Noto-bold($fontsize:2rem);
+        }
+    }
+}
