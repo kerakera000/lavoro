@@ -6,7 +6,8 @@
             // array('title' => 'blogpage', 'template' => 'page-blog.php'),
             array('title' => 'contactpage', 'template' => 'page-contact.php'),
             // array('title' => 'faqpage', 'template' => 'page-faq.php'),
-            // array('title' => 'planpage', 'template' => 'page-plan.php'),
+            array('title' => 'recruitpage', 'template' => 'page-recruit.php'),
+            array('title' => 'workspage', 'template' => 'page-works.php'),
             // array('title' => 'privacypolicypage', 'template' => 'page-privacypolicy.php')
         );
     

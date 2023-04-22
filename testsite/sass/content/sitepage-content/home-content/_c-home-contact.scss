@@ -41,9 +41,20 @@
             @include flex.flex($justify-content:flex-start,$align-items:flex-start);
             flex-direction:column;
             &--text{
-                margin-top: 6rem;
-                @include font.font-Noto-midium($fontsize:1.9rem,$letterSpacing:1.6px,$lineHeight:3.4rem);
+                margin-top: 3rem;
+                @include font.font-Noto-midium($fontsize:2rem,$letterSpacing:1.6px,$lineHeight:3.4rem);
                 color: white;
+                @media screen and (max-width: 768px) {
+                    font-size: 3.5rem;
+                    line-height: 6rem;
+                    // width: 100%;
+                }
+            }
+            &.card-center{
+                width: 100%;
+                height: 45%;
+                margin-top: 5rem;
+                align-items: center;
             }
         }
         &--button{
@@ -56,6 +67,10 @@
                 border-radius: 50%;
                 position: relative;
                 border: 2px solid white;
+                @media screen and (max-width: 768px) {
+                    width: 12rem;
+                    height: 12rem;
+                }
                 &::after{
                     content: "›";
                     position: absolute;
@@ -64,7 +79,16 @@
                     transform: translate(-50%,-50%);
                     font-size:4rem;
                     color: white;
+                    @media screen and (max-width: 768px) {
+                        font-size: 7rem;
+                    }
                 }
+            }
+            &.card-center {
+                width: 100%;
+                height: 20%;
+                align-items: center;
+                justify-content: center;
             }
         }
         &::after{
@@ -79,6 +103,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+        }
+        &.max{
+            width: 100%;
+            flex-direction: column;
+            height: 60rem;
+            justify-content: center;
         }
     }
 }

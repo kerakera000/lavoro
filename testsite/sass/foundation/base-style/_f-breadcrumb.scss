@@ -11,9 +11,22 @@
         @include flex.flex();
         &__top{
             @include font.font-jost-medium($fontsize:1.5rem);
+            @media screen and (max-width: 768px) {
+                font-size: 3.4rem;
+            }
+        }
+        p{
+            font-size: 2rem;
+            margin: 0 2rem;
+            @media screen and (max-width: 768px) {
+                font-size: 4rem;
+            }
         }
         &__text{
             @include font.font-jost-medium($fontsize:1.5rem);
+            @media screen and (max-width: 768px) {
+                font-size: 3.4rem;
+            }
         }
     }
 }

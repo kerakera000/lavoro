@@ -18,10 +18,10 @@
 	</head>
 	<body class="">
 		<header class="header">
-			<div id="HeaderTitle" class="header__title">
+			<a href="<?php echo esc_url(home_url('/')); ?>" id="HeaderTitle" class="header__title">
 				<img class="header__title--pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/title-logo.png" alt="LAVORO">
 				<img class="header__title--sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/Footer-logo.png" alt="LAVORO">
-			</div>
+			</a>
 			<nav class="header__nav">
 				<ul id="NavList" class="nav-list">
 
@@ -65,7 +65,7 @@
 						</ul>
 					</li>
 					<li class="nav-list-item-acodion">
-						<a class="nav-list-item--link" href="#">
+						<a class="nav-list-item--link" href="<?php echo esc_url(home_url('/workspage')); ?>">
 							WORKS
 						</a>
 					</li>
@@ -77,7 +77,7 @@
 					</li>
 
 					<li class="nav-list-item-color-white">
-						<a class="nav-list-item-color-white--link" href="#">
+						<a class="nav-list-item-color-white--link" href="<?php echo esc_url(home_url('/recruitpage')); ?>">
 							RECRUIT
 						</a>
 					</li>
