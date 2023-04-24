@@ -1,0 +1,103 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.about-titlebox{
+    margin-top: 3rem;
+    @include flex.flex($justify-content:space-between);
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+    &__text{
+        width: 50%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            text-align: left;
+        }
+        p{
+            @include font.font-Noto-midium($fontsize:1.8rem);
+        }
+    }
+    &__button{
+        width: 50%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+        .about-link-button{
+            width: 100%;
+            @include flex.flex($justify-content:space-between);
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                gap: 2rem;
+                align-items: flex-end;
+            }
+            button{
+                width: 30%;
+                height: 7rem;
+                margin-top: 3rem;
+                transition: 0.4s;
+                position: relative;
+                border-radius: 4rem;
+                @include flex.flex();
+                @include font.font-Noto-bold($fontsize: 1.6rem);
+                @media screen and (max-width: 768px) {
+                    width: 40%;
+                    height: 9rem;
+                    border-radius: 6rem;
+                }
+                &::after{
+                    content:'';
+                    position: absolute;
+                    top: 52%;
+                    right: 10%;
+                    transform: translate(-0%,-50%);
+                    width: 2rem;
+                    height: 2rem;
+                }
+                &:hover {
+                    &::after {
+                        background-image: url(/wp-content/themes/testsite/images/icon/icon-white.png);
+                    }
+                }
+            }
+            &__1 {
+                border: 2px solid #70CFE4;
+                color: #70CFE4 !important;
+                &::after {
+                    background-image: url(/wp-content/themes/testsite/images/icon/icon1.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                &:hover{
+                    color: white !important;
+                    background-color: #70CFE4;
+                }
+            }
+            &__2 {
+                border: 2px solid #5D97E6;
+                color: #5D97E6 !important;
+                &::after {
+                    background-image: url(/wp-content/themes/testsite/images/icon/icon2.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                &:hover {
+                    color: white !important;
+                    background-color: #5D97E6;
+                }
+            }
+            &__3 {
+                border: 2px solid #6175EE;
+                color: #6175EE !important;
+                &::after {
+                    background-image: url(/wp-content/themes/testsite/images/icon/icon3.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                &:hover {
+                    color: white !important;
+                    background-color: #6175EE;
+                }
+            }
+        }
+    }
+}

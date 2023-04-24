@@ -26,7 +26,7 @@
 				<ul id="NavList" class="nav-list">
 
 					<li id="header-about" class="nav-list-item-acodion">
-						<a class="nav-list-link" href="#">
+						<a class="nav-list-link" href="<?php echo esc_url(home_url('/aboutpage')); ?>">
 							ABOUT
 						</a>
 						<ul>

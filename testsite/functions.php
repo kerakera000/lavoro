@@ -4,6 +4,7 @@
     require_once locate_template('functions/custom-post/custom-taxonomy-cat.php', true);
     require_once locate_template('functions/custom-post/custom-taxonomy-tag.php', true);
     require_once locate_template('functions/load-scripts.php', true);
+    require_once locate_template('functions/custom-fields.php', true);
     require_once locate_template('functions/theme-support.php', true);
     require_once locate_template('functions/create-newpage.php', true);
     

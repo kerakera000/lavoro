@@ -1,0 +1,183 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.Aabout-cnt{
+    width: 100%;
+    height: auto;
+    padding: 0 8rem 10rem;
+    @include flex.flex();
+    flex-direction: column;
+    &__title{
+        width: 100%;
+        margin-top: 8rem;
+        @include flex.flex($justify-content:flex-start,$align-items:flex-start);
+        flex-direction: column;
+        &.Asecon{
+            margin-top: 0%;
+        }
+        &.Aright{
+            align-items: flex-end;
+            padding-right: 20%;
+            @media screen and (max-width: 768px) {
+                padding-right: 0%;
+                align-items: flex-start;
+            }
+        }
+        &.no-m{
+            margin: 0%;
+        }
+        &--sub{
+            width: auto;
+            height: auto;
+            margin-top: 7.6rem;
+            @include flex.flex($justify-content: flex-start);
+            @media screen and (max-width: 768px) {
+                flex-wrap: wrap;
+            }
+            &.long-top{
+                margin-top: 13rem;
+                @media screen and (max-width: 768px) {
+                    margin-top: 11rem;
+                }
+            }
+            &.no-m {
+                margin: 0%;
+                @media screen and (max-width: 768px) {
+                    order: 1;
+                }
+                h3{
+                    @media screen and (max-width: 768px) {
+                        width: auto;
+                    }
+                }
+            }
+            span{
+                width: 1.5rem;
+                height: 1.5rem;
+                display: block;
+                border-radius: 50px;
+                margin-right: 2rem;
+                background: transparent linear-gradient(180deg, #70CFE4 0%, #5C76F6 100%) 0% 0% no-repeat padding-box;
+                @media screen and (max-width: 768px) {
+                    
+                }
+                &.line{
+                    width: 1rem;
+                    height: 3.5rem;
+                }
+            }
+            h3{
+                margin-right: 3rem;
+                @include font.font-jost-bold($fontsize:4rem);
+                @media screen and (max-width: 768px) {
+                    width: 70%;
+                }
+            }
+            p{
+                @include font.font-jost-bold($fontsize:2rem);
+                &.grad{
+                    color: transparent;
+                    background: repeating-linear-gradient(90deg, #70CFE4 0, #5C76F6 100%);
+                    -webkit-background-clip: text;
+                }
+            }
+        }
+    }
+    &__value{
+        width: 100%;
+        height: auto;
+        @include flex.flex($gap:9%);
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        &--card{
+            width: 33%;
+            height: auto;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+            .Aabout--card-title{
+                width: auto;
+                height: auto;
+                padding-left: 2rem;
+                transform: translate(-0%,3.5rem);
+                @include flex.flex($justify-content:flex-start,$gap:0.5rem);
+                p{
+                    padding-top: 1.8rem;
+                    writing-mode: vertical-rl;
+                    @include font.font-oswald-medium($fontsize: 1.4rem);
+                }
+                h2{
+                    @include font.font-oswald-medium($fontsize:5rem);
+                }
+            }
+            .Aabout--card-img{
+                width: 100%;
+                height: 15vw;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    height: 50vw;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .Aabout--card-text{
+                width: 100%;
+                text-align: center;
+                margin-top: 1rem;
+                @include font.font-jost-bold($fontsize:2.2rem);
+            }
+        }
+    }
+    &__mission{
+        width: 100%;
+        height: auto;
+        margin-top: 6rem;
+        @include flex.flex();
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        &.rev{
+            @media screen and (max-width: 768px) {
+                flex-direction: column-reverse;
+            }
+        }
+        &--img{
+            width: 50%;
+            height: 27vw;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                height: 50rem;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &--text{
+            width: 50%;
+            height: 27vw;
+            padding:5rem ;
+            @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:3rem);
+            flex-direction: column;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                height: auto;
+                padding: 2rem 0 0;
+            }
+            h2{
+                @include font.font-Noto-bold($fontsize:3.2rem);
+                span{
+                    color: #5C76F6;
+                }
+            }
+            p{
+                @include font.font-Noto-midium($fontsize:2.2rem,$lineHeight:6rem);
+            }
+        }
+    }
+}

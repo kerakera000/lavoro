@@ -8,57 +8,70 @@
     width: 100%;
     z-index: 999;
     padding: 0 0 0 5rem;
-    @include flex.flex($justify-content:space-between);
+    @include flex.flex($justify-content: space-between);
+
     @media screen and (max-width: 768px) {
         padding-right: 5rem;
     }
-    &__title{
+
+    &__title {
         width: 15rem;
         height: 2.6rem;
-        @include flex.flex($gap:1rem);
+        @include flex.flex($gap: 1rem);
+
         @media screen and (max-width: 768px) {
             position: relative;
             z-index: 999;
             width: 32rem;
             height: 6rem;
         }
-        img{
+
+        img {
             width: 100%;
             height: 100%;
         }
-        &--pc{
+
+        &--pc {
             display: block;
+
             @media screen and (max-width: 768px) {
                 display: block;
             }
         }
-        &--sp{
+
+        &--sp {
             display: none;
+
             @media screen and (max-width: 768px) {
                 display: none;
             }
         }
     }
-    .header__title.open{
-        .header__title--pc{
+
+    .header__title.open {
+        .header__title--pc {
             @media screen and (max-width: 768px) {
                 display: none;
             }
         }
-        .header__title--sp{
+
+        .header__title--sp {
             @media screen and (max-width: 768px) {
                 display: block;
             }
         }
     }
+
     &__nav {
         color: #131311;
         height: 100%;
         padding: 0 5rem 0 0;
-        @include flex.flex($justify-content:space-between);
+        @include flex.flex($justify-content: space-between);
     }
-    .nav-list{
-        @include flex.flex($align-items:flex-start);
+
+    .nav-list {
+        @include flex.flex($align-items: flex-start);
+
         @media screen and (max-width: 768px) {
             transition: 0.3s;
             width: 100%;
@@ -71,51 +84,60 @@
             top: 50%;
             left: 0%;
             padding: 30rem 10rem;
-            transform: translate(-0%,-50%);
+            transform: translate(-0%, -50%);
             gap: 7rem;
             pointer-events: none;
         }
-        .nav-list-item{
+
+        .nav-list-item {
             width: 12rem;
             height: 4rem;
             @include flex.flex();
-            &--link{
-                @include font.font-jost-medium($fontsize:1.6rem);
+
+            &--link {
+                @include font.font-jost-medium($fontsize: 1.6rem);
+
                 @media screen and (max-width: 768px) {
                     color: rgba(255, 255, 255, 0);
                     font-size: 5.6rem;
                 }
             }
+
             @media screen and (max-width: 768px) {
                 justify-content: flex-start;
             }
         }
-        .nav-list-item-acodion{
+
+        .nav-list-item-acodion {
             position: relative;
             width: 12rem;
             height: 4rem;
             @include flex.flex();
             flex-direction: column;
+
             @media screen and (max-width: 768px) {
                 justify-content: flex-start;
                 align-items: flex-start;
                 width: 100%;
                 height: auto;
             }
-            .nav-list-link{
+
+            .nav-list-link {
                 position: static;
                 z-index: 2;
                 height: 4rem;
                 width: 12rem;
-                padding-left: 2rem;
-                @include font.font-jost-medium($fontsize:1.6rem);
-                @include flex.flex($gap:0.5rem,$justify-content:flex-start);
+                // padding-left: 2rem;
+                @include font.font-jost-medium($fontsize: 1.6rem);
+                @include flex.flex($gap: 0.5rem);
+
                 @media screen and (max-width: 768px) {
                     padding-left: 0%;
                     color: rgba(255, 255, 255, 0);
                     font-size: 5.6rem;
                 }
-                &::after{
+
+                &::after {
                     content: "";
                     width: 1rem;
                     height: 100%;
@@ -125,65 +147,75 @@
                     background-position: 50%;
                 }
             }
-            ul{
+
+            ul {
                 position: absolute;
                 top: 0%;
                 left: 0%;
                 width: 100%;
                 height: 100%;
                 transition: 0.3s;
+
                 @media screen and (max-width: 768px) {
                     position: relative;
-                    @include flex.flex($gap:5rem,$align-items:flex-start ,$justify-content:flex-start);
+                    @include flex.flex($gap: 5rem, $align-items: flex-start, $justify-content: flex-start);
                     flex-direction: column;
                     margin-top: 6rem;
                 }
-                li{
-                    .nav-list-link-chiled{
+
+                li {
+                    .nav-list-link-chiled {
                         opacity: 0;
                         height: 4rem;
                         width: 12rem;
-                        @include flex.flex($gap:0.5rem,$justify-content:flex-start);
-                        @include font.font-jost-medium($fontsize:1.3rem);
+                        @include flex.flex($gap: 0.5rem, $justify-content: flex-start);
+                        @include font.font-jost-medium($fontsize: 1.3rem);
+
                         @media screen and (max-width: 768px) {
                             opacity: 1;
                             width: 100%;
-                            font-size:4rem ;
+                            font-size: 4rem;
                             color: rgba(255, 255, 255, 0);
                         }
                     }
-                    .nav-list-link-chiled-large{
+
+                    .nav-list-link-chiled-large {
                         opacity: 0;
                         height: 4rem;
                         width: 20rem;
-                        @include flex.flex($gap:0.5rem,$justify-content:flex-start);
-                        @include font.font-jost-medium($fontsize:1.3rem);
+                        @include flex.flex($gap: 0.5rem, $justify-content: flex-start);
+                        @include font.font-jost-medium($fontsize: 1.3rem);
+
                         @media screen and (max-width: 768px) {
                             opacity: 1;
                             width: 100%;
-                            font-size:4rem ;
+                            font-size: 4rem;
                             color: rgba(255, 255, 255, 0);
                         }
                     }
                 }
             }
-            &:hover{
+
+            &:hover {
                 @media screen and (min-width: 768px) {
-                    ul{
+                    ul {
                         top: 100%;
                         width: auto;
                         height: auto;
                         background-color: #131311;
                         transition: 0.3s;
-                        li{
+
+                        li {
                             width: auto;
                             height: auto;
                             @include flex.flex();
-                            .nav-list-link-chiled{
+
+                            .nav-list-link-chiled {
                                 opacity: 1;
                                 color: white;
                                 padding-left: 2rem;
-                                &::after{
+
+                                &::after {
                                     content: "";
                                     width: 1rem;
                                     height: 100%;
@@ -192,11 +224,13 @@
                                     background-position: 50%;
                                 }
                             }
-                            .nav-list-link-chiled-large{
+
+                            .nav-list-link-chiled-large {
                                 opacity: 1;
                                 color: white;
                                 padding-left: 2rem;
-                                &::after{
+
+                                &::after {
                                     content: "";
                                     width: 1rem;
                                     height: 100%;
@@ -210,7 +244,8 @@
                 }
             }
         }
-        .nav-list-item-color-white{
+
+        .nav-list-item-color-white {
             position: relative;
             width: 13rem;
             height: 4rem;
@@ -218,6 +253,7 @@
             background: white;
             border: #6DCAE4 1px solid;
             border-radius: 25px;
+
             @media screen and (max-width: 768px) {
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -226,11 +262,13 @@
                 background-color: #ffffff00;
                 border: #ffffff00;
             }
-            &--link{
+
+            &--link {
                 color: transparent;
-	            background: repeating-linear-gradient( 90deg, #4169e1 0, #90CAF9 100% );
+                background: repeating-linear-gradient(90deg, #4169e1 0, #90CAF9 100%);
                 -webkit-background-clip: text;
-                @include font.font-jost-medium($fontsize:1.6rem);
+                @include font.font-jost-medium($fontsize: 1.6rem);
+
                 @media screen and (max-width: 768px) {
                     font-size: 5.6rem;
                     color: rgba(255, 255, 255, 0);
@@ -238,7 +276,8 @@
                 }
             }
         }
-        .nav-list-item-color-blue{
+
+        .nav-list-item-color-blue {
             position: relative;
             margin-left: 1.3rem;
             width: 13rem;
@@ -246,6 +285,7 @@
             @include flex.flex();
             border-radius: 25px;
             background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
+
             @media screen and (max-width: 768px) {
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -254,9 +294,11 @@
                 height: 7rem;
                 background: #ffffff00;
             }
-            &--link{
+
+            &--link {
                 color: rgb(255, 255, 255);
-                @include font.font-jost-medium($fontsize:1.6rem);
+                @include font.font-jost-medium($fontsize: 1.6rem);
+
                 @media screen and (max-width: 768px) {
                     font-size: 5.6rem;
                     color: rgba(255, 255, 255, 0);
@@ -264,54 +306,64 @@
             }
         }
     }
-    .nav-list.open{
+
+    .nav-list.open {
         @media screen and (max-width: 768px) {
             transition: 0.3s;
             z-index: 998;
-            background-color:#5C76F6 ;
-            pointer-events:all;
+            background-color: #5C76F6;
+            pointer-events: all;
         }
-        .nav-list-item{
+
+        .nav-list-item {
             width: 12rem;
             height: 4rem;
             @include flex.flex();
-            &--link{
-                @include font.font-jost-medium($fontsize:1.6rem);
+
+            &--link {
+                @include font.font-jost-medium($fontsize: 1.6rem);
+
                 @media screen and (max-width: 768px) {
                     color: white;
                     font-size: 5.6rem;
                 }
             }
+
             @media screen and (max-width: 768px) {
                 justify-content: flex-start;
             }
         }
-        .nav-list-item-acodion{
+
+        .nav-list-item-acodion {
             position: relative;
             width: 12rem;
             height: 4rem;
             @include flex.flex();
             flex-direction: column;
+
             @media screen and (max-width: 768px) {
                 justify-content: flex-start;
                 align-items: flex-start;
                 width: 100%;
                 height: auto;
             }
-            .nav-list-link{
+
+            .nav-list-link {
                 position: static;
                 z-index: 2;
                 height: 4rem;
                 width: 12rem;
                 padding-left: 2rem;
-                @include font.font-jost-medium($fontsize:1.6rem);
-                @include flex.flex($gap:0.5rem,$justify-content:flex-start);
+                @include font.font-jost-medium($fontsize: 1.6rem);
+                @include flex.flex($gap: 0.5rem, $justify-content: flex-start);
+
                 @media screen and (max-width: 768px) {
                     padding-left: 0%;
                     color: white;
                     font-size: 5.6rem;
                 }
-                &::after{
+
+                &::after {
                     content: "";
                     width: 1rem;
                     height: 100%;
@@ -321,65 +373,75 @@
                     background-position: 50%;
                 }
             }
-            ul{
+
+            ul {
                 position: absolute;
                 top: 0%;
                 left: 0%;
                 width: 100%;
                 height: 100%;
                 transition: 0.3s;
+
                 @media screen and (max-width: 768px) {
                     position: relative;
-                    @include flex.flex($gap:5rem,$align-items:flex-start ,$justify-content:flex-start);
+                    @include flex.flex($gap: 5rem, $align-items: flex-start, $justify-content: flex-start);
                     flex-direction: column;
                     margin-top: 6rem;
                 }
-                li{
-                    .nav-list-link-chiled{
+
+                li {
+                    .nav-list-link-chiled {
                         opacity: 0;
                         height: 4rem;
                         width: 12rem;
-                        @include flex.flex($gap:0.5rem,$justify-content:flex-start);
-                        @include font.font-jost-medium($fontsize:1.3rem);
+                        @include flex.flex($gap: 0.5rem, $justify-content: flex-start);
+                        @include font.font-jost-medium($fontsize: 1.3rem);
+
                         @media screen and (max-width: 768px) {
                             opacity: 1;
                             width: 100%;
-                            font-size:4rem ;
+                            font-size: 4rem;
                             color: white;
                         }
                     }
-                    .nav-list-link-chiled-large{
+
+                    .nav-list-link-chiled-large {
                         opacity: 0;
                         height: 4rem;
                         width: 20rem;
-                        @include flex.flex($gap:0.5rem,$justify-content:flex-start);
-                        @include font.font-jost-medium($fontsize:1.3rem);
+                        @include flex.flex($gap: 0.5rem, $justify-content: flex-start);
+                        @include font.font-jost-medium($fontsize: 1.3rem);
+
                         @media screen and (max-width: 768px) {
                             opacity: 1;
                             width: 100%;
-                            font-size:4rem ;
+                            font-size: 4rem;
                             color: white;
                         }
                     }
                 }
             }
-            &:hover{
+
+            &:hover {
                 @media screen and (min-width: 768px) {
-                    ul{
+                    ul {
                         top: 100%;
                         width: auto;
                         height: auto;
                         background-color: #131311;
                         transition: 0.3s;
-                        li{
+
+                        li {
                             width: auto;
                             height: auto;
                             @include flex.flex();
-                            .nav-list-link-chiled{
+
+                            .nav-list-link-chiled {
                                 opacity: 1;
                                 color: white;
                                 padding-left: 2rem;
-                                &::after{
+
+                                &::after {
                                     content: "";
                                     width: 1rem;
                                     height: 100%;
@@ -388,11 +450,13 @@
                                     background-position: 50%;
                                 }
                             }
-                            .nav-list-link-chiled-large{
+
+                            .nav-list-link-chiled-large {
                                 opacity: 1;
                                 color: white;
                                 padding-left: 2rem;
-                                &::after{
+
+                                &::after {
                                     content: "";
                                     width: 1rem;
                                     height: 100%;
@@ -406,7 +470,8 @@
                 }
             }
         }
-        .nav-list-item-color-white{
+
+        .nav-list-item-color-white {
             position: relative;
             width: 13rem;
             height: 4rem;
@@ -414,6 +479,7 @@
             background: white;
             border: #6DCAE4 1px solid;
             border-radius: 25px;
+
             @media screen and (max-width: 768px) {
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -422,18 +488,21 @@
                 background-color: #ffffff00;
                 border: #ffffff00;
             }
-            &--link{
+
+            &--link {
                 color: transparent;
-	            background: repeating-linear-gradient( 90deg, #4169e1 0, #90CAF9 100% );
+                background: repeating-linear-gradient(90deg, #4169e1 0, #90CAF9 100%);
                 -webkit-background-clip: text;
-                @include font.font-jost-medium($fontsize:1.6rem);
+                @include font.font-jost-medium($fontsize: 1.6rem);
+
                 @media screen and (max-width: 768px) {
                     font-size: 5.6rem;
                     color: white;
                 }
             }
         }
-        .nav-list-item-color-blue{
+
+        .nav-list-item-color-blue {
             position: relative;
             margin-left: 1.3rem;
             width: 13rem;
@@ -441,6 +510,7 @@
             @include flex.flex();
             border-radius: 25px;
             background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
+
             @media screen and (max-width: 768px) {
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -449,17 +519,21 @@
                 height: 7rem;
                 background: #ffffff00;
             }
-            &--link{
+
+            &--link {
                 color: white;
-                @include font.font-jost-medium($fontsize:1.6rem);
+                @include font.font-jost-medium($fontsize: 1.6rem);
+
                 @media screen and (max-width: 768px) {
                     font-size: 5.6rem;
                 }
             }
         }
     }
-    .nav-button{
+
+    .nav-button {
         display: none;
+
         @media screen and (max-width: 768px) {
             width: 13rem;
             height: 13rem;
@@ -468,11 +542,12 @@
             position: relative;
             padding: 3rem 0;
             z-index: 999;
-            @include flex.flex($justify-content:space-around);
+            @include flex.flex($justify-content: space-around);
             flex-direction: column;
             transition: 0.3s;
         }
-        span{
+
+        span {
             transition: 0.3s;
             display: block;
             width: 7rem;
@@ -480,24 +555,29 @@
             background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
         }
     }
-    .nav-button.open{
+
+    .nav-button.open {
         transition: 0.3s;
         border: 1.5px solid white;
-        span{
+
+        span {
             transition: 0.3s;
             background: white;
             position: absolute;
             top: 50%;
             left: 50%;
         }
-        .nav-button--line1{
-            transform: translate(-50%,-50%) rotate(130deg);
+
+        .nav-button--line1 {
+            transform: translate(-50%, -50%) rotate(130deg);
         }
-        .nav-button--line2{
+
+        .nav-button--line2 {
             width: 0px;
         }
-        .nav-button--line3{
-            transform: translate(-50%,-50%) rotate(-130deg);
+
+        .nav-button--line3 {
+            transform: translate(-50%, -50%) rotate(-130deg);
         }
     }
 }

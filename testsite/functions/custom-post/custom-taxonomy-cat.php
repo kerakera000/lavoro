@@ -29,19 +29,15 @@
             'slug' => 'website'
         ),
         array(
-            'name' => '進行管理(PM/PMO)',
+            'name' => 'プロジェクト開発',
             'slug' => 'progressmanagement'
-        ),
-        array(
-            'name' => '映像制作',
-            'slug' => 'videoproduction'
         ),
         array(
             'name' => '業務システム開発',
             'slug' => 'systemdevelopment'
         ),
         array(
-            'name' => 'プロジェクト開発',
+            'name' => '進行管理(PM/PMO)',
             'slug' => 'projectdevelopment'
         ),
         );

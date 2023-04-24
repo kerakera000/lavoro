@@ -1,0 +1,165 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.W-works-content{
+    width: 100%;
+    height: auto;
+    padding: 0 10rem 8rem;
+    @include flex.flex();
+    flex-direction: column;
+    background-color: #F8F8F8;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1607843137);
+    @media screen and (max-width: 768px) {
+        padding: 0 5rem 20rem;
+    }
+    &__buttons{
+        width: 100%;
+        @include flex.flex($justify-content:flex-start,$gap:2rem);
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .W-works-button{
+            width: auto;
+            min-width: 10rem;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            border: 1px solid #959595;
+            @include font.font-Noto-bold($fontsize:1.6rem);
+            @include flex.flex();
+            color: #959595;
+            transition: 0.3s;
+            @media screen and (max-width: 768px) {
+                min-width: 27rem;
+                padding: 2rem 2rem !important;
+            }
+            &:hover{
+                transition: 0.3s;
+                border: 1px solid #ffffff00;
+                color: #ffffff;
+                background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
+            }
+        }
+        .open{
+            width: auto;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            border: 1px solid #ffffff00;
+            color: #ffffff;
+            background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
+        }
+    }
+    .page-content{
+        display: none;
+        &.openpage{
+            display: flex;
+            width: 80%;
+            height: auto;
+            margin-top: 6rem;
+            @include flex.flex();
+            flex-direction: column;
+            @include flex.flex($justify-content:center,$gap: 15rem);
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                gap: 10rem;
+            }
+            .page-numbers{
+                @include font.font-Noto-bold(2.8rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 5rem;
+                }
+                color: #868686;
+                &.current{
+                    color: black;
+                }
+            }
+            .Wpagenation {
+                @include flex.flex($gap: 2rem);
+                .prev {
+                    color: #6DCAE4;
+                }
+                .next{
+                    color: #6DCAE4;
+                }
+            }
+            .W-list-content {
+                width: 100%;
+                @include flex.flex($justify-content: space-between);
+                flex-wrap: wrap;
+            }
+            .Wpost{
+                width: 48%;
+                height: auto;
+                margin-top: 4rem;
+                @include flex.flex();
+                flex-direction: column;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+                &__box{
+                    width: 100%;
+                    &--img{
+                        width: 100%;
+                        height: 40rem;
+                        background: #FFFFFF 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 3px 6px #00000029;
+                        border-radius: 20px;
+                        @include flex.flex();
+                        @media screen and (max-width: 768px) {
+                            height: 50rem;
+                        }
+                        img{
+                            width: 80%;
+                            height: 80%;
+                            object-fit: contain;
+                        }
+                    }
+                    &--title{
+                        margin-top: 1.7rem;
+                        @include font.font-Noto-bold($fontsize:2rem);
+                        @media screen and (max-width: 768px) {
+                            font-size: 5rem;
+                        }
+                    }
+                    &--categories{
+                        margin-top: 0.9rem;
+                        padding-left: 2rem;
+                        width: 100%;
+                        @include font.font-Noto-midium($fontsize:1.6rem);
+                        @include flex.flex($justify-content:flex-start);
+                        @media screen and (max-width: 768px) {
+                            font-size: 4rem;
+                            flex-wrap: wrap;
+                            padding-left: 5rem;
+                        }
+                        color: #676767;
+                        .category-link{
+                            width: auto;
+                            margin-right:2.5rem;
+                            position: relative;
+                            @media screen and (max-width: 768px) {
+                                margin-right: 5rem;
+                            }
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                width: 1rem;
+                                height: 1rem;
+                                top: 50%;
+                                left: 0%;
+                                transform: translate(-1.4rem,-50%);
+                                border-radius: 50%;
+                                background-color: #2A52D1;
+                                @media screen and (max-width: 768px) {
+                                    width: 2rem;
+                                    height: 2rem;
+                                    transform: translate(-3.5rem, -50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
