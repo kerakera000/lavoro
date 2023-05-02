@@ -1,8 +1,9 @@
 <?php
     function create_custom_page() {
         $pages = array(
-            // array('title' => 'newspage', 'template' => 'page-news.php'),
+            array('title' => 'newspage', 'template' => 'page-news.php'),
             array('title' => 'aboutpage', 'template' => 'page-about.php'),
+            array('title' => 'businesspage', 'template' => 'page-business.php'),
             // array('title' => 'blogpage', 'template' => 'page-blog.php'),
             array('title' => 'contactpage', 'template' => 'page-contact.php'),
             // array('title' => 'faqpage', 'template' => 'page-faq.php'),

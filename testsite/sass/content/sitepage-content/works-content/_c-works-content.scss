@@ -17,7 +17,7 @@
         @include flex.flex($justify-content:flex-start,$gap:2rem);
         @media screen and (max-width: 768px) {
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
         }
         .W-works-button{
             width: auto;
@@ -53,7 +53,7 @@
         display: none;
         &.openpage{
             display: flex;
-            width: 80%;
+            width: 100%;
             height: auto;
             margin-top: 6rem;
             @include flex.flex();

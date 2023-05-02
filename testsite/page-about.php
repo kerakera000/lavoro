@@ -6,6 +6,7 @@ Template Name: page-about
 <?php get_header(); ?>
 
 <section class="W-works-kv">
+  <div class="max-inner">
     <div class="Breadcrumb-list">
         <div class="Breadcrumb">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="Breadcrumb__top">
@@ -29,7 +30,7 @@ Template Name: page-about
 
     <div class="about-titlebox">
         <div class="about-titlebox__text">
-            <p>LAVOROは「新しい」と「楽しい」を発信する会社です。</p>
+            <p>LAVOROは「新しい」と「楽しい」<br class="spbr">を発信する会社です。</p>
         </div>
         <div class="about-titlebox__button">
             <div class="about-link-button">
@@ -39,9 +40,11 @@ Template Name: page-about
             </div>
         </div>
     </div>
+  </div>
 </section>
 
 <section class="Aabout-cnt">
+  <div class="max-inner">
     <div class="Aabout-cnt__title">
         <div class="main-title">
             <span></span>
@@ -73,7 +76,7 @@ Template Name: page-about
           <h2>2</h2>
         </div>
         <div class="Aabout--card-img">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/1Value1.png" alt="value">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/2Value2.png" alt="value">
         </div>
         <p class="Aabout--card-text">進化するコミュティを作る</p>
       </div>
@@ -84,7 +87,7 @@ Template Name: page-about
           <h2>3</h2>
         </div>
         <div class="Aabout--card-img">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/1Value1.png" alt="value">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/3Value3.png" alt="value">
         </div>
         <p class="Aabout--card-text">成長する喜びを共感する</p>
       </div>
@@ -118,43 +121,45 @@ Template Name: page-about
 
     <div class="Aabout-cnt__mission rev">
       <div class="Aabout-cnt__mission--text">
-        <h2>ものづくりで<span>未来の価値</span>を作る</h2>
-        <p>インターネットやスマートフォンの普及により便利になる一報、こんなサービスがあったらいいなといった、未来のサービスがまだまだ隠れています。私たちはデジタルの力で、サービス提供、 技術的支援をすることで未来のサービスを作り続けるため、たくさんの仲間と解決していく必要があります。 その中でも、弊社では未経験や女性が活躍できる場所・経験を増やし、活躍できる人のフィールドをこれまで以上の拡大を目指します。</p>
+        <h2>ものづくりで<br class="spbr"><span>未来の価値</span>を作る</h2>
+        <p>インターネットやスマートフォンの普及により便利になる一報、こんなサービスがあったらいいなといった、未来のサービスがまだまだ隠れています。私たちはデジタルの力で、サービス提供、 技術的支援をすることで未来のサービスを作り続けるため、たくさんの仲間と解決していく必要があります。<br class="spbr"><br class="spbr">その中でも、弊社では未経験や女性が活躍できる場所・経験を増やし、活躍できる人のフィールドをこれまで以上の拡大を目指します。</p>
       </div>
       <div class="Aabout-cnt__mission--img">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/5Vision.png" alt="value">
       </div>
     </div>
-
-
+  </div>
 </section>
 
 <section class="Aabout-ceo">
-  <div class="Aabout-ceo__text">
-    <div class="Aabout-cnt__title no-m">
-        <div class="Aabout-cnt__title--sub no-m">
-          <span class="line"></span>
-          <h3>CEO MESSAGE</h3>
-          <p class="grad">代表メッセージ</p>
-        </div>
-    </div>
-    <h2 class="Aabout-ceo-title">次の「新しい」と「楽しい」を作る<br>
-        LAVOROは次の体験価値を発信会社です。</h2>
-    <p class="Aabout-ceo-text">
-      私たちは、インターネットという技術を使うことで、これまでに多くの体験をしてきました。
-      しかし、まだまだ新しいものがこれから誕生していきます。もっと、「新しい」が増えて、「新しい」が「楽しい」になることで幸
-      せになる人を増やすことが重要だと考えております。そのためには、「新しい」を作る人
-      と体験する人を増やすことでより実現に近づけることが必要であり、我々がその担い手になることが使命だと認識しています。
-      そのために、弊社では未経験、未就職者の雇用を積極的に行い、発想の方向を複数に増やし、「楽しい」を同時に増やす取り組みを行なっております。
-      LAVOROは仕事を通じて、多くの人とよりよいサービスを提供する会社を目指してまいります。
-    </p>
+  <div class="max-inner-ceo">
+    <div class="Aabout-ceo__text">
+      <div class="Aabout-cnt__title no-m">
+          <div class="Aabout-cnt__title--sub no-m">
+            <span class="line"></span>
+            <h3>CEO MESSAGE</h3>
+            <p class="grad">代表メッセージ</p>
+          </div>
+      </div>
+      <h2 class="Aabout-ceo-title">次の「新しい」と「楽しい」を作る<br>
+          LAVOROは次の体験価値を発信会社です。</h2>
+      <p class="Aabout-ceo-text">
+        私たちは、インターネットという技術を使うことで、これまでに多くの体験をしてきました。
+        しかし、まだまだ新しいものがこれから誕生していきます。もっと、「新しい」が増えて、「新しい」が「楽しい」になることで幸
+        せになる人を増やすことが重要だと考えております。そのためには、「新しい」を作る人
+        と体験する人を増やすことでより実現に近づけることが必要であり、我々がその担い手になることが使命だと認識しています。
+        そのために、弊社では未経験、未就職者の雇用を積極的に行い、発想の方向を複数に増やし、「楽しい」を同時に増やす取り組みを行なっております。
+        LAVOROは仕事を通じて、多くの人とよりよいサービスを提供する会社を目指してまいります。
+      </p>
 
-    <p class="Aabout-ceo-name">
-      代表取締役<span>篠村 洋介</span>
-    </p>
-  </div>
-  <div class="Aabout-ceo__img">
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/6CEOexample.png" alt="value">
+      <p class="Aabout-ceo-name">
+        代表取締役<span>篠村 洋介</span>
+      </p>
+    </div>
+    <div class="Aabout-ceo__img">
+      <img class="Aceoimg-pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/6CEOexample.png" alt="value">
+      <img class="Aceoimg-sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-pagesp/6CEOexample.png" alt="value">
+    </div>
   </div>
 </section>
 

@@ -16,7 +16,7 @@
 		
     <?php wp_head(); ?>
 	</head>
-	<body class="">
+	<body id="body">
 		<header class="header">
 			<a href="<?php echo esc_url(home_url('/')); ?>" id="HeaderTitle" class="header__title">
 				<img class="header__title--pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/title-logo.png" alt="LAVORO">
@@ -31,38 +31,26 @@
 						</a>
 						<ul>
 							<li>
-								<a class="nav-list-link-chiled" href="#">
+								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?>">
 								代表挨拶
 								</a>
 							</li>
 							<li>
-								<a class="nav-list-link-chiled" href="#">
+								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?>">
 								企業理念
 								</a>
 							</li>
 							<li>
-								<a class="nav-list-link-chiled" href="#">
+								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?>">
 								会社概要
 								</a>
 							</li>
 						</ul>
 					</li>
-					<li id="header-buisiness" class="nav-list-item-acodion">
-						<a class="nav-list-link" href="#">
+					<li class="nav-list-item-acodion business-nav">
+						<a class="nav-list-item--link" href="<?php echo esc_url(home_url('/businesspage')); ?>">
 							BUISINESS
 						</a>
-						<ul>
-							<li>
-								<a class="nav-list-link-chiled-large" href="#">
-								コンテンツ制作事業
-								</a>
-							</li>
-							<li>
-								<a class="nav-list-link-chiled-large" href="#">
-								アプリ/業務システム開発
-								</a>
-							</li>
-						</ul>
 					</li>
 					<li class="nav-list-item-acodion">
 						<a class="nav-list-item--link" href="<?php echo esc_url(home_url('/workspage')); ?>">
@@ -71,18 +59,18 @@
 					</li>
 
 					<li class="nav-list-item-acodion">
-						<a class="nav-list-item--link" href="#">
+						<a class="nav-list-item--link" href="<?php echo esc_url(home_url('/newspage')); ?>">
 							NEWS
 						</a>
 					</li>
 
-					<li class="nav-list-item-color-white">
-						<a class="nav-list-item-color-white--link" href="<?php echo esc_url(home_url('/recruitpage')); ?>">
+					<li class="nav-color-white">
+						<a class="nav-color-white--link" href="<?php echo esc_url(home_url('/recruitpage')); ?>">
 							RECRUIT
 						</a>
 					</li>
-					<li class="nav-list-item-color-blue">
-						<a class="nav-list-item-color-blue--link" href="<?php echo esc_url(home_url('/contactpage')); ?>">
+					<li class="nav-color-blue">
+						<a class="nav-color-blue--link" href="<?php echo esc_url(home_url('/contactpage')); ?>">
 							CONTACT
 						</a>
 					</li>

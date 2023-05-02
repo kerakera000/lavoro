@@ -15,6 +15,7 @@
         height: 45rem;
         position: relative;
         padding: 9rem 5rem 3rem;
+        overflow: hidden;
         @include flex.flex($justify-content:space-between);
         @media screen and (max-width: 768px) {
             width: 100%;
@@ -28,6 +29,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+            transition: 0.4s;
             img{
                 width: 100%;
                 height: 100%;
@@ -103,6 +105,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+        }
+        &:hover{
+            .contact__card--backimg{
+                scale: 1.1;
+            }
         }
         &.max{
             width: 100%;

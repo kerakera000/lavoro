@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("Wbutton2"),
         document.getElementById("Wbutton3"),
         document.getElementById("Wbutton4"),
-        document.getElementById("Wbutton5")
     ];
 
     const pages = [
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("Wbutton2-page"),
         document.getElementById("Wbutton3-page"),
         document.getElementById("Wbutton4-page"),
-        document.getElementById("Wbutton5-page")
     ];
 
     function switchPage(index) {
@@ -39,24 +37,68 @@ document.addEventListener("DOMContentLoaded", function(){
                 buttons[i].classList.remove("open");
             }
         }
-    }
+    };
 
     // 各ボタンにクリックイベントを追加する
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function () {
             switchPage(i);
         });
-    }
-
-    const pageContent = document.querySelector('.page-content');
-
-    const observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
-            if (mutation.attributeName === 'class' && mutation.target.classList.contains('openpage')) {
-                location.reload();
-            }
-        });
-    });
-
-    observer.observe(pageContent, { attributes: true });
+    };
 });
+
+window.onload = function() {
+  // ページ全体が読み込まれた後に実行されるコード
+    const buttons2 = [
+        document.getElementById("Bbutton1"),
+        document.getElementById("Bbutton2"),
+        document.getElementById("Bbutton3"),
+        document.getElementById("Bbutton4"),
+    ];
+
+    const pages2 = [
+        document.getElementById("Bbutton1-page"),
+        document.getElementById("Bbutton2-page"),
+        document.getElementById("Bbutton3-page"),
+        document.getElementById("Bbutton4-page"),
+    ];
+
+    const pages3 = [
+        document.getElementById("Bbutton1-page1"),
+        document.getElementById("Bbutton2-page2"),
+        document.getElementById("Bbutton3-page3"),
+        document.getElementById("Bbutton4-page4"),
+    ];
+
+    function switchPage1(index) {
+        for (let i = 0; i < pages2.length; i++) {
+            if (i === index) {
+                pages2[i].classList.add("openpage");
+                buttons2[i].classList.add("open");
+            } else {
+                pages2[i].classList.remove("openpage");
+                buttons2[i].classList.remove("open");
+            }
+        }
+    };
+
+    function switchPage2(index) {
+        for (let i = 0; i < pages3.length; i++) {
+            if (i === index) {
+                pages3[i].classList.add("openpage");
+                buttons2[i].classList.add("open");
+            } else {
+                pages3[i].classList.remove("openpage");
+                buttons2[i].classList.remove("open");
+            }
+        }
+    };
+
+    // 各ボタンにクリックイベントを追加する
+    for (let i = 0; i < buttons2.length; i++) {
+        buttons2[i].addEventListener("click", function () {
+            switchPage1(i);
+            switchPage2(i);
+        });
+    };
+}

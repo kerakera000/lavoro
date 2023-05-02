@@ -12,6 +12,9 @@
     }
     &__title{
         margin-top: 3rem;
+        width: 100%;
+        @include flex.flex($justify-content:flex-start);
+        flex-direction: column;
     }
     &__text{
         width: 100%;

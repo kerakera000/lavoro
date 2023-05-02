@@ -6,7 +6,14 @@
     height: auto;
     padding: 15rem 10rem 10rem;
     background-color: #F8F8F8;
+    @include flex.flex();
+    flex-direction: column;
     @media screen and (max-width: 768px) {
         padding: 30rem 5rem 10rem;
     }
+}
+.max-inner {
+    max-width: 180rem;
+    @include flex.flex();
+    flex-direction: column;
 }

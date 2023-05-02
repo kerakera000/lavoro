@@ -11,7 +11,8 @@
         @include flex.flex($align-items:flex-start);
         flex-direction: column;
         h2{
-            @include font.font-Noto-semibold($fontsize:7.2rem);
+            @include font.font-jost-medium($fontsize:7.2rem);
+            color: rgb(58, 58, 58);
             @media screen and (max-width: 768px) {
                 font-size: 8rem;
             }

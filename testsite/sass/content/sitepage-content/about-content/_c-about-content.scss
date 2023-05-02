@@ -7,13 +7,19 @@
     padding: 0 8rem 10rem;
     @include flex.flex();
     flex-direction: column;
+    @media screen and (max-width: 768px) {
+        padding: 0 8rem 20rem;
+    }
     &__title{
         width: 100%;
         margin-top: 8rem;
         @include flex.flex($justify-content:flex-start,$align-items:flex-start);
         flex-direction: column;
         &.Asecon{
-            margin-top: 0%;
+            margin-top: 0rem;
+            @media screen and (max-width: 768px) {
+                margin-top: 20rem;
+            }
         }
         &.Aright{
             align-items: flex-end;
@@ -35,7 +41,7 @@
                 flex-wrap: wrap;
             }
             &.long-top{
-                margin-top: 13rem;
+                margin-top: 10rem;
                 @media screen and (max-width: 768px) {
                     margin-top: 11rem;
                 }
@@ -59,7 +65,8 @@
                 margin-right: 2rem;
                 background: transparent linear-gradient(180deg, #70CFE4 0%, #5C76F6 100%) 0% 0% no-repeat padding-box;
                 @media screen and (max-width: 768px) {
-                    
+                    width: 2rem;
+                    height: 2rem;
                 }
                 &.line{
                     width: 1rem;
@@ -71,10 +78,14 @@
                 @include font.font-jost-bold($fontsize:4rem);
                 @media screen and (max-width: 768px) {
                     width: 70%;
+                    font-size: 7rem;
                 }
             }
             p{
                 @include font.font-jost-bold($fontsize:2rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
                 &.grad{
                     color: transparent;
                     background: repeating-linear-gradient(90deg, #70CFE4 0, #5C76F6 100%);
@@ -102,13 +113,22 @@
                 padding-left: 2rem;
                 transform: translate(-0%,3.5rem);
                 @include flex.flex($justify-content:flex-start,$gap:0.5rem);
+                @media screen and (max-width: 768px) {
+                    transform: translate(-0%, 6rem);
+                }
                 p{
                     padding-top: 1.8rem;
                     writing-mode: vertical-rl;
                     @include font.font-oswald-medium($fontsize: 1.4rem);
+                    @media screen and (max-width: 768px) {
+                        font-size: 2rem;
+                    }
                 }
                 h2{
                     @include font.font-oswald-medium($fontsize:5rem);
+                    @media screen and (max-width: 768px) {
+                        font-size: 9rem;
+                    }
                 }
             }
             .Aabout--card-img{
@@ -129,6 +149,10 @@
                 text-align: center;
                 margin-top: 1rem;
                 @include font.font-jost-bold($fontsize:2.2rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 4rem;
+                    margin-top: 4rem;
+                }
             }
         }
     }
@@ -161,7 +185,7 @@
         &--text{
             width: 50%;
             height: 27vw;
-            padding:5rem ;
+            padding:2rem 5rem ;
             @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:3rem);
             flex-direction: column;
             @media screen and (max-width: 768px) {
@@ -170,13 +194,33 @@
                 padding: 2rem 0 0;
             }
             h2{
-                @include font.font-Noto-bold($fontsize:3.2rem);
+                @include font.font-Noto-bold($fontsize:4.6rem);
                 span{
                     color: #5C76F6;
+                }
+                @media screen and (max-width: 768px) {
+                    font-size: 6rem;
+                }
+                .spbr {
+                    display: none;
+
+                    @media screen and (max-width: 768px) {
+                        display: inline;
+                    }
                 }
             }
             p{
                 @include font.font-Noto-midium($fontsize:2.2rem,$lineHeight:6rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3.8rem;
+                    line-height: 8rem;
+                }
+                .spbr {
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        display: inline;
+                    }
+                }
             }
         }
     }

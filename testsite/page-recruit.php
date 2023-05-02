@@ -50,9 +50,9 @@ Template Name: page-recruit
                 <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
             </div>
             <div class="R-recruit-card--text">
-                <p class="R-recruit-card--text--subtitle">director</p>
+                <p class="R-recruit-card--text--subtitle">【プロジェクトの管理・進行】</p>
                 <h3>ディレクター</h3>
-                <p class="R-recruit-card--text--maintext">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                <p class="R-recruit-card--text--maintext">クライアントの課題や改善点に向き合う、ディレクターを募集しています。</p>
                 <a href="" class="R-recruit-button">
                     <div class="R-recruit-button--link">
                         応募する
@@ -66,9 +66,9 @@ Template Name: page-recruit
                 <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
             </div>
             <div class="R-recruit-card--text">
-                <p class="R-recruit-card--text--subtitle">director</p>
-                <h3>ディレクター</h3>
-                <p class="R-recruit-card--text--maintext">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                <p class="R-recruit-card--text--subtitle">【ウェブ制作・保守運用】</p>
+                <h3>フロントエンドエンジニア</h3>
+                <p class="R-recruit-card--text--maintext">デザイナーと連携し、お客様に満足頂ける制作ができる方を募集してます。</p>
                 <a href="" class="R-recruit-button">
                     <div class="R-recruit-button--link">
                         応募する
@@ -82,9 +82,9 @@ Template Name: page-recruit
                 <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
             </div>
             <div class="R-recruit-card--text">
-                <p class="R-recruit-card--text--subtitle">director</p>
-                <h3>ディレクター</h3>
-                <p class="R-recruit-card--text--maintext">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                <p class="R-recruit-card--text--subtitle">【システム開発・保守運用】</p>
+                <h3>バックエンドエンジニア</h3>
+                <p class="R-recruit-card--text--maintext">要件書を元にDB設計、構成が柔軟に対応できる方を募集しております。</p>
                 <a href="" class="R-recruit-button">
                     <div class="R-recruit-button--link">
                         応募する
@@ -100,9 +100,9 @@ Template Name: page-recruit
                 <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
             </div>
             <div class="R-recruit-card--text">
-                <p class="R-recruit-card--text--subtitle">director</p>
-                <h3>ディレクター</h3>
-                <p class="R-recruit-card--text--maintext">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                <p class="R-recruit-card--text--subtitle">【企画立案・運用】</p>
+                <h3>ディレクタプランナー（未経験可）</h3>
+                <p class="R-recruit-card--text--maintext">新規企画案件、自社進行案件において資料の作成や社内提案ができる方を募集しています。</p>
                 <a href="" class="R-recruit-button">
                     <div class="R-recruit-button--link">
                         応募する

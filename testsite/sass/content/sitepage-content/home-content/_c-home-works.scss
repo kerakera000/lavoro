@@ -1,0 +1,144 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.works{
+    width: 100%;
+    height: auto;
+    padding: 0rem 8rem 16rem;
+    background: #F8F8F8;
+    box-shadow: 0px 10px 10px #00000029;
+    @include flex.flex();
+    .max-inner{
+        max-width: 180rem;
+        @include flex.flex();
+        flex-direction: column;
+    }
+    &__title{
+        width: 100%;
+        @include flex.flex($justify-content:flex-start);
+    }
+    &__content{
+        width: 100%;
+        @include flex.flex($gap:10rem,$align-items:flex-start);
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        &--page{
+            width: 50%;
+            height: auto;
+            @include flex.flex();
+            flex-direction: column;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+            .page-content{
+                width: 100%;
+                height: auto;
+                @include flex.flex($align-items:flex-start,$gap:6rem);
+                flex-direction: column;
+                @media screen and (max-width: 768px) {
+                    gap: 10rem;
+                }
+                .Wpost {
+                    width: 100%;
+                    height: auto;
+                    margin-top: 4rem;
+                    @include flex.flex();
+                    flex-direction: column;
+            
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                    }
+            
+                    &__box {
+                        width: 100%;
+            
+                        &--img {
+                            width: 100%;
+                            height: 40rem;
+                            background: #FFFFFF 0% 0% no-repeat padding-box;
+                            box-shadow: 0px 3px 6px #00000029;
+                            border-radius: 20px;
+                            @include flex.flex();
+            
+                            @media screen and (max-width: 768px) {
+                                height: 50rem;
+                            }
+            
+                            img {
+                                width: 80%;
+                                height: 80%;
+                                object-fit: contain;
+                            }
+                        }
+            
+                        &--title {
+                            margin-top: 1.7rem;
+                            @include font.font-Noto-bold($fontsize: 2rem);
+            
+                            @media screen and (max-width: 768px) {
+                                font-size: 5rem;
+                            }
+                        }
+            
+                        &--categories {
+                            margin-top: 0.9rem;
+                            padding-left: 2rem;
+                            width: 100%;
+                            @include font.font-Noto-midium($fontsize: 1.6rem);
+                            @include flex.flex($justify-content: flex-start);
+            
+                            @media screen and (max-width: 768px) {
+                                font-size: 4rem;
+                                flex-wrap: wrap;
+                                padding-left: 5rem;
+                            }
+            
+                            color: #676767;
+            
+                            .category-link {
+                                width: auto;
+                                margin-right: 2.5rem;
+                                position: relative;
+            
+                                @media screen and (max-width: 768px) {
+                                    margin-right: 5rem;
+                                }
+            
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 1rem;
+                                    height: 1rem;
+                                    top: 50%;
+                                    left: 0%;
+                                    transform: translate(-1.4rem, -50%);
+                                    border-radius: 50%;
+                                    background-color: #2A52D1;
+            
+                                    @media screen and (max-width: 768px) {
+                                        width: 2rem;
+                                        height: 2rem;
+                                        transform: translate(-3.5rem, -50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .works-secon{
+            padding-top: 20rem;
+            @media screen and (max-width: 768px) {
+                padding-top: 0rem;
+            }
+        }
+    }
+    &__button{
+        margin-top: 5rem;
+        width:100%;
+        height: auto;
+        @include flex.flex();
+    }
+}
