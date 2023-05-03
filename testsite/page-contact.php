@@ -6,6 +6,7 @@ Template Name: page-contact
 <?php get_header(); ?>
 
 <section class="p-contact">
+    <div class="max-inner">
     <div class="Breadcrumb-list">
         <div class="Breadcrumb">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="Breadcrumb__top">
@@ -85,6 +86,7 @@ Template Name: page-contact
                 </div>
             </div>
         </form>
+    </div>
     </div>
 </section>
 

@@ -9,7 +9,7 @@
     box-shadow: 0px 10px 10px #00000029;
     @include flex.flex();
     .max-inner{
-        max-width: 180rem;
+        max-width: 170rem;
         @include flex.flex();
         flex-direction: column;
     }

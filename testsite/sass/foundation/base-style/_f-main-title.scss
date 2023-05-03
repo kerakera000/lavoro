@@ -3,6 +3,10 @@
 
 .main-title{
     @include flex.flex($gap:1.5rem);
+    height: 4rem;
+    @media screen and (max-width: 768px) {
+        height: 10rem;
+    }
     span{
         display: block;
         width: 6px;
@@ -10,13 +14,14 @@
         background: transparent linear-gradient(163deg, #40BEE2 0%, #356ED5 100%) 0% 0% no-repeat padding-box;
         border-radius: 3px;
         @media screen and (max-width: 768px) {
-            height: 6rem;
+            height: 60%;
         }
     }
     h2{
         @include font.font-jost-semibold($fontsize:5rem);
+        color: rgb(58, 58, 58);
         @media screen and (max-width: 768px) {
-            font-size: 8rem;
+            font-size: 7rem;
         }
     }
     p{
@@ -24,8 +29,15 @@
         color: transparent;
         background: repeating-linear-gradient( 90deg, #70CFE4 0, #5C76F6 100% );
         -webkit-background-clip: text;
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
         @media screen and (max-width: 768px) {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 2rem;
         }
     }
 }

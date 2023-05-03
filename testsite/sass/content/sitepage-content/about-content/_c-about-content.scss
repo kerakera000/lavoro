@@ -23,7 +23,7 @@
         }
         &.Aright{
             align-items: flex-end;
-            padding-right: 20%;
+            padding-right: 30rem;
             @media screen and (max-width: 768px) {
                 padding-right: 0%;
                 align-items: flex-start;
@@ -76,6 +76,7 @@
             h3{
                 margin-right: 3rem;
                 @include font.font-jost-bold($fontsize:4rem);
+                color: rgb(58, 58, 58);
                 @media screen and (max-width: 768px) {
                     width: 70%;
                     font-size: 7rem;
@@ -83,6 +84,7 @@
             }
             p{
                 @include font.font-jost-bold($fontsize:2rem);
+                color: rgb(58, 58, 58);
                 @media screen and (max-width: 768px) {
                     font-size: 3rem;
                 }
@@ -119,6 +121,7 @@
                 p{
                     padding-top: 1.8rem;
                     writing-mode: vertical-rl;
+                    color: rgb(58, 58, 58);
                     @include font.font-oswald-medium($fontsize: 1.4rem);
                     @media screen and (max-width: 768px) {
                         font-size: 2rem;
@@ -126,6 +129,7 @@
                 }
                 h2{
                     @include font.font-oswald-medium($fontsize:5rem);
+                    color: rgb(58, 58, 58);
                     @media screen and (max-width: 768px) {
                         font-size: 9rem;
                     }
@@ -149,6 +153,7 @@
                 text-align: center;
                 margin-top: 1rem;
                 @include font.font-jost-bold($fontsize:2.2rem);
+                color: rgb(58, 58, 58);
                 @media screen and (max-width: 768px) {
                     font-size: 4rem;
                     margin-top: 4rem;
@@ -159,7 +164,7 @@
     &__mission{
         width: 100%;
         height: auto;
-        margin-top: 6rem;
+        margin-top: 3rem;
         @include flex.flex();
         @media screen and (max-width: 768px) {
             flex-direction: column;
@@ -194,7 +199,7 @@
                 padding: 2rem 0 0;
             }
             h2{
-                @include font.font-Noto-bold($fontsize:4.6rem);
+                @include font.font-Noto-bold($fontsize:3.4rem);
                 span{
                     color: #5C76F6;
                 }
@@ -210,7 +215,8 @@
                 }
             }
             p{
-                @include font.font-Noto-midium($fontsize:2.2rem,$lineHeight:6rem);
+                @include font.font-Noto-midium($fontsize:1.8rem,$lineHeight:6rem);
+                padding-right: 5rem;
                 @media screen and (max-width: 768px) {
                     font-size: 3.8rem;
                     line-height: 8rem;
@@ -221,6 +227,18 @@
                         display: inline;
                     }
                 }
+            }
+        }
+        .first{
+            padding: 2rem 0rem 2rem 5rem;
+            @media screen and (max-width: 768px) {
+                padding: 2rem 0rem 2rem 0rem;
+            }
+        }
+        .secon{
+            padding: 2rem 5rem 2rem 0rem;
+            @media screen and (max-width: 768px) {
+                padding: 2rem 0rem 2rem 0rem;
             }
         }
     }

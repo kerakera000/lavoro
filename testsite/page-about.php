@@ -105,9 +105,9 @@ Template Name: page-about
       <div class="Aabout-cnt__mission--img">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/4Mission.png" alt="value">
       </div>
-      <div class="Aabout-cnt__mission--text">
+      <div class="Aabout-cnt__mission--text first">
         <h2>デジタルの力で<span>新しい体験を</span></h2>
-        <p>デバイスの進化が加速し、よりこれまでにないサービスに触れることが多い時代になっています。<br>私たちはサービスを提供する立場として、新しい体験価値を提供するために、初めに働く環境を楽しい場所にすることが重要と捉えております。<br>それぞれのライフスタイルに応じた仕事の仕方を最優先に、仕事に対する価値観を高めていきます。</p>
+        <p>デバイスの進化が加速し、よりこれまでにないサービスに触れることが多い時代になっています。私たちはサービスを提供する立場として、新しい体験価値を提供するために、初めに働く環境を楽しい場所にすることが重要と捉えております。それぞれのライフスタイルに応じた仕事の仕方を最優先に、仕事に対する価値観を高めていきます。</p>
       </div>
     </div>
 
@@ -120,7 +120,7 @@ Template Name: page-about
     </div>
 
     <div class="Aabout-cnt__mission rev">
-      <div class="Aabout-cnt__mission--text">
+      <div class="Aabout-cnt__mission--text secon">
         <h2>ものづくりで<br class="spbr"><span>未来の価値</span>を作る</h2>
         <p>インターネットやスマートフォンの普及により便利になる一報、こんなサービスがあったらいいなといった、未来のサービスがまだまだ隠れています。私たちはデジタルの力で、サービス提供、 技術的支援をすることで未来のサービスを作り続けるため、たくさんの仲間と解決していく必要があります。<br class="spbr"><br class="spbr">その中でも、弊社では未経験や女性が活躍できる場所・経験を増やし、活躍できる人のフィールドをこれまで以上の拡大を目指します。</p>
       </div>

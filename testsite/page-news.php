@@ -6,25 +6,27 @@ Template Name: page-news
 <?php get_header(); ?>
 
 <section class="W-works-kv">
-    <div class="Breadcrumb-list">
-        <div class="Breadcrumb">
-            <a href="<?php echo esc_url(home_url('/')); ?>" class="Breadcrumb__top">
-                TOP
-            </a>
-            <p>></p>
-            <a href="" class="Breadcrumb__text">
-                NEWS
-            </a>
-        </div>
-    </div>
+    <div class="max-inner">
+      <div class="Breadcrumb-list">
+          <div class="Breadcrumb">
+              <a href="<?php echo esc_url(home_url('/')); ?>" class="Breadcrumb__top">
+                  TOP
+              </a>
+              <p>></p>
+              <a href="" class="Breadcrumb__text">
+                  NEWS
+              </a>
+          </div>
+      </div>
 
-    <div class="p-contact__title">
-        <div class="page-title">
-            <div class="page-title__text">
-                <h2>NEWS</h2>
-                <p>お知らせ</p>
-            </div>
-        </div>
+      <div class="p-contact__title">
+          <div class="page-title">
+              <div class="page-title__text">
+                  <h2>NEWS</h2>
+                  <p>お知らせ</p>
+              </div>
+          </div>
+      </div>
     </div>
 </section>
 
