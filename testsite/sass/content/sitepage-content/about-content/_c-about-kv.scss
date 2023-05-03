@@ -15,7 +15,7 @@
             text-align: left;
         }
         p{
-            @include font.font-Noto-midium($fontsize:1.8rem);
+            @include font.font-Noto-midium($fontsize:2.4rem);
             .spbr{
                 display: none;
                 @media screen and (max-width: 768px) {
@@ -40,7 +40,7 @@
             }
             button{
                 width: 30%;
-                height: 7rem;
+                height: 6rem;
                 margin-top: 3rem;
                 transition: 0.4s;
                 position: relative;

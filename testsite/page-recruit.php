@@ -102,7 +102,7 @@ Template Name: page-recruit
                 </div>
                 <div class="R-recruit-card--text">
                     <p class="R-recruit-card--text--subtitle">【企画立案・運用】</p>
-                    <h3>ディレクタプランナー（未経験可）</h3>
+                    <h3>ディレクタプランナー<br>（未経験可）</h3>
                     <p class="R-recruit-card--text--maintext">新規企画案件、自社進行案件において資料の作成や社内提案ができる方を募集しています。</p>
                     <a href="" class="R-recruit-button">
                         <div class="R-recruit-button--link">

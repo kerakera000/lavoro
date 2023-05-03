@@ -1,13 +1,16 @@
 <?php 
 
 function add_custom_fields(){
-    add_meta_box(
-        'custom_setting', //編集画面セクションのHTML ID
-        'カスタム情報', //編集画面セクションのタイトル、画面上に表示される
-        'insert_custom_fields', //編集画面セクションにHTML出力する関数
-        'works', //投稿タイプ名
-        'normal' //編集画面セクションが表示される部分
-    );
+    $post_types = array('works','news'); //投稿タイプ名を配列にまとめる
+    foreach ($post_types as $post_type) { //各投稿タイプに対してメタボックスを追加する
+        add_meta_box(
+            'custom_setting', //編集画面セクションのHTML ID
+            'カスタム情報', //編集画面セクションのタイトル、画面上に表示される
+            'insert_custom_fields', //編集画面セクションにHTML出力する関数
+            $post_type, //投稿タイプ名
+            'normal' //編集画面セクションが表示される部分
+        );
+    }
 }
 add_action('admin_menu', 'add_custom_fields');
 
@@ -20,20 +23,21 @@ add_action('post_edit_form_tag', 'custom_metabox_edit_form_tag');
 // カスタムフィールドの入力エリア
 function insert_custom_fields(){
     global $post;
-    //get_post_meta関数を使ってpostmeta情報を取得
-    $hoge_name = get_post_meta(
-        $post->ID, //投稿ID
-        'hoge_name', //キー名
-        true //戻り値を文字列にする場合true(falseの場合は配列)
-    );
     $main_text = get_post_meta($post->ID,'main_text',true);
     $hoge_thumbnail = get_post_meta($post->ID,'hoge_thumbnail',true);
-    echo '会社名： <input type="text" name="hoge_name" value="'.$hoge_name.'" /><br>';
-    echo 'テキスト： <input type="text" name="main_text" value="'.$main_text.'" /><br>';
+    if(get_post_type() == 'news'){ // newsの場合は会社名を表示しない
+        echo 'テキスト： <input type="text" name="main_text" value="'.$main_text.'" /><br>';
+    }else{
+        $hoge_name = get_post_meta(
+            $post->ID, //投稿ID
+            'hoge_name', //キー名
+            true //戻り値を文字列にする場合true(falseの場合は配列)
+        );
+        echo '会社名： <input type="text" name="hoge_name" value="'.$hoge_name.'" /><br>';
+        echo 'テキスト： <input type="text" name="main_text" value="'.$main_text.'" /><br>';
+    }
     echo '画像： <input type="file" name="hoge_thumbnail" accept="image/*" /><br>';
     if(isset($hoge_thumbnail) && strlen($hoge_thumbnail) > 0){
-        //hoge_thumbnailキーのpostmeta情報がある場合は、画像を表示
-        //$hoge_thumbnailには、後述するattach_idが格納されているので、wp_get_attachment_url関数にそのattach_idを渡して画像のURLを取得する
         echo '<img style="width: 200px;display: block;margin: 1em;" src="'.wp_get_attachment_url($hoge_thumbnail).'">';
     }
 }

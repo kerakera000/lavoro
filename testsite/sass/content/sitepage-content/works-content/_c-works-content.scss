@@ -31,6 +31,7 @@
             transition: 0.3s;
             @media screen and (max-width: 768px) {
                 min-width: 27rem;
+                font-size: 3rem;
                 padding: 2rem 2rem !important;
             }
             &:hover{
@@ -62,11 +63,12 @@
             @media screen and (max-width: 768px) {
                 flex-direction: column;
                 gap: 10rem;
+                margin-top: 12rem;
             }
             .page-numbers{
                 @include font.font-Noto-bold(2.8rem);
                 @media screen and (max-width: 768px) {
-                    font-size: 5rem;
+                    font-size: 4rem;
                 }
                 color: #868686;
                 &.current{
@@ -86,6 +88,9 @@
                 width: 100%;
                 @include flex.flex($justify-content: space-between);
                 flex-wrap: wrap;
+                @media screen and (max-width: 768px) {
+                    gap: 10rem;
+                }
             }
             .Wpost{
                 width: 48%;
@@ -128,7 +133,7 @@
                         @include font.font-Noto-midium($fontsize:1.6rem);
                         @include flex.flex($justify-content:flex-start);
                         @media screen and (max-width: 768px) {
-                            font-size: 4rem;
+                            font-size: 3.7rem;
                             flex-wrap: wrap;
                             padding-left: 5rem;
                         }

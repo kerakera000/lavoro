@@ -122,7 +122,7 @@ Template Name: page-about
     <div class="Aabout-cnt__mission rev">
       <div class="Aabout-cnt__mission--text secon">
         <h2>ものづくりで<br class="spbr"><span>未来の価値</span>を作る</h2>
-        <p>インターネットやスマートフォンの普及により便利になる一報、こんなサービスがあったらいいなといった、未来のサービスがまだまだ隠れています。私たちはデジタルの力で、サービス提供、 技術的支援をすることで未来のサービスを作り続けるため、たくさんの仲間と解決していく必要があります。<br class="spbr"><br class="spbr">その中でも、弊社では未経験や女性が活躍できる場所・経験を増やし、活躍できる人のフィールドをこれまで以上の拡大を目指します。</p>
+        <p>インターネットやスマートフォンの普及により便利になる一報、こんなサービスがあったらいいなといった、未来のサービスがまだまだ隠れています。私たちはデジタルの力で、サービス提供、 技術的支援をすることで未来のサービスを作り続けるため、たくさんの仲間と解決していく必要があります。<br class="spbr">その中でも、弊社では未経験や女性が活躍できる場所・経験を増やし、活躍できる人のフィールドをこれまで以上の拡大を目指します。</p>
       </div>
       <div class="Aabout-cnt__mission--img">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/5Vision.png" alt="value">

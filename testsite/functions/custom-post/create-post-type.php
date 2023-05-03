@@ -32,8 +32,8 @@
                     'title',  // タイトル
                     'editor', // エディター
                     'thumbnail', // アイキャッチ画像
-                    'revisions' // リビジョンの保存
-
+                    'revisions' ,// リビジョンの保存
+                    'custom-fields'
                 ),
             )
         );

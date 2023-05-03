@@ -71,13 +71,13 @@
                 left: 50%;
                 transform: translate(-50%,-50%);
                 border-radius: 30px;
-                width: 25.7rem;
-                height: 5.7rem;
+                width: 25.5rem;
+                height: 5.5rem;
                 background-color: white;
                 transition: 0.3s;
                 @media screen and (max-width: 768px) {
-                    width: 97%;
-                    height: 96%;
+                    width: 39rem;
+                    height: 9rem;
                 }
             }
             &::after{

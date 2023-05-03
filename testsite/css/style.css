@@ -657,10 +657,9 @@ html {
 }
 @media screen and (max-width: 768px) {
   .header::after {
-    position: relative;
-    z-index: 999;
-    width: 32rem;
-    height: 6rem;
+    z-index: 800;
+    width: 100%;
+    height: 17rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1321,6 +1320,7 @@ html {
 @media screen and (max-width: 768px) {
   .header .nav-list.open .nav-color-blue--link {
     font-size: 5.6rem;
+    color: white !important;
   }
 }
 .header .nav-button {
@@ -1482,15 +1482,15 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 30px;
-  width: 25.7rem;
-  height: 5.7rem;
+  width: 25.5rem;
+  height: 5.5rem;
   background-color: white;
   transition: 0.3s;
 }
 @media screen and (max-width: 768px) {
   .kv__title--button .kv-button-back {
-    width: 97%;
-    height: 96%;
+    width: 39rem;
+    height: 9rem;
   }
 }
 .kv__title--button::after {
@@ -2359,7 +2359,7 @@ html {
   width: 100%;
   flex-direction: column;
   height: 60rem;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .works {
@@ -2564,7 +2564,7 @@ html {
 }
 @media screen and (max-width: 768px) {
   .p-contact {
-    padding: 30rem 5rem 10rem;
+    padding: 30rem 8rem 10rem;
   }
 }
 .p-contact__title {
@@ -2937,11 +2937,16 @@ html {
   }
 }
 .recruit__box .R-recruit-card {
-  width: 26vw;
-  height: 31vw;
+  width: 50rem;
+  height: 62rem;
   border-radius: 10px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1019607843);
   transition: 0.4s;
+  display: flex;
+  gap: 4%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 @media screen and (max-width: 768px) {
   .recruit__box .R-recruit-card {
@@ -2971,19 +2976,25 @@ html {
   flex-direction: column;
   height: 50%;
 }
+@media screen and (max-width: 768px) {
+  .recruit__box .R-recruit-card--text {
+    justify-content: space-around;
+  }
+}
 .recruit__box .R-recruit-card--text--maintext {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
   letter-spacing: normal;
   line-height: normal;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #333333;
   text-align: center;
-  width: 80%;
+  width: 70%;
 }
 @media screen and (max-width: 768px) {
   .recruit__box .R-recruit-card--text--maintext {
     font-size: 4rem;
+    width: 90%;
   }
 }
 .recruit__box .R-recruit-card--text--subtitle {
@@ -2994,7 +3005,6 @@ html {
   font-size: 1.6rem;
   color: #333333;
   color: #959595;
-  margin-top: 3rem;
 }
 @media screen and (max-width: 768px) {
   .recruit__box .R-recruit-card--text--subtitle {
@@ -3009,6 +3019,7 @@ html {
   font-size: 2.4rem;
   color: #333333;
   margin-bottom: 2rem;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .recruit__box .R-recruit-card--text h3 {
@@ -3019,7 +3030,7 @@ html {
   position: relative;
   width: 24rem;
   height: 6rem;
-  margin-top: 4rem;
+  margin-top: auto;
   display: flex;
   gap: 0rem;
   justify-content: center;
@@ -3027,12 +3038,13 @@ html {
   background: white;
   border: #6DCAE4 2px solid;
   border-radius: 30px;
+  margin-bottom: 6%;
 }
 @media screen and (max-width: 768px) {
   .recruit__box .R-recruit-card--text .R-recruit-button {
     width: 44rem;
     height: 12rem;
-    margin-top: 7rem;
+    margin-bottom: 0%;
   }
 }
 .recruit__box .R-recruit-card--text .R-recruit-button--link {
@@ -3055,8 +3067,8 @@ html {
   scale: 1.05;
 }
 .recruit__box .R-nocard {
-  width: 23vw;
-  height: 29vw;
+  width: 50rem;
+  height: 62rem;
   border-radius: 10px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0);
 }
@@ -3144,6 +3156,7 @@ html {
 @media screen and (max-width: 768px) {
   .W-works-content__buttons .W-works-button {
     min-width: 27rem;
+    font-size: 3rem;
     padding: 2rem 2rem !important;
   }
 }
@@ -3183,6 +3196,7 @@ html {
   .W-works-content .page-content.openpage {
     flex-direction: column;
     gap: 10rem;
+    margin-top: 12rem;
   }
 }
 .W-works-content .page-content.openpage .page-numbers {
@@ -3196,7 +3210,7 @@ html {
 }
 @media screen and (max-width: 768px) {
   .W-works-content .page-content.openpage .page-numbers {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 .W-works-content .page-content.openpage .page-numbers.current {
@@ -3221,6 +3235,11 @@ html {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .W-works-content .page-content.openpage .W-list-content {
+    gap: 10rem;
+  }
 }
 .W-works-content .page-content.openpage .Wpost {
   width: 48%;
@@ -3294,7 +3313,7 @@ html {
 }
 @media screen and (max-width: 768px) {
   .W-works-content .page-content.openpage .Wpost__box--categories {
-    font-size: 4rem;
+    font-size: 3.7rem;
     flex-wrap: wrap;
     padding-left: 5rem;
   }
@@ -3355,7 +3374,7 @@ html {
   font-weight: 500;
   letter-spacing: normal;
   line-height: normal;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   color: #333333;
 }
 .about-titlebox__text p .spbr {
@@ -3391,7 +3410,7 @@ html {
 }
 .about-titlebox__button .about-link-button button {
   width: 30%;
-  height: 7rem;
+  height: 6rem;
   margin-top: 3rem;
   transition: 0.4s;
   position: relative;
@@ -3513,6 +3532,7 @@ html {
   .Aabout-cnt__title.Aright {
     padding-right: 0%;
     align-items: flex-start;
+    margin-top: 0%;
   }
 }
 .Aabout-cnt__title.no-m {
@@ -3630,7 +3650,7 @@ html {
   width: auto;
   height: auto;
   padding-left: 2rem;
-  transform: translate(0%, 3.5rem);
+  transform: translate(0%, 5rem);
   display: flex;
   gap: 0.5rem;
   justify-content: flex-start;
@@ -3671,12 +3691,12 @@ html {
 }
 .Aabout-cnt__value--card .Aabout--card-img {
   width: 100%;
-  height: 15vw;
+  height: 31rem;
 }
 @media screen and (max-width: 768px) {
   .Aabout-cnt__value--card .Aabout--card-img {
     width: 100%;
-    height: 50vw;
+    height: 50rem;
   }
 }
 .Aabout-cnt__value--card .Aabout--card-img img {
@@ -3791,6 +3811,7 @@ html {
   .Aabout-cnt__mission--text p {
     font-size: 3.8rem;
     line-height: 8rem;
+    padding-right: 0%;
   }
 }
 .Aabout-cnt__mission--text p .spbr {
@@ -3807,6 +3828,10 @@ html {
 @media screen and (max-width: 768px) {
   .Aabout-cnt__mission .first {
     padding: 2rem 0rem 2rem 0rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 .Aabout-cnt__mission .secon {
@@ -3831,6 +3856,7 @@ html {
 @media screen and (max-width: 768px) {
   .Aabout-ceo {
     flex-direction: column;
+    padding: 15rem 8rem 0;
   }
 }
 .Aabout-ceo .max-inner-ceo {
@@ -3839,6 +3865,11 @@ html {
   gap: 0rem;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .Aabout-ceo .max-inner-ceo {
+    flex-direction: column;
+  }
 }
 .Aabout-ceo__text {
   width: 50%;
@@ -3866,7 +3897,8 @@ html {
 @media screen and (max-width: 768px) {
   .Aabout-ceo__text .Aabout-ceo-title {
     order: 3;
-    font-size: 4.8rem;
+    font-size: 4.2rem;
+    line-height: 7rem;
   }
 }
 .Aabout-ceo__text .Aabout-ceo-text {
@@ -3883,7 +3915,7 @@ html {
   .Aabout-ceo__text .Aabout-ceo-text {
     order: 4;
     width: 100%;
-    font-size: 4rem;
+    font-size: 3.8rem;
     line-height: 8rem;
   }
 }
@@ -4262,7 +4294,7 @@ html {
   .business-cnt__page--text--explane {
     order: 3;
     padding: 0 5rem;
-    font-size: 4rem;
+    font-size: 3.7rem;
     line-height: 8rem;
   }
 }
