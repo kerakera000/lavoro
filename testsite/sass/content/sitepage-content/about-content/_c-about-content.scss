@@ -4,7 +4,7 @@
 .Aabout-cnt{
     width: 100%;
     height: auto;
-    padding: 0 8rem 10rem;
+    padding: 0 10rem 10rem;
     @include flex.flex();
     flex-direction: column;
     @media screen and (max-width: 768px) {

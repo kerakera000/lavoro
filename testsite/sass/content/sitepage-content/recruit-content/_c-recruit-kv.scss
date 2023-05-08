@@ -4,7 +4,7 @@
 .recruit{
     width: 100%;
     height: auto;
-    padding: 15rem 0rem 10rem;
+    padding: 15rem 10rem 10rem;
     background-color: #F8F8F8;
     box-shadow: 0px 8px 10px #00000029;
     @include flex.flex();
@@ -86,7 +86,7 @@
             justify-content: flex-start;
         }
         .R-recruit-card{
-            width: 50rem;
+            width: 45rem;
             height: 62rem;
             border-radius: 10px;
             box-shadow: 0px 6px 10px #0000001A;
@@ -158,7 +158,6 @@
                     &--link {
                         color: transparent;
                         background: repeating-linear-gradient(90deg, #6DCAE4 0, #5F94EF 100%);
-                        -webkit-background-clip: text;
                         @include font.font-jost-bold($fontsize: 2rem);
                         @media screen and (max-width: 768px) {
                             font-size: 3.5rem;
@@ -172,7 +171,7 @@
             }
         }
         .R-nocard{
-            width: 50rem;
+            width: 45rem;
             height: 62rem;
             border-radius: 10px;
             box-shadow: 0px 6px 10px #00000000;

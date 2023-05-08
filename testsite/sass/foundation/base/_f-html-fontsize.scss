@@ -1,21 +1,24 @@
-html{
+html {
     font-size: 10px;
+
     //sp
     @media (max-width: 767px) {
         // viewport 768px のとき font-size 16px
         font-size: calc(100vw * 4.5 / 767);
     }
+
     @media (max-width: 600px) {
         // viewport 768px のとき font-size 16px
         font-size: calc(100vw * 6 / 600);
     }
+
     //pc
     @media (min-width: 768px) {
-    // viewport 768px のとき font-size 16px
-    // font-size: calc(100vw * 3.8 / 768);
+        // viewport 768px のとき font-size 16px
+        // font-size: calc(100vw * 3.8 / 768);
         font-size: 8px;
     }
-    
+
 
     // @media (min-width: 1240px) {
     // // viewport 1240px のとき font-size 18px
@@ -27,32 +30,40 @@ html{
     // font-size: calc(100vw * 7.5 / 1440);
     // }
 }
-#body{
+
+#body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.max-inner{
+
+.max-inner {
     max-width: 170rem;
     width: 100%;
 }
 
-.fade-in1,.fade-in2,.fade-in3,.fade-in4{
+.fade-in1,
+.fade-in2,
+.fade-in3,
+.fade-in4 {
     opacity: 0;
     transform: translateY(2rem);
     transition: opacity 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53), transform 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
-.fade-inLeft{
-opacity: 0;
+
+.fade-inLeft {
+    opacity: 0;
     transform: translateY(-10rem);
     transition: opacity 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53), transform 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
-.fade-inRight{
-opacity: 0;
+
+.fade-inRight {
+    opacity: 0;
     transform: translateY(10rem);
     transition: opacity 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53), transform 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
+
 .load-in {
     opacity: 0;
     transform: translateY(3rem);
