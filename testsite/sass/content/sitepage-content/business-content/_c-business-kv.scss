@@ -51,6 +51,7 @@
             background-color: #FFFFFF;
             position: relative;
             z-index: 1;
+            transform: translateX(-40rem);
             padding: 11rem 10rem;
             @media screen and (max-width: 768px) {
                 display: contents;
@@ -125,9 +126,10 @@
 
         &--img {
             width: 50%;
-            height: 32vw;
+            height: 50rem;
             position: relative;
             z-index: 1;
+            transform: translateX(40rem);
             @include flex.flex($justify-content:flex-start);
             @media screen and (max-width: 768px) {
                 order: 2;

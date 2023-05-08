@@ -16,6 +16,9 @@
         }
         p{
             @include font.font-Noto-midium($fontsize:2.4rem);
+            @media screen and (max-width: 768px) {
+                font-size: 4rem;
+            }
             .spbr{
                 display: none;
                 @media screen and (max-width: 768px) {
@@ -38,7 +41,7 @@
                 gap: 2rem;
                 align-items: flex-end;
             }
-            button{
+            a{
                 width: 30%;
                 height: 6rem;
                 margin-top: 3rem;

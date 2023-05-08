@@ -10,50 +10,33 @@
 
         <div class="footer__content">
             <div class="footer__content--pattern1">
-                <a href="" class="footer-pattern1-title">ABOUT</a>
+                <a href="<?php echo esc_url(home_url('/aboutpage')); ?>" class="footer-pattern1-title">ABOUT</a>
                 <div class="footer-pattern1-col">
                     <p>―</p>
-                    <a>代表挨拶</a>
+                    <a href="<?php echo esc_url(home_url('/aboutpage')); ?>">代表挨拶</a>
                 </div>
                 <div class="footer-pattern1-col">
                     <p>―</p>
-                    <a>企業理念</a>
+                    <a href="<?php echo esc_url(home_url('/aboutpage')); ?>">企業理念</a>
                 </div>
                 <div class="footer-pattern1-col">
                     <p>―</p>
-                    <a>会社概要</a>
-                </div>
-            </div>
-
-            <div class="footer__content--pattern1">
-                <a href="" class="footer-pattern1-title">BUSINESS</a>
-                <div class="footer-pattern1-col">
-                    <p>―</p>
-                    <a>コンテンツ制作事業</a>
-                </div>
-                <div class="footer-pattern1-col">
-                    <p>―</p>
-                    <a>アプリ／業務システム開発</a>
+                    <a href="<?php echo esc_url(home_url('/aboutpage')); ?>">会社概要</a>
                 </div>
             </div>
 
             <div class="footer__content--pattern1">
-                <a href="" class="footer-pattern1-title">WORKS</a>
-                <div class="footer-pattern1-col">
-                    <p>―</p>
-                    <a>コンテンツ制作事業</a>
-                </div>
-                <div class="footer-pattern1-col">
-                    <p>―</p>
-                    <a>アプリ／業務システム開発</a>
-                </div>
+                <a href="<?php echo esc_url(home_url('/businesspage')); ?>" class="footer-pattern1-title">BUSINESS</a>
+            </div>
+
+            <div class="footer__content--pattern1">
+                <a href="<?php echo esc_url(home_url('/workspage')); ?>" class="footer-pattern1-title">WORKS</a>
             </div>
 
             <div class="footer__content--pattern2">
-                <a href="" class="footer-pattern2-text">NEWS</a>
-                <a href="" class="footer-pattern2-text">RECURUIT</a>
-                <a href="" class="footer-pattern2-text">CONTACT</a>
-                <a href="" class="footer-pattern2-text">プライバシーポリシー</a>
+                <a href="<?php echo esc_url(home_url('/newspage')); ?>" class="footer-pattern2-text">NEWS</a>
+                <a href="<?php echo esc_url(home_url('/recruitpage')); ?>" class="footer-pattern2-text">RECURUIT</a>
+                <a href="<?php echo esc_url(home_url('/contactpage')); ?>" class="footer-pattern2-text">CONTACT</a>
             </div>
         </div>
     </div>

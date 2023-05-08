@@ -31,17 +31,17 @@
 						</a>
 						<ul>
 							<li>
-								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?>">
+								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?> #01">
 								代表挨拶
 								</a>
 							</li>
 							<li>
-								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?>">
+								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?> #02">
 								企業理念
 								</a>
 							</li>
 							<li>
-								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?>">
+								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?> #03">
 								会社概要
 								</a>
 							</li>

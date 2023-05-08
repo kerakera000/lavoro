@@ -196,7 +196,8 @@
             }
             &:hover{
                 &::after{
-                    scale: 1.1;
+                    transform: translate(-50%, -50%) scale(1.1);
+                    transform-origin: center;
                 }
                 &::before {
                     height: 25%;
@@ -340,7 +341,8 @@
             }
             &:hover {
                 &::after {
-                    scale: 1.1;
+                    transform: translate(-50%, -50%) scale(1.1);
+                    transform-origin: center;
                 }
 
                 &::before {

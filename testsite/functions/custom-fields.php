@@ -25,8 +25,10 @@ function insert_custom_fields(){
     global $post;
     $main_text = get_post_meta($post->ID,'main_text',true);
     $hoge_thumbnail = get_post_meta($post->ID,'hoge_thumbnail',true);
+    $link_text = get_post_meta($post->ID,'link_text',true); // ここで定義する
     if(get_post_type() == 'news'){ // newsの場合は会社名を表示しない
-        echo 'テキスト： <input type="text" name="main_text" value="'.$main_text.'" /><br>';
+        echo '作業内容： <input type="text" name="main_text" value="'.$main_text.'" /><br>';
+        echo 'リンク： <input type="text" name="link_text" value="'.$link_text.'" /><br>';
     }else{
         $hoge_name = get_post_meta(
             $post->ID, //投稿ID
@@ -34,7 +36,8 @@ function insert_custom_fields(){
             true //戻り値を文字列にする場合true(falseの場合は配列)
         );
         echo '会社名： <input type="text" name="hoge_name" value="'.$hoge_name.'" /><br>';
-        echo 'テキスト： <input type="text" name="main_text" value="'.$main_text.'" /><br>';
+        echo 'リンク： <input type="text" name="link_text" value="'.$link_text.'" /><br>';
+        echo '作業内容： <input type="text" name="main_text" value="'.$main_text.'" /><br>';
     }
     echo '画像： <input type="file" name="hoge_thumbnail" accept="image/*" /><br>';
     if(isset($hoge_thumbnail) && strlen($hoge_thumbnail) > 0){
@@ -42,11 +45,17 @@ function insert_custom_fields(){
     }
 }
 
+
 function save_custom_fields( $post_id ) {
     if(isset($_POST['main_text'])){
-    update_post_meta($post_id, 'main_text', $_POST['main_text']);
+        update_post_meta($post_id, 'main_text', $_POST['main_text']);
     }else{
         delete_post_meta($post_id, 'main_text');
+    }
+    if(isset($_POST['link_text'])){
+        update_post_meta($post_id, 'link_text', $_POST['link_text']);
+    }else{
+        delete_post_meta($post_id, 'link_text');
     }
     if(isset($_POST['hoge_name'])){
         //hoge_nameキーで、$_POST['hoge_name']を保存

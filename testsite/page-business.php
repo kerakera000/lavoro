@@ -7,7 +7,7 @@ Template Name: page-business
 
 <section class="W-works-kv">
     <div class="max-inner">
-        <div class="Breadcrumb-list">
+        <div class="Breadcrumb-list load-in load-in">
             <div class="Breadcrumb">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="Breadcrumb__top">
                     TOP
@@ -19,7 +19,7 @@ Template Name: page-business
             </div>
         </div>
 
-        <div class="p-contact__title">
+        <div class="p-contact__title load-in load-in1">
             <div class="page-title">
                 <div class="page-title__text">
                     <h2>BUSINESS</h2>
@@ -32,7 +32,7 @@ Template Name: page-business
 
 <section class="W-works-content inBusiness">
     <div class="max-inner">
-        <div class="W-works-content__buttons Business-wrap">
+        <div class="W-works-content__buttons Business-wrap load-in load-in">
             <?php
                 $terms = get_terms( array(
                     'taxonomy' => 'works-cat',
@@ -100,7 +100,7 @@ Template Name: page-business
             </div>
         </div>
 
-        <div id="Bbutton3-page" class="page-content business-cnt">
+        <div id="Bbutton3-page" class="page-content business-cnt origin">
             <div class="business-cnt__page">
                 <div class="business-cnt__page--text">
                     <div class="business-title">
@@ -182,7 +182,7 @@ Template Name: page-business
     <div class="max-inner">
         <div id="Bbutton1-page1" class="page-content inBusiness-wrapper openpage">
 
-            <div class="business-page-title">
+            <div class="business-page-title fade-in1">
                 <div class="main-title">
                 <span></span>
                 <h2>WORKS</h2>
@@ -214,7 +214,7 @@ Template Name: page-business
                         while ( $the_query->have_posts() ) : $the_query->the_post();
                         ?>
 
-                        <div class="Wpost Bpost">
+                        <div class="Wpost Bpost fade-in1">
                             <a href="<?php echo get_permalink();?>">
                                 <?php
                                     echo '<div class="Wpost__box">';
@@ -266,7 +266,7 @@ Template Name: page-business
         </div>
 
         <div id="Bbutton2-page2" class="page-content inBusiness-wrapper">
-            <div class="business-page-title">
+            <div class="business-page-title fade-in1">
                 <div class="main-title">
                 <span></span>
                 <h2>WORKS</h2>
@@ -297,7 +297,7 @@ Template Name: page-business
                         while ( $the_query->have_posts() ) : $the_query->the_post();
                         ?>
 
-                        <div class="Wpost Bpost">
+                        <div class="Wpost Bpost fade-in1">
                             <a href="<?php echo get_permalink();?>">
                                 <?php
                                     echo '<div class="Wpost__box">';
@@ -349,7 +349,7 @@ Template Name: page-business
         </div>
 
         <div id="Bbutton3-page3" class="page-content inBusiness-wrapper">
-            <div class="business-page-title">
+            <div class="business-page-title fade-in1">
                 <div class="main-title">
                 <span></span>
                 <h2>WORKS</h2>
@@ -380,7 +380,7 @@ Template Name: page-business
                         while ( $the_query->have_posts() ) : $the_query->the_post();
                         ?>
 
-                        <div class="Wpost Bpost">
+                        <div class="Wpost Bpost fade-in1">
                             <a href="<?php echo get_permalink();?>">
                                 <?php
                                     echo '<div class="Wpost__box">';
@@ -432,7 +432,7 @@ Template Name: page-business
         </div>
 
         <div id="Bbutton4-page4" class="page-content inBusiness-wrapper">
-            <div class="business-page-title">
+            <div class="business-page-title fade-in1">
                 <div class="main-title">
                 <span></span>
                 <h2>WORKS</h2>
@@ -463,7 +463,7 @@ Template Name: page-business
                         while ( $the_query->have_posts() ) : $the_query->the_post();
                         ?>
 
-                        <div class="Wpost Bpost">
+                        <div class="Wpost Bpost fade-in1">
                             <a href="<?php echo get_permalink();?>">
                                 <?php
                                     echo '<div class="Wpost__box">';
@@ -518,7 +518,7 @@ Template Name: page-business
 </section>
 
 <section class="contact">
-  <div class="contact__card">
+  <a href="<?php echo esc_url(home_url('/recruitpage')); ?>" class="contact__card fade-in1">
     <div class="contact__card--backimg">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/Recruit.png" alt="Business-logo">
     </div>
@@ -534,9 +534,9 @@ Template Name: page-business
     <div class="contact__card--button">
       <button></button>
     </div>
-  </div>
+  </a>
 
-  <div class="contact__card">
+  <a href="<?php echo esc_url(home_url('/contactpage')); ?>" class="contact__card fade-in2">
     <div class="contact__card--backimg">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/Contact.png" alt="Business-logo">
     </div>
@@ -552,7 +552,7 @@ Template Name: page-business
     <div class="contact__card--button">
       <button></button>
     </div>
-  </div>
+  </a>
 </section>
 
 

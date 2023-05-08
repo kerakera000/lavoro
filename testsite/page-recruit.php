@@ -7,7 +7,7 @@ Template Name: page-recruit
 
 <section class="recruit">
     <div class="max-inner">
-        <div class="Breadcrumb-list">
+        <div class="Breadcrumb-list load-in load-in">
             <div class="Breadcrumb">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="Breadcrumb__top">
                     TOP
@@ -22,17 +22,17 @@ Template Name: page-recruit
         <div class="recruit__title">
             <div class="recruit__title--box">
                 <div class="page-title">
-                    <div class="page-title__text">
+                    <div class="page-title__text load-in load-in1">
                         <h2>RECRUIT</h2>
                         <p>採用情報</p>
                     </div>
                 </div>
 
-                <h3>要件書を元にDB設計、構成が柔軟に対応できる方を募集しております。<br class="r-recuruit-br-pc"><br class="r-recuruit-br-sp">
+                <h3 class="load-in load-in2">要件書を元にDB設計、構成が柔軟に対応できる方を募集しております。<br class="r-recuruit-br-pc"><br class="r-recuruit-br-sp">
                     <b>テクノロジーで未来の「新しい」と「楽しい」を作る仕事を</b>
                 </h3>
 
-                <p class="recruit__title--box--text">
+                <p class="recruit__title--box--text load-in load-in3">
                     これまでのテクノロジーによるサービスはたくさん生まれる中、<br class="r-recuruit-br-pc">
                     これからも生まれ続けます。私たちはこれからのサービスを<br class="r-recuruit-br-pc">
                     作る立場として、多くのサービスを作り続けます。LAVOROは、<br class="r-recuruit-br-pc">
@@ -40,13 +40,13 @@ Template Name: page-recruit
                 </p>
             </div>
 
-            <div class="recruit__title--img">
+            <div class="recruit__title--img load-in load-in4">
                 <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/recruit-top.png" alt="LAVORO">
             </div>
         </div>
 
         <div class="recruit__box">
-            <div class="R-recruit-card">
+            <div class="R-recruit-card fade-in1">
                 <div class="R-recruit-card--img">
                     <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
                 </div>
@@ -62,7 +62,7 @@ Template Name: page-recruit
                 </div>
             </div>
 
-            <div class="R-recruit-card">
+            <div class="R-recruit-card fade-in2">
                 <div class="R-recruit-card--img">
                     <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
                 </div>
@@ -78,7 +78,7 @@ Template Name: page-recruit
                 </div>
             </div>
 
-            <div class="R-recruit-card">
+            <div class="R-recruit-card fade-in3">
                 <div class="R-recruit-card--img">
                     <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
                 </div>
@@ -96,7 +96,7 @@ Template Name: page-recruit
         </div>
 
         <div class="recruit__box">
-            <div class="R-recruit-card">
+            <div class="R-recruit-card fade-in1">
                 <div class="R-recruit-card--img">
                     <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
                 </div>
@@ -130,7 +130,7 @@ Template Name: page-recruit
 </section>
 
 <section class="contact">
-    <div class="contact__card max">
+    <a href="<?php echo esc_url(home_url('/contactpage')); ?>" class="contact__card max fade-in1">
         <div class="contact__card--backimg">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/Recruit.png" alt="Business-logo">
         </div>
@@ -146,7 +146,7 @@ Template Name: page-recruit
         <div class="contact__card--button card-center">
         <button></button>
         </div>
-    </div>
+    </a>
 </section>
 
 <?php get_footer(); ?>

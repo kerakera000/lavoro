@@ -1,0 +1,144 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.Nmax-inner{
+    width: 100%;
+    max-width: 170rem;
+    @include flex.flex($align-items:flex-start);
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 6rem;
+    }
+    .W-works-content__buttons{
+        width: 20%;
+        align-items: flex-start;
+        flex-direction: column;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            flex-direction: row;
+        }
+    }
+    .W-list-content{
+        gap: 5rem !important;
+    }
+    .openpage{
+        margin-top: 0% !important;
+    }
+    .Wpost{
+        width: 100% !important;
+        margin-top: 0% !important;
+        gap: 5rem !important;
+    }
+    .N-post{
+        width: 70%;
+        height: 100%;
+        margin-top: 3rem;
+        @include flex.flex($align-items:flex-start,$justify-content:flex-start);
+        flex-direction: column;
+        &__day{
+            @include flex.flex($gap:2rem);
+            .N-date{
+                @include font.font-oswald-medium($fontsize: 2.4rem,$letterSpacing:0.2rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
+            }
+            .category-link{
+                border: 1.5px solid #70CFE4;
+                border-image: linear-gradient(to right, #70CFE4 0%, #5C76F6 100%);
+                border-image-slice: 1;
+                &--text{
+                    @include font.font-Noto-midium($fontsize: 2.2rem);
+                    color: transparent;
+                    background: repeating-linear-gradient(90deg, #4169e1 0, #90CAF9 100%);
+                    -webkit-background-clip: text;
+                    margin: 0.5rem 2rem;
+                    @media screen and (max-width: 768px) {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+        .N-title {
+            width: 80%;
+            height: 18rem;
+            margin-top: 4rem;
+            position: relative;
+            @include font.font-Noto-midium($fontsize: 2rem);
+            @media screen and (max-width: 768px) {
+                font-size: 3.4rem;
+            }
+            &::before{
+                content: "";
+                width: 6rem;
+                height: 6rem;
+                border: 2px solid #70CFE4;
+                border-radius: 50%;
+                position: absolute;
+                right: -8rem;
+                top: 20%;
+                z-index: 2;
+                transform: translate(-50%, -50%);
+                @media screen and (max-width: 768px) {
+                    top: 70%;
+                    width: 8rem;
+                    height: 8rem;
+                    right: -11rem;
+                    border: 1px solid #70CFE4;
+                }
+            }
+            &::after {
+                content: ">";
+                width: 6rem;
+                height: 6rem;
+                @include flex.flex();
+                z-index: 1;
+                position: absolute;
+                right: -8rem;
+                top: 20%;
+                transform: translate(-50%, -50%);
+                color: transparent;
+                background: transparent linear-gradient(135deg, #70CFE4 0%, #5C76F6 100%) 0% 0% no-repeat padding-box;
+                -webkit-background-clip: text;
+                font-size: 3rem;
+                @media screen and (max-width: 768px) {
+                    top: 70%;
+                    width: 8rem;
+                    height: 8rem;
+                    right: -11rem;
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    .N-line{
+        width: 100%;
+        height: 1px;
+        background: #e5e5e5;
+        margin-top: 3rem;
+    }
+    .N-flex{
+        width: 100%;
+        @include flex.flex();
+        .Wpost__box{
+            width: 100%;
+            height: 28rem;
+            @include flex.flex($justify-content:flex-start,$gap:6rem);
+            &--img{
+                width: 35% !important;
+                height: 28rem !important;
+                @media screen and (max-width: 768px) {
+                    width: 50% !important;
+                    height: 25rem !important;
+                }
+            }
+        }
+    }
+    .Wpost__box--img{
+        border-radius: 0% !important;
+        img{
+            width: 90% !important;
+            height: 90% !important;
+        }
+    }
+}

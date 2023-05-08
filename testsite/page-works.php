@@ -8,7 +8,7 @@ Template Name: page-works
 
 <section class="W-works-kv">
     <div class="max-inner">
-        <div class="Breadcrumb-list">
+        <div class="Breadcrumb-list load-in load-in">
             <div class="Breadcrumb">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="Breadcrumb__top">
                     TOP
@@ -20,7 +20,7 @@ Template Name: page-works
             </div>
         </div>
 
-        <div class="p-contact__title">
+        <div class="p-contact__title load-in load-in1">
             <div class="page-title">
                 <div class="page-title__text">
                     <h2>WORKS</h2>
@@ -33,7 +33,7 @@ Template Name: page-works
 
 <section class="W-works-content">
     <div class="max-inner">
-        <div class="W-works-content__buttons">
+        <div class="W-works-content__buttons load-in load-in2">
             <button id="Wbutton0" class="W-works-button open">
                 ALL
             </button>
@@ -52,7 +52,7 @@ Template Name: page-works
             ?>
         </div>
 
-        <div id="Wbutton0-page" class="page-content openpage">
+        <div id="Wbutton0-page" class="page-content openpage load-in load-in">
             <?php
                 $paged = (int) get_query_var('paged');
                 $args = array(
@@ -418,7 +418,7 @@ Template Name: page-works
 </section>
 
 <section class="contact">
-  <div class="contact__card">
+  <div class="contact__card fade-in1">
     <div class="contact__card--backimg">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/Recruit.png" alt="Business-logo">
     </div>
@@ -436,7 +436,7 @@ Template Name: page-works
     </div>
   </div>
 
-  <div class="contact__card">
+  <div class="contact__card fade-in2">
     <div class="contact__card--backimg">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/Contact.png" alt="Business-logo">
     </div>

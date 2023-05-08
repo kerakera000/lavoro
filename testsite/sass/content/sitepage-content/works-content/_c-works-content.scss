@@ -56,7 +56,7 @@
             display: flex;
             width: 100%;
             height: auto;
-            margin-top: 3rem;
+            margin-top: 9rem;
             @include flex.flex();
             flex-direction: column;
             @include flex.flex($justify-content:center,$gap: 15rem);
@@ -64,6 +64,28 @@
                 flex-direction: column;
                 gap: 10rem;
                 margin-top: 12rem;
+            }
+            .business-cnt__page{
+                &--text{
+                    animation: appear .8s ease;
+                    animation-fill-mode: forwards;
+                        /* アニメーション終了後の状態を保持 */
+                }
+                &--img{
+                    animation: appear .8s ease;
+                    animation-fill-mode: forwards;
+                        /* アニメーション終了後の状態を保持 */
+                }
+                @keyframes appear {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+                }
             }
             .page-numbers{
                 @include font.font-Noto-bold(2.8rem);

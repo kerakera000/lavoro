@@ -7,7 +7,7 @@ Template Name: page-contact
 
 <section class="p-contact">
     <div class="max-inner">
-    <div class="Breadcrumb-list">
+    <div class="Breadcrumb-list load-in load-in">
         <div class="Breadcrumb">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="Breadcrumb__top">
                 TOP
@@ -19,7 +19,7 @@ Template Name: page-contact
         </div>
     </div>
 
-    <div class="p-contact__title">
+    <div class="p-contact__title load-in load-in1">
         <div class="page-title">
             <div class="page-title__text">
                 <h2>CONTACT</h2>
@@ -28,12 +28,12 @@ Template Name: page-contact
         </div>
     </div>
 
-    <div class="p-contact__text">
+    <div class="p-contact__text load-in load-in2">
         <p>ご相談やご依頼について、下記より必要事項記入の上、「送信」ボタンをクリックし、ご連絡ください。<br><br>
             *は必須項目ですので、必ずご記入をお願いします。</p>
     </div>
 
-    <div class="form">
+    <div class="form load-in load-in3">
         <form class="form__content" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfKgS0Fp1IVKwqTlB5QEMBmyGKsDowH5rPdCkot1HcUbDyqVQ/formResponse">
             <div class="form__content--flex">
                 <p class="form-text">お問い合わせ種別<span>*</span></p>
@@ -91,7 +91,7 @@ Template Name: page-contact
 </section>
 
 <section class="contact">
-    <div class="contact__card max">
+    <a href="<?php echo esc_url(home_url('/recruitpage')); ?>" class="contact__card max fade-in1">
         <div class="contact__card--backimg">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/Recruit.png" alt="Business-logo">
         </div>
@@ -107,7 +107,7 @@ Template Name: page-contact
         <div class="contact__card--button card-center">
         <button></button>
         </div>
-    </div>
+    </a>
 </section>
 
 <?php get_footer(); ?>

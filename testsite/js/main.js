@@ -1,11 +1,11 @@
 //htmlが全部ロードされてから開始
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
     const NavButton = document.getElementById("NavButton");
     const NavList = document.getElementById("NavList");
     const HeaderTitle = document.getElementById("HeaderTitle")
 
-    NavButton.addEventListener("click", function() {
+    NavButton.addEventListener("click", function () {
         NavButton.classList.toggle("open");
         NavList.classList.toggle("open");
         HeaderTitle.classList.toggle("open");
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function(){
     };
 });
 
-window.onload = function() {
-  // ページ全体が読み込まれた後に実行されるコード
+window.onload = function () {
+    // ページ全体が読み込まれた後に実行されるコード
     const buttons2 = [
         document.getElementById("Bbutton1"),
         document.getElementById("Bbutton2"),
@@ -101,4 +101,49 @@ window.onload = function() {
             switchPage2(i);
         });
     };
+
+
+    //値渡し
+    const params = new URLSearchParams(window.location.search); // URLのパラメータを取得
+    const id = params.get('target'); // パラメータからid名を取得
+
+    if (id === 'goW1') {
+        // id名がgoW1の場合の処理
+        console.log('こいよ！');
+        switchPage1(0);
+        switchPage2(0);
+    } else {
+        // id名がgoW1以外の場合の処理
+        console.log('こいよ2！');
+    }
+
+    if (id === 'goW2') {
+        // id名がgoW1の場合の処理
+        console.log('こいよ！');
+        switchPage1(3);
+        switchPage2(3);
+    } else {
+        // id名がgoW1以外の場合の処理
+        console.log('こいよ2！');
+    }
+
+    if (id === 'goW3') {
+        // id名がgoW1の場合の処理
+        console.log('こいよ！');
+        switchPage1(2);
+        switchPage2(2);
+    } else {
+        // id名がgoW1以外の場合の処理
+        console.log('こいよ2！');
+    }
+
+    if (id === 'goW4') {
+        // id名がgoW1の場合の処理
+        console.log('こいよ！');
+        switchPage1(1);
+        switchPage2(1);
+    } else {
+        // id名がgoW1以外の場合の処理
+        console.log('こいよ2！');
+    }
 }

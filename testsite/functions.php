@@ -21,4 +21,5 @@
         // remove_menu_page( 'tools.php' ); //ツールメニュー
         // remove_menu_page( 'options-general.php' ); //設定メニュー
     }
+    add_image_size( 'work_thumbnail', 950, 550, true );
 ?>
