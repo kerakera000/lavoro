@@ -2582,7 +2582,7 @@ html {
 .p-contact {
   width: 100%;
   height: auto;
-  padding: 15rem 0rem 10rem;
+  padding: 15rem 10rem 10rem;
   background-color: #F8F8F8;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1607843137);
   display: flex;
@@ -3897,7 +3897,7 @@ html {
 .Aabout-ceo {
   width: 100%;
   height: auto;
-  padding: 10rem 10vw 0;
+  padding: 10rem 10rem 0;
   display: flex;
   gap: 0rem;
   justify-content: center;
@@ -4369,7 +4369,7 @@ html {
 }
 
 .inBusiness {
-  padding: 0%;
+  padding: 0 10rem;
 }
 
 .inBusiness-wrapper {
