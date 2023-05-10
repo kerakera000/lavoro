@@ -57,7 +57,7 @@
             .Aabout-infotext1 {
                 width: 20%;
                 margin-top: 0.5rem;
-                @include font.font-Noto-bold($fontsize: 1.8rem);
+                @include font.font-Noto-bold($fontsize: 2.2rem);
 
                 @media screen and (max-width: 768px) {
                     font-size: 4rem;
@@ -66,7 +66,7 @@
 
             .Aabout-infotext2 {
                 width: 50%;
-                @include font.font-Noto-midium($fontsize: 1.8rem);
+                @include font.font-Noto-midium($fontsize: 2.2rem);
 
                 @media screen and (max-width: 768px) {
                     font-size: 4rem;

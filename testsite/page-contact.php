@@ -45,7 +45,7 @@ Template Name: page-contact
                         <option value="選択肢 4">選択肢 4</option>
                         <option value="選択肢 5">選択肢 5</option>
                     </select>
-                    <div>▼</div>
+                    <div class="img-under"></div>
                 </div>
             </div>
             <div class="form__content--flex">

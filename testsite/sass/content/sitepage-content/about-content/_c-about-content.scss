@@ -13,21 +13,22 @@
     &__title{
         width: 100%;
         margin-top: 8rem;
+        margin-bottom: 5rem;
         @include flex.flex($justify-content:flex-start,$align-items:flex-start);
         flex-direction: column;
         &.Asecon{
             margin-top: 0rem;
-            @media screen and (max-width: 768px) {
-                margin-top: 20rem;
-            }
         }
         &.Aright{
             align-items: flex-end;
-            padding-right: 30rem;
+            padding-right: 23rem;
+            @media screen and (max-width: 1239px) {
+                padding-right: 7rem;
+            }
             @media screen and (max-width: 768px) {
                 padding-right: 0%;
                 align-items: flex-start;
-                margin-top: 0%;
+                margin-top: 15%;
             }
         }
         &.no-m{
@@ -84,7 +85,7 @@
                 }
             }
             p{
-                @include font.font-jost-bold($fontsize:2rem);
+                @include font.font-jost-bold($fontsize:2.2rem,$letterSpacing:2px);
                 color: rgb(58, 58, 58);
                 @media screen and (max-width: 768px) {
                     font-size: 3rem;
@@ -100,21 +101,27 @@
     &__value{
         width: 100%;
         height: auto;
-        @include flex.flex($gap:9%);
+        margin-top: 8rem;
+        @include flex.flex($gap:9%,$justify-content:space-between);
         @media screen and (max-width: 768px) {
             flex-direction: column;
         }
         &--card{
-            width: 33%;
+            width: 45rem;
             height: auto;
+            position: relative;
             @media screen and (max-width: 768px) {
                 width: 100%;
+                margin-bottom: 12rem;
             }
             .Aabout--card-title{
                 width: auto;
                 height: auto;
                 padding-left: 2rem;
-                transform: translate(-0%,5rem);
+                position: absolute;
+                top: -23%;
+                left: 0%;
+                transform: translate(-0%,0);
                 @include flex.flex($justify-content:flex-start,$gap:0.5rem);
                 @media screen and (max-width: 768px) {
                     transform: translate(-0%, 6rem);
@@ -129,7 +136,7 @@
                     }
                 }
                 h2{
-                    @include font.font-oswald-medium($fontsize:5rem);
+                    @include font.font-oswald-medium($fontsize:6rem);
                     color: rgb(58, 58, 58);
                     @media screen and (max-width: 768px) {
                         font-size: 9rem;
@@ -138,10 +145,10 @@
             }
             .Aabout--card-img{
                 width: 100%;
-                height: 31rem;
+                // height: 31rem;
                 @media screen and (max-width: 768px) {
                     width: 100%;
-                    height: 50rem;
+                    // height: 50rem;
                 }
                 img{
                     width: 100%;
@@ -153,7 +160,7 @@
                 width: 100%;
                 text-align: center;
                 margin-top: 1rem;
-                @include font.font-jost-bold($fontsize:2.2rem);
+                @include font.font-jost-bold($fontsize:2.2rem,$letterSpacing:2px);
                 color: rgb(58, 58, 58);
                 @media screen and (max-width: 768px) {
                     font-size: 4rem;
@@ -165,8 +172,8 @@
     &__mission{
         width: 100%;
         height: auto;
-        margin-top: 3rem;
-        @include flex.flex();
+        // margin-top: 5rem;
+        @include flex.flex($align-items:flex-start);
         @media screen and (max-width: 768px) {
             flex-direction: column;
         }
@@ -180,7 +187,7 @@
             height: 27vw;
             @media screen and (max-width: 768px) {
                 width: 100%;
-                height: 50rem;
+                height: auto;
             }
             img{
                 width: 100%;
@@ -190,7 +197,7 @@
         }
         &--text{
             width: 50%;
-            height: 27vw;
+            // height: 27vw;
             padding:2rem 5rem ;
             @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:3rem);
             flex-direction: column;
@@ -216,8 +223,8 @@
                 }
             }
             p{
-                @include font.font-Noto-midium($fontsize:1.8rem,$lineHeight:6rem);
-                padding-right: 5rem;
+                @include font.font-Noto-midium($fontsize:2.2rem,$lineHeight:40px,$letterSpacing:1.08px);
+                // padding-right: 5rem;
                 @media screen and (max-width: 768px) {
                     font-size: 3.8rem;
                     line-height: 8rem;
@@ -232,7 +239,7 @@
             }
         }
         .first{
-            padding: 2rem 0rem 2rem 5rem;
+            padding: 5rem 0rem 2rem 5rem;
             @media screen and (max-width: 768px) {
                 padding: 2rem 0rem 2rem 0rem;
                 @include flex.flex($gap:2rem);

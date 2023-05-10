@@ -88,7 +88,7 @@ Template Name: page-works
                                         if (!empty($works_terms)) {
                                             foreach ($works_terms as $works_term) {
                                                 if (!empty($works_term->name)) {
-                                                    echo '<a class="category-link" href="' . get_term_link($works_term) . '">' . $works_term->name . '</a> ';
+                                                    echo '<p class="category-link">' . $works_term->name . '</p> ';
                                                 }
                                             }
                                         }
@@ -106,14 +106,20 @@ Template Name: page-works
                 </div>
                 <?php
                     echo '<div class="Wpagenation">';
-                        if ($the_query->max_num_pages > 1) {
+                    if ($the_query->max_num_pages > 1) {
+                        $prev_arrow = '<img src="' . get_stylesheet_directory_uri() . '/images/arrow-img/arowblue.svg" alt="Previous" />';
+                        $next_arrow = '<img src="' . get_stylesheet_directory_uri() . '/images/arrow-img/arowblue.svg" alt="Next" />';
                         echo paginate_links(array(
                             'base' => get_pagenum_link(1) . '%_%',
                             'format' => 'page/%#%/',
                             'current' => max(1, $paged),
-                            'total' => $the_query->max_num_pages
+                            'total' => $the_query->max_num_pages,
+                            'prev_text' => $prev_arrow,
+                            'next_text' => $next_arrow,
+                            'mid_size' => 2,
+                            'end_size' => 2,
                         ));
-                        }
+                    }
                     echo '</div>';
                 ?>
             <?php wp_reset_postdata(); ?>
@@ -162,7 +168,7 @@ Template Name: page-works
                                         if (!empty($works_terms)) {
                                             foreach ($works_terms as $works_term) {
                                                 if (!empty($works_term->name)) {
-                                                    echo '<a class="category-link" href="' . get_term_link($works_term) . '">' . $works_term->name . '</a> ';
+                                                    echo '<p class="category-link">' . $works_term->name . '</p> ';
                                                 }
                                             }
                                         }
@@ -179,17 +185,22 @@ Template Name: page-works
                     <?php endwhile; endif; ?>
                 </div>
                 <?php
-                    echo '<div class="Wpagenation">';
-                        if ($the_query->max_num_pages > 1) {
-                        echo paginate_links(array(
-                            'base' => get_pagenum_link(1) . '%_%',
-                            'format' => 'page/%#%/',
-                            'current' => max(1, $paged),
-                            'total' => $the_query->max_num_pages
-                        ));
-                        }
-                    echo '</div>';
-                ?>
+    echo '<div class="Wpagenation">';
+    if ($the_query->max_num_pages > 1) {
+        $prev_arrow = '<img src="' . get_template_directory_uri() . '/images/prev-arrow.png" alt="Previous" />';
+        $next_arrow = '<img src="' . get_template_directory_uri() . '/images/next-arrow.png" alt="Next" />';
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => 'page/%#%/',
+            'current' => max(1, $paged),
+            'total' => $the_query->max_num_pages,
+            'prev_text' => $prev_arrow,
+            'next_text' => $next_arrow
+        ));
+    }
+    echo '</div>';
+?>
+
             <?php wp_reset_postdata(); ?>
         </div>
 
@@ -236,7 +247,7 @@ Template Name: page-works
                                         if (!empty($works_terms)) {
                                             foreach ($works_terms as $works_term) {
                                                 if (!empty($works_term->name)) {
-                                                    echo '<a class="category-link" href="' . get_term_link($works_term) . '">' . $works_term->name . '</a> ';
+                                                    echo '<p class="category-link">' . $works_term->name . '</p> ';
                                                 }
                                             }
                                         }
@@ -253,17 +264,22 @@ Template Name: page-works
                     <?php endwhile; endif; ?>
                 </div>
                 <?php
-                    echo '<div class="Wpagenation">';
-                        if ($the_query->max_num_pages > 1) {
-                        echo paginate_links(array(
-                            'base' => get_pagenum_link(1) . '%_%',
-                            'format' => 'page/%#%/',
-                            'current' => max(1, $paged),
-                            'total' => $the_query->max_num_pages
-                        ));
-                        }
-                    echo '</div>';
-                ?>
+    echo '<div class="Wpagenation">';
+    if ($the_query->max_num_pages > 1) {
+        $prev_arrow = '<img src="' . get_template_directory_uri() . '/images/prev-arrow.png" alt="Previous" />';
+        $next_arrow = '<img src="' . get_template_directory_uri() . '/images/next-arrow.png" alt="Next" />';
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => 'page/%#%/',
+            'current' => max(1, $paged),
+            'total' => $the_query->max_num_pages,
+            'prev_text' => $prev_arrow,
+            'next_text' => $next_arrow
+        ));
+    }
+    echo '</div>';
+?>
+
             <?php wp_reset_postdata(); ?>
         </div>
 
@@ -310,7 +326,7 @@ Template Name: page-works
                                         if (!empty($works_terms)) {
                                             foreach ($works_terms as $works_term) {
                                                 if (!empty($works_term->name)) {
-                                                    echo '<a class="category-link" href="' . get_term_link($works_term) . '">' . $works_term->name . '</a> ';
+                                                    echo '<p class="category-link">' . $works_term->name . '</p> ';
                                                 }
                                             }
                                         }
@@ -327,17 +343,22 @@ Template Name: page-works
                     <?php endwhile; endif; ?>
                 </div>
                 <?php
-                    echo '<div class="Wpagenation">';
-                        if ($the_query->max_num_pages > 1) {
-                        echo paginate_links(array(
-                            'base' => get_pagenum_link(1) . '%_%',
-                            'format' => 'page/%#%/',
-                            'current' => max(1, $paged),
-                            'total' => $the_query->max_num_pages
-                        ));
-                        }
-                    echo '</div>';
-                ?>
+    echo '<div class="Wpagenation">';
+    if ($the_query->max_num_pages > 1) {
+        $prev_arrow = '<img src="' . get_template_directory_uri() . '/images/prev-arrow.png" alt="Previous" />';
+        $next_arrow = '<img src="' . get_template_directory_uri() . '/images/next-arrow.png" alt="Next" />';
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => 'page/%#%/',
+            'current' => max(1, $paged),
+            'total' => $the_query->max_num_pages,
+            'prev_text' => $prev_arrow,
+            'next_text' => $next_arrow
+        ));
+    }
+    echo '</div>';
+?>
+
             <?php wp_reset_postdata(); ?>
         </div>
 
@@ -384,7 +405,7 @@ Template Name: page-works
                                         if (!empty($works_terms)) {
                                             foreach ($works_terms as $works_term) {
                                                 if (!empty($works_term->name)) {
-                                                    echo '<a class="category-link" href="' . get_term_link($works_term) . '">' . $works_term->name . '</a> ';
+                                                    echo '<p class="category-link">' . $works_term->name . '</p> ';
                                                 }
                                             }
                                         }
@@ -401,17 +422,22 @@ Template Name: page-works
                     <?php endwhile; endif; ?>
                 </div>
                 <?php
-                    echo '<div class="Wpagenation">';
-                        if ($the_query->max_num_pages > 1) {
-                        echo paginate_links(array(
-                            'base' => get_pagenum_link(1) . '%_%',
-                            'format' => 'page/%#%/',
-                            'current' => max(1, $paged),
-                            'total' => $the_query->max_num_pages
-                        ));
-                        }
-                    echo '</div>';
-                ?>
+    echo '<div class="Wpagenation">';
+    if ($the_query->max_num_pages > 1) {
+        $prev_arrow = '<img src="' . get_template_directory_uri() . '/images/prev-arrow.png" alt="Previous" />';
+        $next_arrow = '<img src="' . get_template_directory_uri() . '/images/next-arrow.png" alt="Next" />';
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => 'page/%#%/',
+            'current' => max(1, $paged),
+            'total' => $the_query->max_num_pages,
+            'prev_text' => $prev_arrow,
+            'next_text' => $next_arrow
+        ));
+    }
+    echo '</div>';
+?>
+
             <?php wp_reset_postdata(); ?>
         </div>
     </div>

@@ -3,7 +3,7 @@
 <section class="kv">
   <div class="kv__title">
       <h1 class="kv__title--main load-in load-in">ITから<span>「楽しい」</span>をつくる</h1>
-      <p class="kv__title--text load-in load-in1">デジタルの力でものづくりをもっと楽しく、<br>ものづくりで今までにない体験を</p>
+      <p class="kv__title--text load-in load-in1">デジタルの力で<span>ものづくり</span>をもっと楽しく、<br><span>ものづくり</span>で今までにない体験を</p>
       <a href="<?php echo esc_url(home_url('/aboutpage')); ?>" class="kv__title--button load-in load-in2">
         <P>ABOUT US</P>
         <div class="kv-button-back"></div>
@@ -29,12 +29,12 @@
       <?php wp_reset_postdata(); ?>
       <p class="kv__news--text--more">MORE</p>
     </a>
-    <div class="kv__news--scroll">
+    <a href="#4" class="kv__news--scroll">
       <p class="kv__news--scroll--text">SCROLL</p>
       <div class="kv__news--scroll--mouth">
         <div class="kv__news--scroll--mouth--ball"></div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="kv__img">
     <img class="kv__img--pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/KV.png" alt="">
@@ -45,7 +45,7 @@
 <section class="business">
     <div class="max-inner">
       <div class="business__title  fade-in1">
-        <div class="main-title">
+        <div id="4" class="main-title">
           <span></span>
           <h2>BUSINESS</h2>
           <p>事業内容</p>

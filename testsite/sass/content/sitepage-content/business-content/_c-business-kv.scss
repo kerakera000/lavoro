@@ -3,12 +3,15 @@
 
 .inBusiness{
     padding: 0 10rem;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
 }
 .inBusiness-wrapper{
     padding: 0 0rem 8rem;
     gap: 0 !important;
     overflow-y: hidden;
-    overflow-x: scroll;
+    // overflow-x: scroll;
     @media screen and (max-width: 768px) {
         padding: 0 8rem 8rem;
     }
@@ -114,7 +117,7 @@
             &--explane{
                 margin-top: 3rem;
                 padding-left: 3rem;
-                @include font.font-Noto-midium($fontsize:2rem,$lineHeight:6rem);
+                @include font.font-Noto-midium($fontsize:2.2rem,$lineHeight:6rem);
                 @media screen and (max-width: 768px) {
                     order: 3;
                     padding: 0 5rem;
@@ -137,9 +140,10 @@
                 height: 56vw;
                 margin-top: 4rem;
                 justify-content: center;
+                transform: translateX(0);
             }
             img{
-                width: 90%;
+                width: 95%;
                 height: 100%;
                 object-fit: contain;
             }

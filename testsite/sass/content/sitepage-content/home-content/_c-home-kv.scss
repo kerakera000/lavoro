@@ -9,19 +9,20 @@
     &__title{
         width: 100%;
         height: 100%;
-        padding-left: 12rem;
-        @include flex.flex($align-items:flex-start);
+        // padding-left: 12rem;
+        padding-top: 7rem;
+        @include flex.flex($align-items:center);
         flex-direction: column;
         @media screen and (max-width: 768px) {
-            padding-left: 5rem;
+            // padding-left: 5rem;
         }
         &--main{
-            @include font.font-Noto-bold($fontsize:5.4rem);
+            @include font.font-Noto-bold($fontsize:6.4rem);
             @media screen and (max-width: 768px) {
-                font-size: 6.5rem;
+                font-size: 7rem;
             }
             span{
-                @include font.font-Noto-bold($fontsize:7.4rem);
+                @include font.font-Noto-bold($fontsize:9.4rem);
                 color: transparent;
 	            background: repeating-linear-gradient( 90deg, #70CFE4 0, #5C76F6 100% );
                 -webkit-background-clip: text;
@@ -31,16 +32,23 @@
             }
         }
         &--text{
-            margin-top: 6rem;
-            @include font.font-Noto-bold($fontsize:2.4rem,$lineHeight:6.4rem);
+            margin-top: 3rem;
+            text-align: center;
+            @include font.font-Noto-bold($fontsize:3rem, $lineHeight:6.4rem);
             @media screen and (max-width: 768px) {
                 font-size: 4rem;
+            }
+            span{
+                @include font.font-Noto-bold($fontsize: 4rem, $lineHeight: 6.4rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 5rem;
+                }
             }
         }
         &--button{
             margin-top: 5rem;
-            width: 26rem;
-            height: 6rem;
+            width: 29rem;
+            height: 7rem;
             @include font.font-jost-semibold($fontsize:2.2rem);
             @include flex.flex();
             position: relative;
@@ -70,9 +78,9 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                border-radius: 30px;
-                width: 25.5rem;
-                height: 5.5rem;
+                border-radius: 40px;
+                width: 28.5rem;
+                height: 6.5rem;
                 background-color: white;
                 transition: 0.3s;
                 @media screen and (max-width: 768px) {
@@ -81,13 +89,14 @@
                 }
             }
             &::after{
-                content: '>';
+                content: '';
+                width: 1.5rem;
+                height: 1.5rem;
                 position: absolute;
                 right: 5%;
-                top: 48%;
-                color: transparent;
-                background: repeating-linear-gradient( 90deg, #6DCAE4 0, #5F94EF 100% );
-                -webkit-background-clip: text;
+                top: 50%;
+                background-image: url(/wp-content/themes/testsite/images/arrow-img/arowblue.svg);
+                background-size: 100%;
                 transform: translate(-0%,-50%);
                 @media screen and (max-width: 768px) {
                     font-size: 4rem;
@@ -101,9 +110,9 @@
                 left: 50%;
                 transform: translate(-50%,-50%);
                 background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
-                width: 26rem;
-                height: 6.0rem;
-                border-radius: 30px;
+                width: 29rem;
+                height: 7rem;
+                border-radius: 40px;
                 @media screen and (max-width: 768px) {
                     width: 40rem;
                     height: 10rem;
@@ -131,19 +140,23 @@
         height: auto;
         padding-right: 7rem;
         padding-bottom: 3rem;
-        @include flex.flex($justify-content:space-between,$align-items:flex-end);
+        position: relative;
+        @include flex.flex($justify-content:flex-end,$align-items:flex-end);
         @media screen and (max-width: 768px) {
             height: 16rem;
             padding-right: 2rem;
-            position: relative;
         }
         &--text{
             width: 80%;
             height: 6rem;
             background-color: rgb(248, 248, 248);
-            border-radius: 0 3rem 3rem 0;
-            padding-left: 11rem;
+            border-radius: 3rem;
+            padding-left: 5rem;
             padding-right: 2.5rem;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translate(-50%,-0%);
             @include flex.flex($justify-content:flex-start);
             @media screen and (max-width: 768px) {
                 flex-direction: column;
@@ -181,8 +194,12 @@
                     display: none;
                 }
                 &::after{
-                    content: '>';
+                    content: '';
+                    width: 1.5rem;
+                    height: 1.5rem;
                     padding-bottom: 0.3rem;
+                    background-image: url(/wp-content/themes/testsite/images/arrow-img/arowblue.svg);
+                    background-size: 100%;
                 }
             }
         }

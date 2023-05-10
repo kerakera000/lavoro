@@ -9,7 +9,7 @@
     box-shadow: 0px 8px 10px #00000029;
     @include flex.flex();
     @media screen and (max-width: 768px) {
-        padding: 30rem 5rem 10rem;
+        padding: 30rem 8rem 10rem;
     }
     &__title{
         width: 100%;
@@ -94,7 +94,7 @@
             @include flex.flex($justify-content:flex-start,$gap:4%);
             flex-direction: column;
             @media screen and (max-width: 768px) {
-                width: 85%;
+                width: 100%;
                 height: 110rem;
                 margin-top: 8rem;
             }
@@ -117,7 +117,7 @@
                     justify-content: space-around;
                 }
                 &--maintext{
-                    @include font.font-Noto-midium($fontsize:2rem);
+                    @include font.font-Noto-midium($fontsize:2.2rem);
                     text-align: center;
                     width: 70%;
                     @media screen and (max-width: 768px) {
@@ -158,6 +158,7 @@
                     &--link {
                         color: transparent;
                         background: repeating-linear-gradient(90deg, #6DCAE4 0, #5F94EF 100%);
+                        -webkit-background-clip: text;
                         @include font.font-jost-bold($fontsize: 2rem);
                         @media screen and (max-width: 768px) {
                             font-size: 3.5rem;

@@ -266,7 +266,7 @@
                     }
                     &--title{
                         margin-top: 1.7rem;
-                        @include font.font-Noto-bold($fontsize:2rem);
+                        @include font.font-Noto-bold($fontsize:2.2rem);
                         @media screen and (max-width: 768px) {
                             font-size: 5rem;
                         }

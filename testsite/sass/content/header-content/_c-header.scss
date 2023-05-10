@@ -14,7 +14,7 @@
         top: 0%;
         left: 0%;
         width: 100%;
-        height: 8rem;
+        height: 9rem;
         background-color: rgba(255, 255, 255, 0.8);
         z-index: -1;
         @media screen and (max-width: 768px) {
@@ -98,7 +98,7 @@
             left: 0%;
             padding: 30rem 10rem;
             transform: translate(-0%, -50%);
-            gap: 7rem;
+            gap: 5%;
             pointer-events: none;
         }
 
@@ -107,7 +107,10 @@
             height: 4rem;
             @include flex.flex();
             &--link {
-                @include font.font-jost-medium($fontsize: 1.6rem);
+                width: 100%;
+                height: 100%;
+                @include flex.flex($justify-content: flex-start);
+                @include font.font-jost-medium($fontsize: 1.8rem);
 
                 @media screen and (max-width: 768px) {
                     color: rgba(255, 255, 255, 0);
@@ -132,7 +135,7 @@
         .nav-list-item-acodion {
             position: relative;
             width: 12rem;
-            height: 4rem;
+            height: 5rem;
             @include flex.flex($justify-content:flex-start);
             @media screen and (max-width: 768px) {
                 justify-content: flex-start;
@@ -144,9 +147,10 @@
             .nav-list-link {
                 position: static;
                 z-index: 2;
-                height: 4rem;
-                width: 12rem;
-                @include font.font-jost-medium($fontsize: 1.6rem);
+                width: 100%;
+                height: 100%;
+                // @include flex.flex($justify-content: flex-start);
+                @include font.font-jost-medium($fontsize: 1.8rem);
                 @include flex.flex($gap: 0.5rem,$justify-content:flex-start);
 
                 @media screen and (max-width: 768px) {
@@ -154,7 +158,21 @@
                     color: rgba(255, 255, 255, 0);
                     font-size: 5.6rem;
                 }
-
+                &::before{
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: 0%;
+                    left: 0%;
+                    width: 13rem;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.966);
+                    transform: translate(-10px, -0);
+                    @media screen and (max-width: 768px) {
+                        padding-left: 0%;
+                        display: none;
+                    }
+                }
                 &::after {
                     content: "";
                     width: 1rem;
@@ -282,14 +300,15 @@
 
         .nav-color-white {
             position: relative;
-            width: 13rem;
-            height: 4rem;
+            width: 16rem;
+            height: 5rem;
             @include flex.flex();
             background: white;
             border: #6DCAE4 1px solid;
             border-radius: 25px;
             transition: 0.4s;
             transform: translateX(-2rem);
+            position: relative;
             @media screen and (max-width: 768px) {
                 align-items: flex-start;
                 justify-content: flex-start;
@@ -301,15 +320,40 @@
             }
 
             &--link {
+                width: 100%;
+                height: 100%;
                 color: transparent;
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                @include flex.flex();
                 background: repeating-linear-gradient(90deg, #4169e1 0, #90CAF9 100%);
                 -webkit-background-clip: text;
-                @include font.font-jost-medium($fontsize: 1.6rem);
-
+                @include font.font-jost-medium($fontsize: 1.8rem);
                 @media screen and (max-width: 768px) {
+                    width: auto;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(0);
                     font-size: 5.6rem;
                     color: rgba(255, 255, 255, 0);
                     background: rgba(255, 255, 255, 0);
+                }
+            }
+
+            &::after{
+                content: "";
+                width: 1.2rem;
+                height: 1.2rem;
+                position: absolute;
+                top: 50%;
+                right: 3%;
+                transform: translate(-50%,-50%);
+                background-image: url(/wp-content/themes/testsite/images/arrow-img/arowblue.svg);
+                background-size: 100%;
+                @media screen and (max-width: 768px) {
+                    display: none;
                 }
             }
             &:hover {
@@ -318,14 +362,17 @@
                 .nav-color-white--link{
                     color: white;
                 }
+                &::after {
+                    background-image: url(/wp-content/themes/testsite/images/arrow-img/arowwhite.svg);
+                }
             }
         }
 
         .nav-color-blue {
             position: relative;
             margin-left: 1.3rem;
-            width: 13rem;
-            height: 4rem;
+            width: 16rem;
+            height: 5rem;
             @include flex.flex();
             border-radius: 25px;
             border: #6DCAE4 1px solid;
@@ -344,12 +391,36 @@
             }
 
             &--link {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include flex.flex();
+                @include font.font-jost-medium($fontsize: 1.8rem);
                 color: rgb(255, 255, 255);
-                @include font.font-jost-medium($fontsize: 1.6rem);
-
                 @media screen and (max-width: 768px) {
+                    width: auto;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(0);
                     font-size: 5.6rem;
                     color: rgba(255, 255, 255, 0);
+                }
+            }
+            &::after {
+                content: "";
+                width: 1.2rem;
+                height: 1.2rem;
+                position: absolute;
+                top: 50%;
+                right: 3%;
+                transform: translate(-50%, -50%);
+                background-image: url(/wp-content/themes/testsite/images/arrow-img/arowwhite.svg);
+                background-size: 100%;
+                @media screen and (max-width: 768px) {
+                    display: none;
                 }
             }
             &:hover {
@@ -360,6 +431,9 @@
                     color: transparent;
                     background: repeating-linear-gradient(90deg, #4169e1 0, #90CAF9 100%);
                     -webkit-background-clip: text;
+                }
+                &::after {
+                    background-image: url(/wp-content/themes/testsite/images/arrow-img/arowblue.svg);
                 }
             }
         }

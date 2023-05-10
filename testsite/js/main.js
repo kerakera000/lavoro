@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const NavButton = document.getElementById("NavButton");
     const NavList = document.getElementById("NavList");
-    const HeaderTitle = document.getElementById("HeaderTitle")
+    const HeaderTitle = document.getElementById("HeaderTitle");
+    const HeaderM = document.getElementById("Header");
 
     NavButton.addEventListener("click", function () {
         NavButton.classList.toggle("open");
         NavList.classList.toggle("open");
         HeaderTitle.classList.toggle("open");
+        HeaderM.classList.toggle("open");
     })
 
     const buttons = [

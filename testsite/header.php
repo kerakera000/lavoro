@@ -17,10 +17,10 @@
     <?php wp_head(); ?>
 	</head>
 	<body id="body">
-		<header class="header">
+		<header id="Header" class="header">
 			<a href="<?php echo esc_url(home_url('/')); ?>" id="HeaderTitle" class="header__title">
-				<img class="header__title--pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/title-logo.png" alt="LAVORO">
-				<img class="header__title--sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/Footer-logo.png" alt="LAVORO">
+				<img class="header__title--pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/SVGKV/lavoroB.svg" alt="LAVORO">
+				<img class="header__title--sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/SVGKV/lavoroW.svg" alt="LAVORO">
 			</a>
 			<nav class="header__nav">
 				<ul id="NavList" class="nav-list">

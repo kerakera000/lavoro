@@ -18,14 +18,14 @@
         }
     }
     h2{
-        @include font.font-jost-semibold($fontsize:5rem);
+        @include font.font-jost-semibold($fontsize:4rem);
         color: rgb(58, 58, 58);
         @media screen and (max-width: 768px) {
             font-size: 7rem;
         }
     }
     p{
-        @include font.font-Noto-midium($fontsize:1.8rem);
+        @include font.font-Noto-midium($fontsize:2rem,$letterSpacing:1.8px);
         color: transparent;
         background: repeating-linear-gradient( 90deg, #70CFE4 0, #5C76F6 100% );
         -webkit-background-clip: text;
