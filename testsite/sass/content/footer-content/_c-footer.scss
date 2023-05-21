@@ -84,12 +84,13 @@ footer{
             &--pattern2{
                 width: auto;
                 height: 100%;
-                @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:5rem);
+                @include flex.flex($align-items:flex-start,$justify-content:flex-start,$gap:2rem);
                 flex-direction: column;
                 @media screen and (max-width: 768px) {
                     margin-right: 0;
                     margin-top: 4rem;
                     height: auto;
+                    $gap: 5rem
                 }
                 .footer-pattern2-text{
                     @include font.font-jost-semibold($fontsize:2.2rem);

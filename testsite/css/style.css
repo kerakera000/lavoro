@@ -671,6 +671,21 @@ html {
   }
 }
 
+.Ctext-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.Ctext-box__text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.Ctext-box__text .Customfirst {
+  width: 20rem;
+}
+
 .header {
   position: fixed;
   top: 2rem;
@@ -689,7 +704,6 @@ html {
   left: 0%;
   width: 100%;
   height: 9rem;
-  background-color: rgba(255, 255, 255, 0.8);
   z-index: -1;
 }
 @media screen and (max-width: 768px) {
@@ -767,7 +781,7 @@ html {
 }
 @media screen and (max-width: 768px) {
   .header .nav-list {
-    transition: 0.3s;
+    transition: 0.1s;
     width: 100%;
     height: 100%;
     z-index: -300;
@@ -873,7 +887,6 @@ html {
   left: 0%;
   width: 13rem;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.966);
   transform: translate(-10px, 0);
 }
 @media screen and (max-width: 768px) {
@@ -891,6 +904,11 @@ html {
   background-repeat: no-repeat;
   background-position: 50%;
 }
+@media screen and (max-width: 768px) {
+  .header .nav-list .nav-list-item-acodion .nav-list-link::after {
+    display: none;
+  }
+}
 .header .nav-list .nav-list-item-acodion .nav-list-link:hover {
   color: #5a5a58;
 }
@@ -900,7 +918,8 @@ html {
   left: 0%;
   width: 100%;
   height: 100%;
-  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.3s, background-color 0s;
   transform: translate(-10px, 0);
   pointer-events: none;
 }
@@ -966,7 +985,6 @@ html {
     width: 13rem;
     height: auto;
     background-color: rgba(34, 34, 34, 0.9019607843);
-    transition: 0.3s;
     transform: translate(-10px, 0);
     border-radius: 0.5rem;
     pointer-events: initial;
@@ -1052,6 +1070,7 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: 0.4s;
   transform: translate(-50%, -50%);
   display: flex;
   gap: 0rem;
@@ -1134,6 +1153,7 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: 0.4s;
   transform: translate(-50%, -50%);
   display: flex;
   gap: 0rem;
@@ -1187,8 +1207,8 @@ html {
 }
 @media screen and (max-width: 768px) {
   .header .nav-list.open {
-    transition: 0.3s;
-    z-index: 998;
+    transition: 0.1s;
+    z-index: 200;
     background-color: #5C76F6;
     pointer-events: all;
   }
@@ -1219,6 +1239,11 @@ html {
     justify-content: flex-start;
   }
 }
+@media screen and (max-width: 768px) {
+  .header .nav-list.open .btmabout {
+    margin-bottom: 26rem;
+  }
+}
 .header .nav-list.open .nav-list-item-acodion {
   position: relative;
   width: 12rem;
@@ -1228,13 +1253,14 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 998;
 }
 @media screen and (max-width: 768px) {
   .header .nav-list.open .nav-list-item-acodion {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    height: auto;
+    height: 5rem;
   }
 }
 .header .nav-list.open .nav-list-item-acodion .nav-list-link {
@@ -1276,6 +1302,7 @@ html {
   width: 100%;
   height: 100%;
   transition: 0.3s;
+  pointer-events: all;
 }
 @media screen and (max-width: 768px) {
   .header .nav-list.open .nav-list-item-acodion ul {
@@ -1286,6 +1313,7 @@ html {
     align-items: flex-start;
     flex-direction: column;
     margin-top: 6rem;
+    z-index: 999;
   }
 }
 .header .nav-list.open .nav-list-item-acodion ul li .nav-list-link-chiled {
@@ -1497,6 +1525,9 @@ html {
 .header .nav-button.open .nav-button--line3 {
   transform: translate(-50%, -50%) rotate(-130deg);
 }
+.header.open::after {
+  background-color: rgba(255, 255, 255, 0);
+}
 
 .kv {
   height: 100svh;
@@ -1597,7 +1628,7 @@ html {
     width: 40rem;
     height: 10rem;
     margin-top: 8rem;
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 .kv__title--button p {
@@ -1642,7 +1673,8 @@ html {
 }
 @media screen and (max-width: 768px) {
   .kv__title--button::after {
-    font-size: 4rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 .kv__title--button::before {
@@ -1672,7 +1704,7 @@ html {
   transition: 0.3s;
 }
 .kv__title--button:hover::after {
-  color: white;
+  background-image: url(/wp-content/themes/testsite/images/arrow-img/arowwhite.svg);
 }
 .kv__title--button:hover .kv-button-back {
   transition: 0.3s;
@@ -2486,17 +2518,23 @@ html {
   }
 }
 .contact__card--button button::after {
-  content: "›";
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  background-image: url(/wp-content/themes/testsite/images/arrow-img/arowwhite.svg);
+  background-size: 100%;
   transform: translate(-50%, -50%);
   font-size: 4rem;
   color: white;
 }
 @media screen and (max-width: 768px) {
   .contact__card--button button::after {
-    font-size: 7rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 }
 .contact__card--button.card-center {
@@ -5641,7 +5679,7 @@ footer .footer__content--pattern2 {
   width: auto;
   height: 100%;
   display: flex;
-  gap: 5rem;
+  gap: 2rem;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;

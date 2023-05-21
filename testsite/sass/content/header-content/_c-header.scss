@@ -15,7 +15,6 @@
         left: 0%;
         width: 100%;
         height: 9rem;
-        background-color: rgba(255, 255, 255, 0.8);
         z-index: -1;
         @media screen and (max-width: 768px) {
             z-index: 800;
@@ -86,7 +85,7 @@
         @include flex.flex($align-items: flex-start);
 
         @media screen and (max-width: 768px) {
-            transition: 0.3s;
+            transition: 0.1s;
             width: 100%;
             height: 100%;
             z-index: -300;
@@ -166,7 +165,6 @@
                     left: 0%;
                     width: 13rem;
                     height: 100%;
-                    background-color: rgba(255, 255, 255, 0.966);
                     transform: translate(-10px, -0);
                     @media screen and (max-width: 768px) {
                         padding-left: 0%;
@@ -181,6 +179,9 @@
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: 50%;
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
                 }
                 &:hover {
                     color: #5a5a58;
@@ -193,7 +194,8 @@
                 left: 0%;
                 width: 100%;
                 height: 100%;
-                transition: 0.3s;
+                background-color: #ffffff00;
+                transition: all 0.3s, background-color 0s;
                 transform: translate(-10px, -0);
                 pointer-events: none;
                 @media screen and (max-width: 768px) {
@@ -203,7 +205,6 @@
                     flex-direction: column;
                     margin-top: 6rem;
                 }
-
                 li {
                     .nav-list-link-chiled {
                         opacity: 0;
@@ -244,7 +245,6 @@
                         width: 13rem;
                         height: auto;
                         background-color: #222222E6;
-                        transition: 0.3s;
                         transform: translate(-10px,-0);
                         border-radius: 0.5rem;
                         pointer-events:initial;
@@ -326,6 +326,7 @@
                 position: absolute;
                 top:50%;
                 left: 50%;
+                transition: 0.4s;
                 transform: translate(-50%,-50%);
                 @include flex.flex();
                 background: repeating-linear-gradient(90deg, #4169e1 0, #90CAF9 100%);
@@ -396,6 +397,7 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
+                transition: 0.4s;
                 transform: translate(-50%, -50%);
                 @include flex.flex();
                 @include font.font-jost-medium($fontsize: 1.8rem);
@@ -441,8 +443,8 @@
 
     .nav-list.open {
         @media screen and (max-width: 768px) {
-            transition: 0.3s;
-            z-index: 998;
+            transition: 0.1s;
+            z-index: 200;
             background-color: #5C76F6;
             pointer-events: all;
         }
@@ -465,6 +467,11 @@
                 justify-content: flex-start;
             }
         }
+        .btmabout{
+            @media screen and (max-width: 768px) {
+                margin-bottom: 26rem;
+            }
+        }
 
         .nav-list-item-acodion {
             position: relative;
@@ -472,12 +479,13 @@
             height: 4rem;
             @include flex.flex();
             flex-direction: column;
+            z-index: 998;
 
             @media screen and (max-width: 768px) {
                 justify-content: flex-start;
                 align-items: flex-start;
                 width: 100%;
-                height: auto;
+                height: 5rem;
             }
 
             .nav-list-link {
@@ -513,12 +521,14 @@
                 width: 100%;
                 height: 100%;
                 transition: 0.3s;
+                pointer-events: all;
 
                 @media screen and (max-width: 768px) {
                     position: relative;
                     @include flex.flex($gap: 5rem, $align-items: flex-start, $justify-content: flex-start);
                     flex-direction: column;
                     margin-top: 6rem;
+                    z-index: 999;
                 }
 
                 li {
@@ -712,6 +722,11 @@
 
         .nav-button--line3 {
             transform: translate(-50%, -50%) rotate(-130deg);
+        }
+    }
+    &.open{
+        &::after {
+            background-color: rgba(255, 255, 255, 0);
         }
     }
 }

@@ -8,8 +8,18 @@
 		
 		<link rel="stylesheet" href="<?php echo get_theme_file_uri('css/style.css'); ?>">
 		<link rel="stylesheet" href="<?php echo get_theme_file_uri('style.css'); ?>">
-		<title><?php wp_title(); ?> test site</title>
+		<title><?php wp_title(); ?>LAVORO</title>
+		<meta name="keywords" content="インターネット事業,ウェブ制作,ウェブ運用,内装事業,地方創生事業">
+		<meta name="description" content="ものづくりをもっと楽しくする、ものづくりで今までにない体験をつくる">
+		
+		<meta property="og:title" content="lavoro">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://www.lavoro-inc.com">
+		<meta property="og:site_name" content="LAVORO">
+		<meta property="og:description" content="ものづくりをもっと楽しくする、ものづくりで今までにない体験をつくる">
+		<meta property="og:image" content="https://www.lavoro-inc.com/wp-content/themes/lavoro/assets/img/ogp.png">
 
+		<link rel="shortcut icon" href="https://www.lavoro-inc.com/wp-content/themes/lavoro/assets/favicon/favicon.ico">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Noto+Sans+JP:wght@500;600;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
@@ -25,23 +35,23 @@
 			<nav class="header__nav">
 				<ul id="NavList" class="nav-list">
 
-					<li id="header-about" class="nav-list-item-acodion">
+					<li id="header-about" class="nav-list-item-acodion btmabout">
 						<a class="nav-list-link" href="<?php echo esc_url(home_url('/aboutpage')); ?>">
 							ABOUT
 						</a>
 						<ul>
 							<li>
-								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?> #01">
+								<a class="nav-list-link-chiled golink1" href="<?php echo esc_url(home_url('/aboutpage')); ?> #01">
 								代表挨拶
 								</a>
 							</li>
 							<li>
-								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?> #02">
+								<a class="nav-list-link-chiled golink2" href="<?php echo esc_url(home_url('/aboutpage')); ?> #02">
 								企業理念
 								</a>
 							</li>
 							<li>
-								<a class="nav-list-link-chiled" href="<?php echo esc_url(home_url('/aboutpage')); ?> #03">
+								<a class="nav-list-link-chiled golink3" href="<?php echo esc_url(home_url('/aboutpage')); ?> #03">
 								会社概要
 								</a>
 							</li>

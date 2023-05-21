@@ -5,7 +5,7 @@ function add_custom_fields(){
     foreach ($post_types as $post_type) { //各投稿タイプに対してメタボックスを追加する
         add_meta_box(
             'custom_setting', //編集画面セクションのHTML ID
-            'カスタム情報', //編集画面セクションのタイトル、画面上に表示される
+            'カテゴリ一覧用の情報', //編集画面セクションのタイトル、画面上に表示される
             'insert_custom_fields', //編集画面セクションにHTML出力する関数
             $post_type, //投稿タイプ名
             'normal' //編集画面セクションが表示される部分
@@ -21,28 +21,64 @@ function custom_metabox_edit_form_tag(){
 add_action('post_edit_form_tag', 'custom_metabox_edit_form_tag');
 
 // カスタムフィールドの入力エリア
+
 function insert_custom_fields(){
     global $post;
     $main_text = get_post_meta($post->ID,'main_text',true);
     $hoge_thumbnail = get_post_meta($post->ID,'hoge_thumbnail',true);
     $link_text = get_post_meta($post->ID,'link_text',true); // ここで定義する
     if(get_post_type() == 'news'){ // newsの場合は会社名を表示しない
-        echo '作業内容： <input type="text" name="main_text" value="'.$main_text.'" /><br>';
-        echo 'リンク： <input type="text" name="link_text" value="'.$link_text.'" /><br>';
+        echo'<div style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+                <div style="display: flex; align-items: flex-start; justify-content: center;">
+                    <p style="font-weight:bold; font-size:16px">カテゴリ一覧用のタイトル</p>
+                </div> 
+                <input style="width: 100%; height: 2.3rem;" type="text" name="main_text" value="'.$main_text.'" />
+            </div>';
+        echo'<div style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+                <div style="display: flex; align-items: flex-start; justify-content: center;">
+                    <p style="font-weight:bold; font-size:16px">リンク</p>
+                </div> 
+                <input style="width: 100%; height: 2.3rem;" type="text" name="link_text" value="'.$link_text.'" />
+            </div>';
     }else{
         $hoge_name = get_post_meta(
-            $post->ID, //投稿ID
-            'hoge_name', //キー名
-            true //戻り値を文字列にする場合true(falseの場合は配列)
-        );
-        echo '会社名： <input type="text" name="hoge_name" value="'.$hoge_name.'" /><br>';
-        echo 'リンク： <input type="text" name="link_text" value="'.$link_text.'" /><br>';
-        echo '作業内容： <input type="text" name="main_text" value="'.$main_text.'" /><br>';
+        $post->ID, //投稿ID
+        'hoge_name', //キー名
+        true //戻り値を文字列にする場合true(falseの場合は配列)
+    );
+        echo'<div style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+                <div style="display: flex; align-items: flex-start; justify-content: center;">
+                    <p style="font-weight:bold; font-size:16px">会社名</p>
+                </div> 
+                <input style="width: 100%; height: 2.3rem;" type="text" name="hoge_name" value="'.$hoge_name.'" />
+            </div>';
+
+        echo'<div style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+                <div style="display: flex; align-items: flex-start; justify-content: center;">
+                    <p style="font-weight:bold; font-size:16px">リンク</p>
+                </div> 
+                <input style="width: 100%; height: 2.3rem;" type="text" name="link_text" value="'.$link_text.'" />
+            </div>';
+
+        echo'<div style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+                <div style="display: flex; align-items: flex-start; justify-content: center;">
+                    <p style="font-weight:bold; font-size:16px">作業内容</p>
+                </div> 
+                <input style="width: 100%; height: 2.3rem;" type="text" name="main_text" value="'.$main_text.'" />
+            </div>';
     }
-    echo '画像： <input type="file" name="hoge_thumbnail" accept="image/*" /><br>';
-    if(isset($hoge_thumbnail) && strlen($hoge_thumbnail) > 0){
-        echo '<img style="width: 200px;display: block;margin: 1em;" src="'.wp_get_attachment_url($hoge_thumbnail).'">';
-    }
+        echo'<div style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+                <div style="display: flex; align-items: flex-start; justify-content: center;">
+                    <p style="font-weight:bold; font-size:16px">画像</p>
+                </div> 
+                <input style="width: 100%; height: 2.3rem;" type="file" name="hoge_thumbnail" accept="image/*" />
+            </div>';
+
+        if(isset($hoge_thumbnail) && strlen($hoge_thumbnail) > 0){
+        echo'<div style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+                <div><img style="width: 200px;display: block;margin: 1em;" src="'.wp_get_attachment_url($hoge_thumbnail).'">
+            </div>';
+}
 }
 
 
