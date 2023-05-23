@@ -18,8 +18,10 @@
         p{
             font-size: 2rem;
             margin: 0 2rem;
+            padding-top: 2px;
             @media screen and (max-width: 768px) {
                 font-size: 4rem;
+                padding-top: 0px;
             }
         }
         &__text{

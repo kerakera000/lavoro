@@ -95,7 +95,7 @@ Template Name: page-business
                     </p>
                 </div>
                 <div class="business-cnt__page--img">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact-business/2BUSINESS.png" alt="value">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/bus5.png" alt="value">
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@ Template Name: page-business
                     </p>
                 </div>
                 <div class="business-cnt__page--img">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact-business/2BUSINESS.png" alt="value">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/bus4.png" alt="value">
                 </div>
             </div>
 
@@ -173,7 +173,7 @@ Template Name: page-business
                     </p>
                 </div>
                 <div class="business-cnt__page--img">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact-business/2BUSINESS.png" alt="value">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-img/bus2.png" alt="value">
                 </div>
             </div>
         </div>

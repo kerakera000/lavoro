@@ -14,7 +14,7 @@ Template Name: page-recruit
                 </a>
                 <p>></p>
                 <a href="" class="Breadcrumb__text">
-                    CONTACT
+                    RECRUIT
                 </a>
             </div>
         </div>
@@ -64,7 +64,7 @@ Template Name: page-recruit
 
             <div class="R-recruit-card fade-in2">
                 <div class="R-recruit-card--img">
-                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
+                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/3-Front-engineer.png" alt="LAVORO">
                 </div>
                 <div class="R-recruit-card--text">
                     <p class="R-recruit-card--text--subtitle">【ウェブ制作・保守運用】</p>
@@ -80,7 +80,7 @@ Template Name: page-recruit
 
             <div class="R-recruit-card fade-in3">
                 <div class="R-recruit-card--img">
-                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/2-Director.png" alt="LAVORO">
+                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/recuruit-img/4-Backend-engineer.png" alt="LAVORO">
                 </div>
                 <div class="R-recruit-card--text">
                     <p class="R-recruit-card--text--subtitle">【システム開発・保守運用】</p>
