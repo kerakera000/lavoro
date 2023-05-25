@@ -1,0 +1,391 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+
+.main-post{
+    width: 100%;
+    height: auto;
+    background-color: #F8F8F8;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1607843137);
+    @include flex.flex();
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+        padding: 0rem 5rem;
+    }
+}
+.max-inner-post{
+    width: 100%;
+    max-width: 120rem;
+    @include flex.flex($align-items:flex-start);
+    flex-direction: column;
+    &.large{
+        max-width: 170rem;
+    }
+    .singletitle{
+        @include font.font-Noto-bold($fontsize: 4.8rem);
+        @media screen and (max-width: 768px) {
+            font-size: 6rem;
+        }
+    }
+    .Spost{
+        width: 100%;
+        @include flex.flex($align-items:flex-start);
+        flex-direction: column;
+        &__day{
+            width: 100%;
+            margin: 2rem 0 0;
+            @include flex.flex($justify-content:flex-start,$gap:1rem);
+            flex-wrap: wrap;
+            &--YNJ{
+                @include font.font-oswald-medium($fontsize: 1.8rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
+            }
+            &--midline{
+                transform: translateY(-1px);
+                @include font.font-oswald-medium($fontsize: 1.8rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
+            }
+            &--cate{
+                @include font.font-oswald-medium($fontsize: 1.8rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
+            }
+            &--cateW{
+                position: relative;
+                padding-left: 1rem;
+                @include font.font-oswald-medium($fontsize: 1.8rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 1rem;
+                    height: 1rem;
+                    top: 50%;
+                    left: 1rem;
+                    transform: translate(-1.4rem, -50%);
+                    border-radius: 50%;
+                    background-color: #2A52D1;
+                }
+            }
+            &--company{
+                @include font.font-oswald-medium($fontsize: 1.8rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
+            }
+            &--link{
+                border: 1px solid #356ED5;
+                border-radius: 20px;
+                padding: 0.4rem 2rem;
+                @include font.font-oswald-medium($fontsize: 1.8rem);
+                color: #356ED5;
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        &__main-img{
+            width: 100%;
+            height: auto;
+            margin-top: 4rem;
+            img{
+                width: 100%;
+                aspect-ratio: 16/9;
+            }
+        }
+    }
+    .Spost-body{
+        width: 100%;
+        padding: 0 2rem;
+        margin-bottom: 8rem;
+        h2 {
+            @include font.font-Noto-bold($fontsize: 4rem);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            @media screen and (max-width: 768px) {
+                font-size: 6rem;
+            }
+        }
+
+        h3 {
+            @include font.font-Noto-bold($fontsize: 3.8rem);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            @media screen and (max-width: 768px) {
+                font-size: 5.8rem;
+            }
+        }
+
+        h4 {
+            @include font.font-Noto-bold($fontsize: 3.6rem);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            @media screen and (max-width: 768px) {
+                font-size: 5.6rem;
+            }
+        }
+
+        h5 {
+            @include font.font-Noto-bold($fontsize: 3.4rem);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            @media screen and (max-width: 768px) {
+                font-size: 5.4rem;
+            }
+        }
+
+        h6 {
+            @include font.font-Noto-bold($fontsize: 3.2rem);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            @media screen and (max-width: 768px) {
+                font-size: 5.2rem;
+            }
+        }
+
+        p {
+            @include font.font-Noto-midium($fontsize: 2.2rem);
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            line-height: 2;
+            @media screen and (max-width: 768px) {
+                font-size: 4rem;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+            }
+        }
+
+        a {
+            @include font.font-Noto-midium($fontsize: 2.2rem);
+            text-decoration: underline;
+            @media screen and (max-width: 768px) {
+                font-size: 4rem;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+            }
+        }
+        /* リストアイテム全体の余白を設定 */
+        ul,
+        ol {
+            margin: 1rem 3rem;
+            padding: 0;
+        }
+
+        /* リストアイテムのマーカーのスタイル */
+        li {
+            margin: 0.5rem 0;
+            @include font.font-Noto-midium($fontsize: 2.2rem);
+            line-height: 1.5;
+            list-style-position: outside;
+            @media screen and (max-width: 768px) {
+                    font-size: 4rem;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+            }
+            /* マーカーをリストアイテムの外側に表示 */
+        }
+
+        /* 番号付きリストアイテムのマーカーのスタイル */
+        ol li {
+            list-style-type: decimal;
+        }
+
+        /* 箇条書きリストアイテムのマーカーのスタイル */
+        ul li {
+            list-style-type: disc;
+        }
+        .page-content{
+        display: none;
+        &.openpage{
+            display: flex;
+            width: 100%;
+            height: auto;
+            margin-top: 3rem;
+            @include flex.flex();
+            flex-direction: column;
+            @include flex.flex($justify-content:center,$gap: 15rem);
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                gap: 10rem;
+                margin-top: 12rem;
+            }
+            .page-numbers{
+                @include font.font-Noto-bold(2.8rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 4rem;
+                }
+                color: #868686;
+                &.current{
+                    color: black;
+                }
+            }
+            .W-list-content {
+                width: 100%;
+                @include flex.flex($justify-content: space-between);
+                flex-wrap: wrap;
+                @media screen and (max-width: 768px) {
+                    gap: 10rem;
+                }
+            }
+            .Wpost{
+                width: 48%;
+                height: auto;
+                margin-top: 4rem;
+                @include flex.flex();
+                flex-direction: column;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+                &__box{
+                    width: 100%;
+                    &--img{
+                        width: 100%;
+                        height: 40rem;
+                        background: #FFFFFF 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 3px 6px #00000029;
+                        border-radius: 20px;
+                        @include flex.flex();
+                        @media screen and (max-width: 768px) {
+                            height: 50rem;
+                        }
+                        img{
+                            width: 80%;
+                            height: 80%;
+                            object-fit: contain;
+                        }
+                    }
+                    &--title{
+                        margin-top: 1.7rem;
+                        @include font.font-Noto-bold($fontsize:2.2rem);
+                        @media screen and (max-width: 768px) {
+                            font-size: 5rem;
+                        }
+                    }
+                    &--categories{
+                        margin-top: 0.9rem;
+                        padding-left: 2rem;
+                        width: 100%;
+                        @include font.font-Noto-midium($fontsize:1.6rem);
+                        @include flex.flex($justify-content:flex-start);
+                        @media screen and (max-width: 768px) {
+                            font-size: 3.7rem;
+                            flex-wrap: wrap;
+                            padding-left: 5rem;
+                        }
+                        color: #676767;
+                        .category-link{
+                            width: auto;
+                            margin-right:2.5rem;
+                            position: relative;
+                            @media screen and (max-width: 768px) {
+                                margin-right: 5rem;
+                            }
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                width: 1rem;
+                                height: 1rem;
+                                top: 50%;
+                                left: 0%;
+                                transform: translate(-1.4rem,-50%);
+                                border-radius: 50%;
+                                background-color: #2A52D1;
+                                @media screen and (max-width: 768px) {
+                                    width: 2rem;
+                                    height: 2rem;
+                                    transform: translate(-3.5rem, -50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+    .Scenter{
+        margin-top: 6rem;
+        width: 100%;
+        @include flex.flex();
+        .SbackBTN {
+            @include flex.flex();
+            width: 25rem;
+            height: 6rem;
+            border-radius: 30px;
+            position: relative;
+            background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
+            text-decoration: none !important;
+            border: 1px solid #6DCAE4;
+            cursor: pointer;
+            transition: 0.2s;
+            @media screen and (max-width: 768px) {
+                width: 44rem;
+                height: 12rem;
+            }
+            div {
+                width: 1.2rem;
+                height: 1.2rem;
+                position: absolute;
+                top: 50%;
+                left: 12%;
+                transform: translate(-50%, -43%) rotate(180deg);
+                @include flex.flex();
+                @media screen and (max-width: 768px) {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+                .Sbtnwhite{
+                    display: block;
+                }
+                .Sbtnblue{
+                    display:none;
+                }
+            }
+    
+            button {
+                transition: 0.2s;
+                @include font.font-Noto-midium($fontsize: 2rem);
+                color: #F8F8F8;
+                @media screen and (max-width: 768px) {
+                    font-size: 4rem;
+                }
+            }
+    
+            &:hover {
+                background: white;
+                border: 1px solid #6DCAE4;
+    
+                div {
+                    .Sbtnwhite {
+                        display: none;
+                    }
+
+                    .Sbtnblue {
+                        display: block;
+                    }
+                }
+    
+                button {
+                    color: transparent;
+                    background: repeating-linear-gradient(90deg, #4169e1 0, #90CAF9 100%);
+                    -webkit-background-clip: text;
+                }
+            }
+        }
+    }
+}

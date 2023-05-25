@@ -1,0 +1,129 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.contact{
+    width: 100%;
+    height: auto;
+    padding: 8rem;
+    @include flex.flex();
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 8rem 0;
+    }
+    &__card{
+        width: 50%;
+        height: 45rem;
+        position: relative;
+        padding: 9rem 5rem 3rem;
+        overflow: hidden;
+        @include flex.flex($justify-content:space-between);
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            height: 50rem;
+        }
+        &--backimg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -3;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: 0.4s;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: relative;
+            }
+        }
+        &--title{
+            width: 70%;
+            height: 100%;
+            @include flex.flex($justify-content:flex-start,$align-items:flex-start);
+            flex-direction:column;
+            &--text{
+                margin-top: 3rem;
+                @include font.font-Noto-midium($fontsize:2.2rem,$letterSpacing:1.6px,$lineHeight:3.4rem);
+                color: white;
+                @media screen and (max-width: 768px) {
+                    font-size: 3.5rem;
+                    line-height: 6rem;
+                    // width: 100%;
+                }
+            }
+            &.card-center{
+                width: 100%;
+                height: 45%;
+                margin-top: 5rem;
+                align-items: center;
+            }
+        }
+        &--button{
+            width: 30%;
+            height: 100%;
+            @include flex.flex($align-items:flex-end,$justify-content:flex-end);
+            button{
+                width: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+                position: relative;
+                border: 2px solid white;
+                @media screen and (max-width: 768px) {
+                    width: 12rem;
+                    height: 12rem;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    position: absolute;
+                    background-image: url(/wp-content/themes/testsite/images/arrow-img/arowwhite.svg);
+                    background-size: 100%;
+                    transform: translate(-50%,-50%);
+                    font-size:4rem;
+                    color: white;
+                    @media screen and (max-width: 768px) {
+                        width: 3.5rem;
+                        height: 3.5rem;
+                    }
+                }
+            }
+            &.card-center {
+                width: 100%;
+                height: 20%;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &::after{
+            content: "";
+            background-color: #00000066;
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 0.8;
+            z-index: -2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        &:hover{
+            .contact__card--backimg{
+                scale: 1.1;
+            }
+        }
+        &.max{
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            @media screen and (max-width: 768px) {
+                height: 60rem;
+            }
+        }
+    }
+}

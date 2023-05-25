@@ -1,0 +1,34 @@
+@use "../../foundation/base/f-font-family" as font;
+@use "../../foundation/mixin/f-flex" as flex;
+
+.Breadcrumb-list{
+    width: 100%;
+    height: 3rem;
+    @include flex.flex($justify-content:flex-end);
+    .Breadcrumb{
+        width: auto;
+        height: 100%;
+        @include flex.flex();
+        &__top{
+            @include font.font-jost-medium($fontsize:2rem);
+            @media screen and (max-width: 768px) {
+                font-size: 3.4rem;
+            }
+        }
+        p{
+            font-size: 2rem;
+            margin: 0 2rem;
+            padding-top: 2px;
+            @media screen and (max-width: 768px) {
+                font-size: 4rem;
+                padding-top: 0px;
+            }
+        }
+        &__text{
+            @include font.font-jost-medium($fontsize:2rem);
+            @media screen and (max-width: 768px) {
+                font-size: 3.4rem;
+            }
+        }
+    }
+}

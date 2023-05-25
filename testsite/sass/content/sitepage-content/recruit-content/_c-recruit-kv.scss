@@ -1,0 +1,184 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.recruit{
+    width: 100%;
+    height: auto;
+    padding: 15rem 10rem 10rem;
+    background-color: #F8F8F8;
+    box-shadow: 0px 8px 10px #00000029;
+    @include flex.flex();
+    @media screen and (max-width: 768px) {
+        padding: 30rem 8rem 10rem;
+    }
+    &__title{
+        width: 100%;
+        margin-top: 3rem;
+        @include flex.flex($align-items:flex-start,$justify-content:space-between);
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+        &--box{
+            width: 50%;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+            h3{
+                margin-top: 8rem;
+                @include font.font-Noto-bold($fontsize:2.8rem,$lineHeight: 5rem);
+                white-space: nowrap;
+                @media screen and (max-width: 768px) {
+                    font-size: 5rem;
+                    line-height: 6rem;
+                    white-space: inherit;
+                }
+                .r-recuruit-br-sp{
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        display: inline;
+                    }
+                }
+            }
+            &--text{
+                margin-top: 4rem;
+                @include font.font-Noto-midium($fontsize:2.3rem,$lineHeight:6rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3.5rem;
+                    line-height: 8rem;
+                }
+                .r-recuruit-br-sp {
+                    display: none;
+
+                    @media screen and (max-width: 768px) {
+                        display: inline;
+                    }
+                }
+                .r-recuruit-br-pc{
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &--img{
+            width: 50%;
+            height: 70rem;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin-top: 5rem;
+                margin-bottom: 10rem;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    &__box{
+        width: 100%;
+        height: auto;
+        margin-top: 10rem;
+        @include flex.flex($justify-content:space-between);
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            margin-top: 0rem;
+            justify-content: flex-start;
+        }
+        .R-recruit-card{
+            width: 45rem;
+            height: 62rem;
+            border-radius: 10px;
+            box-shadow: 0px 6px 10px #0000001A;
+            transition: 0.4s;
+            @include flex.flex($justify-content:flex-start,$gap:4%);
+            flex-direction: column;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                height: 110rem;
+                margin-top: 8rem;
+            }
+            &--img{
+                width: 100%;
+                height: 29rem;
+                @media screen and (max-width: 768px) {
+                    height: 48rem;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &--text{
+                @include flex.flex($justify-content:flex-start);
+                flex-direction: column;
+                height: 50%;
+                @media screen and (max-width: 768px) {
+                    justify-content: space-around;
+                }
+                &--maintext{
+                    @include font.font-Noto-midium($fontsize:2.2rem);
+                    text-align: center;
+                    width: 70%;
+                    @media screen and (max-width: 768px) {
+                        font-size: 4rem;
+                        width: 90%;
+                    }
+                }
+                &--subtitle{
+                    @include font.font-Noto-midium($fontsize:1.6rem);
+                    color: #959595;
+                    @media screen and (max-width: 768px) {
+                        font-size: 3rem;
+                    }
+                }
+                h3{
+                    @include font.font-Noto-bold($fontsize:2.4rem);
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    @media screen and (max-width: 768px) {
+                        font-size: 5rem;
+                    }
+                }
+                .R-recruit-button{
+                    position: relative;
+                    width: 24rem;
+                    height: 6rem;
+                    margin-top: auto;
+                    @include flex.flex();
+                    background: white;
+                    border: #6DCAE4 2px solid;
+                    border-radius: 30px;
+                    margin-bottom: 6%;
+                    @media screen and (max-width: 768px) {
+                        width: 44rem;
+                        height: 12rem;
+                        margin-bottom: 0%;
+                    }
+                    &--link {
+                        color: transparent;
+                        background: repeating-linear-gradient(90deg, #6DCAE4 0, #5F94EF 100%);
+                        -webkit-background-clip: text;
+                        @include font.font-jost-bold($fontsize: 2rem);
+                        @media screen and (max-width: 768px) {
+                            font-size: 3.5rem;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                transition: 0.4s;
+                scale: 1.05;
+            }
+        }
+        .R-nocard{
+            width: 45rem;
+            height: 62rem;
+            border-radius: 10px;
+            box-shadow: 0px 6px 10px #00000000;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}

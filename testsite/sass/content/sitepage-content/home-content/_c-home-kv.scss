@@ -9,55 +9,99 @@
     &__title{
         width: 100%;
         height: 100%;
-        padding-left: 12rem;
-        @include flex.flex($align-items:flex-start);
+        // padding-left: 12rem;
+        padding-top: 7rem;
+        @include flex.flex($align-items:center);
         flex-direction: column;
+        @media screen and (max-width: 768px) {
+            // padding-left: 5rem;
+        }
         &--main{
-            @include font.font-Noto-bold($fontsize:5.4rem);
+            @include font.font-Noto-bold($fontsize:6.4rem);
+            @media screen and (max-width: 768px) {
+                font-size: 7rem;
+            }
             span{
-                @include font.font-Noto-bold($fontsize:7.4rem);
+                @include font.font-Noto-bold($fontsize:9.4rem);
                 color: transparent;
 	            background: repeating-linear-gradient( 90deg, #70CFE4 0, #5C76F6 100% );
                 -webkit-background-clip: text;
+                @media screen and (max-width: 768px) {
+                    font-size: 8rem;
+                }
             }
         }
         &--text{
-            margin-top: 6rem;
-            @include font.font-Noto-bold($fontsize:2.4rem,$lineHeight:6.4rem);
+            margin-top: 3rem;
+            text-align: center;
+            @include font.font-Noto-bold($fontsize:3rem, $lineHeight:6.4rem);
+            @media screen and (max-width: 768px) {
+                font-size: 4rem;
+            }
+            span{
+                @include font.font-Noto-bold($fontsize: 4rem, $lineHeight: 6.4rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 5rem;
+                }
+            }
         }
         &--button{
             margin-top: 5rem;
-            width: 24.6rem;
-            height: 5.6rem;
-            @include font.font-jost-bold($fontsize:2.4rem);
+            width: 29rem;
+            height: 7rem;
+            @include font.font-jost-semibold($fontsize:2.2rem);
             @include flex.flex();
             position: relative;
-            padding: 3px;/*borderの太さ*/
             border-radius: 30px;
-            color: transparent;
-            background: repeating-linear-gradient( 90deg, #6DCAE4 0, #5F94EF 100% );
-            -webkit-background-clip: text;
             transition: 0.3s;
+            z-index: 1;
+            @media screen and (max-width: 768px) {
+                width: 40rem;
+                height: 10rem;
+                margin-top: 8rem;
+                font-size: 3.5rem;
+            }
+            p{
+                color: transparent;
+                background: repeating-linear-gradient(90deg, #6DCAE4 0, #5F94EF 100%);
+                -webkit-background-clip: text;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 10;
+                white-space: nowrap;
+            }
             .kv-button-back{
                 position: absolute;
                 z-index: -1;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                border-radius: 3rem;
-                width: 24.6rem;
-                height: 5.6rem;
+                border-radius: 40px;
+                width: 28.5rem;
+                height: 6.5rem;
                 background-color: white;
                 transition: 0.3s;
+                @media screen and (max-width: 768px) {
+                    width: 39rem;
+                    height: 9rem;
+                }
             }
             &::after{
-                content: '>';
+                content: '';
+                width: 1.5rem;
+                height: 1.5rem;
                 position: absolute;
                 right: 5%;
-                top: 48%;
-                background: repeating-linear-gradient( 90deg, #6DCAE4 0, #5F94EF 100% );
-                -webkit-background-clip: text;
+                top: 50%;
+                background-image: url(/wp-content/themes/testsite/images/arrow-img/arowblue.svg);
+                background-size: 100%;
                 transform: translate(-0%,-50%);
+                @media screen and (max-width: 768px) {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
             }
             &::before{
                 content: '';
@@ -66,15 +110,25 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                background:  linear-gradient(to right, #00ffd5 0%, #0f3dd7 100%);
-                width: 25rem;
-                height: 6rem;
-                border-radius: 3rem;
-                padding: 20px;
+                background: transparent linear-gradient(90deg, #6DCAE4 0%, #5F94EF 100%) 0% 0% no-repeat padding-box;
+                width: 29rem;
+                height: 7rem;
+                border-radius: 40px;
+                @media screen and (max-width: 768px) {
+                    width: 40rem;
+                    height: 10rem;
+                }
             }
             &:hover{
                 color:white;
                 transition: 0.3s;
+                p{
+                    color: white;
+                    transition: 0.3s;
+                }
+                &::after{
+                    background-image: url(/wp-content/themes/testsite/images/arrow-img/arowwhite.svg);
+                }
                 & .kv-button-back{
                     transition: 0.3s;
                     opacity: 0;
@@ -87,30 +141,66 @@
         height: auto;
         padding-right: 7rem;
         padding-bottom: 3rem;
-        @include flex.flex($justify-content:space-between);
+        position: relative;
+        @include flex.flex($justify-content:flex-end,$align-items:flex-end);
+        @media screen and (max-width: 768px) {
+            height: 16rem;
+            padding-right: 2rem;
+        }
         &--text{
             width: 80%;
             height: 6rem;
-            background-color: white;
-            border-radius: 0 3rem 3rem 0;
-            padding-left: 2.5rem;
+            background-color: rgb(248, 248, 248);
+            border-radius: 3rem;
+            padding-left: 5rem;
             padding-right: 2.5rem;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translate(-50%,-0%);
             @include flex.flex($justify-content:flex-start);
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                height: 16rem;
+                border-radius: 0 9rem 9rem 0;
+                padding-left: 5rem;
+                padding-top: 3rem;
+            }
             &--day{
                 color: #3F3F3F;
                 @include font.font-Noto-midium($fontsize:1.5rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
             }
             &--detail{
                 margin-left: 4rem;
                 @include font.font-Noto-midium($fontsize:1.5rem);
+                @media screen and (max-width: 768px) {
+                    margin-left: 0;
+                    width: 90%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 3rem;
+                }
             }
             &--more{
                 margin-left: auto;
                 @include font.font-jost-bold($fontsize:1.5rem);
                 @include flex.flex($gap:1.7rem);
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
                 &::after{
-                    content: '>';
+                    content: '';
+                    width: 1.5rem;
+                    height: 1.5rem;
                     padding-bottom: 0.3rem;
+                    background-image: url(/wp-content/themes/testsite/images/arrow-img/arowblue.svg);
+                    background-size: 100%;
                 }
             }
         }
@@ -119,18 +209,34 @@
             height: auto;
             @include flex.flex($gap:2rem);
             flex-direction: column;
+            @media screen and (max-width: 768px) {
+                position: absolute;
+                right: 2%;
+                top: -32rem;
+                width: 23rem;
+                height: 27rem;
+            }
             &--text{
                 @include font.font-jost-bold($fontsize:1.5rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                    letter-spacing: 0.5rem;
+                }
             }
             &--mouth{
                 width: 4rem;
                 height: 7rem;
-                border: 1px solid #C6C6C6;
+                border: 1.5px solid #C6C6C6;
                 border-radius: 3rem;
                 padding-top: 1rem;
                 @include flex.flex($justify-content:flex-start);
                 flex-direction: column;
                 transition: 0.4s;
+                @media screen and (max-width: 768px) {
+                    width: 8rem;
+                    height: 13rem;
+                    border-radius: 20rem;
+                }
                 &--ball{
                     width: 7px;
                     height: 10px;
@@ -145,16 +251,34 @@
             }
         }
     }
-    &::after{
-        content: '';
-        height: 100svh;
+    &__img{
+        height: 100vh;
         width: 100%;
         top: 0%;
         left: 0%;
         position: fixed;
         z-index: -100;
-        background-image: url(/wp-content/themes/testsite/images/home-img/KV.png);
-        background-size: 100%;
-        background-repeat: no-repeat;
+        @media screen and (max-width: 768px) {
+            top: 3%;
+        }
+        img{
+            width: 100%;
+        }
+        &--sp{
+            display: none;
+            @media screen and (max-width: 768px) {
+                display: block;
+                aspect-ratio: 8/13;
+                object-fit: cover;
+            }
+        }
+        &--pc{
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
     }
 }

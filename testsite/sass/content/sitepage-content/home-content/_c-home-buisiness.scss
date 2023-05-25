@@ -4,16 +4,383 @@
 .business{
     width: 100%;
     height: auto;
-    padding: 0 5rem;
+    padding: 16rem 8rem 16rem;
+    background: #F8F8F8;
+    @include flex.flex();
+    @media screen and (max-width: 768px) {
+        margin-top: 5rem;
+    }
+    .max-inner{
+        max-width: 170rem;
+        @include flex.flex();
+        flex-direction: column;
+    }
     &__title{
         width: 100%;
         @include flex.flex($justify-content:flex-start);
     }
     &__sub{
         width: 100%;
-        @include flex.flex($justify-content:flex-start);
+        margin-top: 6rem;
+        @include flex.flex($align-items:flex-start,$justify-content:space-between);
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            margin-top: 3rem;
+        }
         &--title{
-            @include font.font-jost-bold
+            @include font.font-oswald-medium($fontsize:3rem);
+            @include flex.flex($align-items:flex-start,$gap:1rem);
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                justify-content: flex-start;
+                flex-direction: column;
+                font-size: 6rem;
+            }
+            p{
+                padding-top: 0.3rem;
+                letter-spacing: 2.4px;
+                color: transparent;
+                background: repeating-linear-gradient(90deg, #4169e1 0, #90CAF9 100%);
+                -webkit-background-clip: text;
+            }
+        }
+        &--title--box{
+            @include flex.flex($align-items:flex-start,$justify-content:flex-start);
+            flex-direction: column;
+            h3{
+                @include font.font-Noto-bold($fontsize:3.2rem,$letterSpacing:0.9px);
+                color: rgb(58, 58, 58);
+                @media screen and (max-width: 768px) {
+                    font-size: 5rem;
+                }
+            }
+            p{
+                color: #959595;
+                @include font.font-jost-medium($fontsize:2.2rem);
+                @media screen and (max-width: 768px) {
+                    font-size: 3rem;
+                }
+            }
+        }
+        &--text{
+            width: 50%;
+            @include flex.flex($justify-content:flex-end);
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin-top: 2rem;
+            }
+            p{
+                @include font.font-Noto-midium($fontsize:2.2rem,$lineHeight:34px);
+                @media screen and (max-width: 768px) {
+                    font-size: 3.5rem;
+                    line-height: 8rem;
+                }
+            }
         }
     }
+    &__content{
+        width: 100%;
+        margin-top: 8rem;
+        @include flex.flex($justify-content:space-between,$gap:4rem);
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 10rem;
+        }
+        .business-card{
+            width: 60rem;
+            height: 35rem;
+            border-radius: 2.5rem;
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+            padding-right: 2rem;
+            position: relative;
+            @include flex.flex($align-items:flex-end);
+            overflow: hidden;
+            transition: 0.4s;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                height: 55vw;
+                padding-bottom: 2.5rem;
+            }
+            &__box{
+                width: 70%;
+                height: 100%;
+                @include flex.flex($align-items:flex-end,$justify-content:flex-start,$gap:2rem);
+                position: relative;
+                z-index: 2;
+                transition: 0.4s;
+                &--img{
+                    width: 4rem;
+                    height: 4rem;
+                    @media screen and (max-width: 768px) {
+                        width: 8rem;
+                        height: 8rem;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .Bcard-text{
+                    @include flex.flex($align-items:flex-start);
+                    flex-direction: column;
+                }
+                &--main-text{
+                    white-space: nowrap;
+                    @include font.font-Noto-bold($fontsize:2.2rem);
+                    color: white;
+                    @media screen and (max-width: 768px) {
+                        font-size: 3.5rem;
+                    }
+                }
+                &--sub-text{
+                    @include font.font-Noto-midium($fontsize:1.3rem);
+                    color: white;
+                }
+            }
+            &__button{
+                width: 30%;
+                height: 100%;
+                position: relative;
+                z-index: 2;
+                transition: 0.4s;
+                @include flex.flex($align-items:flex-end,$justify-content:flex-end);
+                button{
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 30px;
+                    border: 2px solid white;
+                    position: relative;
+                    @media screen and (max-width: 768px) {
+                        width: 9rem;
+                        height: 9rem;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        background-image: url(/wp-content/themes/testsite/images/arrow-img/arowwhite.svg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        @include font.font-jost-bold($fontsize:3rem);
+                        transform: translate(-50%,-50%);
+                        color: white;
+                        @media screen and (max-width: 768px) {
+                            // font-size: 5rem;
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+                    }
+                }
+            }
+            &::before{
+                content: '';
+                width: 100%;
+                height: 24%;
+                background-color: gray;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                transition: 0.4s;
+            }
+            &::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 1;
+                transition: 0.4s;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            &:hover{
+                &::after{
+                    transform: translate(-50%, -50%) scale(1.1);
+                    transform-origin: center;
+                }
+                &::before {
+                    height: 25%;
+                }
+            }
+        }
+        .business-card.C1{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business1.png);
+            }
+        }
+        .business-card.C2{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business2.png);
+            }
+        }
+        .business-card.C3{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business3.png);
+            }
+        }
+    }
+    &__sistem{
+        width: 100%;
+        height: auto;
+        margin-top: 8rem;
+        @include flex.flex($gap:10rem);
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 10rem;
+        }
+        .sistem-card{
+            width: 50%;
+            height: 36rem;
+            border-radius: 2.5rem;
+            padding-left: 2rem;
+            padding-bottom: 1.5rem;
+            padding-right: 2rem;
+            position: relative;
+            @include flex.flex($justify-content:space-between,$align-items:flex-end);
+            overflow: hidden;
+            transition: 0.4s;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                height: 50vw;
+                padding-bottom: 2.5rem;
+            }
+            &--title{
+                width: 70%;
+                height: 100%;
+                @include flex.flex($align-items: flex-end, $justify-content: flex-start, $gap: 2rem);
+                position: relative;
+                z-index: 2;
+                transition: 0.4s;
+                &--img{
+                    width: 6rem;
+                    height: 6rem;
+                    @media screen and (max-width: 768px) {
+                        width: 10rem;
+                        height: 10rem;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                h3{
+                    margin-top: 4px;
+                    white-space: nowrap;
+                    @include font.font-Noto-bold($fontsize:2.6rem);
+                    color: white;
+                    @media screen and (max-width: 768px) {
+                        font-size: 3.5rem;
+                    }
+                }
+                p{
+                    @include font.font-Noto-midium($fontsize:1.3rem);
+                    color: white;
+                    margin-bottom: 0.5rem;
+                    @media screen and (max-width: 768px) {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+            &--button {
+                width: 30%;
+                height: 100%;
+                position: relative;
+                z-index: 2;
+                transition: 0.4s;
+                @include flex.flex($align-items: flex-end, $justify-content: flex-end);
+
+                button {
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 30px;
+                    border: 2px solid white;
+                    position: relative;
+                    margin-bottom: 0.5rem;
+                    @media screen and (max-width: 768px) {
+                        width: 9rem;
+                        height: 9rem;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        top: 50%;
+                        left: 50%;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        background-image: url(/wp-content/themes/testsite/images/arrow-img/arowwhite.svg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        @include font.font-jost-bold($fontsize: 3rem);
+                        transform: translate(-50%, -50%);
+                        color: white;
+                        padding-bottom: 0.5rem;
+                        @media screen and (max-width: 768px) {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+                    }
+                }
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 1;
+                transition: 0.4s;
+                transform: translate(-50%,-50%);
+            }
+            &::before {
+                content: '';
+                width: 100%;
+                height: 27%;
+                background-color: gray;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                transition: 0.4s;
+            }
+            &:hover {
+                &::after {
+                    transform: translate(-50%, -50%) scale(1.1);
+                    transform-origin: center;
+                }
+
+                &::before {
+                    height: 29%;
+                }
+            }
+        }
+        .sistem-card.C1{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business4.png);
+            }
+        }
+        .sistem-card.C2{
+            &::after{
+                background-image: url(/wp-content/themes/testsite/images/home-img/Business5.png);
+            }
+        }
+    }
+}
+
+.wrap110{
+    margin-top: 11rem;
 }

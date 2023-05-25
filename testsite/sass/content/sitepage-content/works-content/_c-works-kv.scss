@@ -1,0 +1,24 @@
+@use "../../../foundation/base/f-font-family" as font;
+@use "../../../foundation/mixin/f-flex" as flex;
+
+.W-works-kv {
+    width: 100%;
+    height: auto;
+    padding: 15rem 10rem 10rem;
+    background-color: #F8F8F8;
+    @include flex.flex();
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+        padding: 30rem 8rem 10rem;
+    }
+
+}
+
+.max-inner {
+    max-width: 170rem;
+    @include flex.flex();
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+        gap: 0rem;
+    }
+}

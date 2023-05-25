@@ -1,0 +1,14 @@
+.Ctext-box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    &__text{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        .Customfirst{
+            width: 20rem;
+        }
+    }
+}
