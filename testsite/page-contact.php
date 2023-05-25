@@ -34,7 +34,7 @@ Template Name: page-contact
     </div>
 
     <div class="form load-in load-in3">
-        <form class="form__content" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfKgS0Fp1IVKwqTlB5QEMBmyGKsDowH5rPdCkot1HcUbDyqVQ/formResponse">
+        <form class="form__content" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScQ4d2vYswmJonmCRdjaC94xrur5R2pFna-GdMnEXLyLdPF-A/formResponse">
             <div class="form__content--flex">
                 <p class="form-text">お問い合わせ種別<span>*</span></p>
                 <div class="form-box select">

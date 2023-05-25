@@ -156,10 +156,10 @@ Template Name: page-about
         代表取締役<span>篠村 洋介</span>
       </p>
     </div>
-    <div class="Aabout-ceo__img fade-in1">
+    <!-- <div class="Aabout-ceo__img fade-in1">
       <img class="Aceoimg-pc" src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-page/6CEOexample.png" alt="value">
       <img class="Aceoimg-sp" src="<?php echo get_stylesheet_directory_uri(); ?>/images/about_news_work-pagesp/6CEOexample.png" alt="value">
-    </div>
+    </div> -->
   </div>
 </section>
 
